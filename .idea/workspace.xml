@@ -21,7 +21,9 @@
   <component name="ChangeListManager">
     <list default="true" id="c5475574-7e0c-4a54-bb73-5d31cdf8e08b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/H2/vulmetjs.js" beforeDir="false" afterPath="$PROJECT_DIR$/H2/vulmetjs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/H2/H2.html" beforeDir="false" afterPath="$PROJECT_DIR$/H2/H2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/H2/Opdracht2.html" beforeDir="false" afterPath="$PROJECT_DIR$/H2/stijlenAanpassen.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/H2/Opdracht2H2.js" beforeDir="false" afterPath="$PROJECT_DIR$/H2/stijlenAanpassen.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,17 +67,17 @@
       <recent name="C:\Users\sande\javascript\H2" />
     </key>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.vulmetjs.html">
+  <component name="RunManager" selected="JavaScript Debug.stijlenAanpassen.html">
     <configuration name="Opdracht2.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/javascript/H1/Opdracht2.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="Opdracht3.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/javascript/H1/Opdracht3.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="vulmetjs.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/javascript/H2/vulmetjs.html" useBuiltInWebServerPort="true">
+    <configuration name="stijlenAanpassen.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/javascript/H2/stijlenAanpassen.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="Opdracht2.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/H1/Opdracht2.js" working-dir="$PROJECT_DIR$/H1">
+    <configuration name="vulmetjs.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/javascript/H2/vulmetjs.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="Opdracht3.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/H1/Opdracht3.js" working-dir="$PROJECT_DIR$/H1">
@@ -83,11 +85,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.stijlenAanpassen.html" />
         <item itemvalue="JavaScript Debug.vulmetjs.html" />
         <item itemvalue="JavaScript Debug.Opdracht3.html" />
         <item itemvalue="Node.js.Opdracht3.js" />
         <item itemvalue="JavaScript Debug.Opdracht2.html" />
-        <item itemvalue="Node.js.Opdracht2.js" />
       </list>
     </recent_temporary>
   </component>
@@ -100,7 +102,7 @@
       <option name="presentableId" value="Default" />
       <updated>1605694344171</updated>
       <workItem from="1605694345230" duration="5093000" />
-      <workItem from="1605777094779" duration="4150000" />
+      <workItem from="1605777094779" duration="7878000" />
     </task>
     <servers />
   </component>
