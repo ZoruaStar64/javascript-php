@@ -21,9 +21,8 @@
   <component name="ChangeListManager">
     <list default="true" id="c5475574-7e0c-4a54-bb73-5d31cdf8e08b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/H2/H2.html" beforeDir="false" afterPath="$PROJECT_DIR$/H2/H2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/H2/Opdracht2.html" beforeDir="false" afterPath="$PROJECT_DIR$/H2/stijlenAanpassen.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/H2/Opdracht2H2.js" beforeDir="false" afterPath="$PROJECT_DIR$/H2/stijlenAanpassen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/H2/stijlenAanpassen.html" beforeDir="false" afterPath="$PROJECT_DIR$/H2/stijlenAanpassen.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/H2/stijlenAanpassen.js" beforeDir="false" afterPath="$PROJECT_DIR$/H2/stijlenAanpassen.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +101,8 @@
       <option name="presentableId" value="Default" />
       <updated>1605694344171</updated>
       <workItem from="1605694345230" duration="5093000" />
-      <workItem from="1605777094779" duration="7878000" />
+      <workItem from="1605777094779" duration="8661000" />
+      <workItem from="1605862500441" duration="2349000" />
     </task>
     <servers />
   </component>
@@ -119,6 +119,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605695198456">
