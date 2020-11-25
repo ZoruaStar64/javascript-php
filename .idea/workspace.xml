@@ -20,10 +20,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c5475574-7e0c-4a54-bb73-5d31cdf8e08b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/H3/shuffle.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/H3/shuffle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/BOTW-Link.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/HW-Link.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/LASwitch-Link.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/MM-Link.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/Oot-Link.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/Skyward_Link.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/TLOZ-link.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/TP-Link.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/WW-Link.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/H3/H3.html" beforeDir="false" afterPath="$PROJECT_DIR$/H3/H3.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,11 +66,11 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\sande\javascript\img" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\sande\javascript\H2" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\sande\javascript\img" />
     </key>
   </component>
   <component name="RunManager" selected="JavaScript Debug.stijlenAanpassen.html">
@@ -104,7 +110,8 @@
       <workItem from="1605694345230" duration="5093000" />
       <workItem from="1605777094779" duration="8661000" />
       <workItem from="1605862500441" duration="3803000" />
-      <workItem from="1606225714462" duration="2016000" />
+      <workItem from="1606225714462" duration="2056000" />
+      <workItem from="1606299151327" duration="54000" />
     </task>
     <servers />
   </component>
