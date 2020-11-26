@@ -7,14 +7,36 @@
     </style>
 </head>
 <body>
+<p>Check the console to see what happened.</p>
+<p>What should've happened is that "snelheid" is 5 <br>
+    and it should say "Honk!" in a line under it</p>
+
+<p>Click <a href="../H4/H4.html">This</a> to return to chapter 4 </p>
 
 
 
 
 
 
+<script>
+    var mijnauto = {
+        merk: "Ford",
+        type: "Mondeo",
+        aantalWielen: 4,
+        kleur: "blauw",
+        snelheid: 0,
 
-
+        gas: function() {
+            this.snelheid += 5
+            console.log(this.snelheid);
+        },
+        honk: function() {
+            console.log("Honk!")
+        }
+    }
+    mijnauto.gas();
+    mijnauto.honk();
+</script>
 
 
 
