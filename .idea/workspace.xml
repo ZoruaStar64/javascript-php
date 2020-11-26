@@ -20,7 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c5475574-7e0c-4a54-bb73-5d31cdf8e08b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/H3/shuffle.html" beforeDir="false" afterPath="$PROJECT_DIR$/H3/shuffle.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/H4/car.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/H4/car.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/H4/crook.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/H4/crook.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/H4/imageSlider.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/H4/imageSlider.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/H2/vulmetjs.html" beforeDir="false" afterPath="$PROJECT_DIR$/H2/vulmetjs.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/H4/H4.html" beforeDir="false" afterPath="$PROJECT_DIR$/H4/H4.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
