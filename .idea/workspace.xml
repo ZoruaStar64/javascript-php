@@ -22,6 +22,7 @@
     <list default="true" id="c5475574-7e0c-4a54-bb73-5d31cdf8e08b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/H4/car.html" beforeDir="false" afterPath="$PROJECT_DIR$/H4/car.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/H4/imageSlider.html" beforeDir="false" afterPath="$PROJECT_DIR$/H4/imageSlider.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,14 +66,14 @@
       <recent name="C:\Users\sande\javascript\img" />
     </key>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.car.html">
+  <component name="RunManager" selected="JavaScript Debug.imageSlider.html">
     <configuration name="H4.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/javascript/H4/H4.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="Opdracht3.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/javascript/H1/Opdracht3.html" useBuiltInWebServerPort="true">
+    <configuration name="car.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/javascript/H4/car.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="car.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/javascript/H4/car.html" useBuiltInWebServerPort="true">
+    <configuration name="imageSlider.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/javascript/H4/imageSlider.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="stijlenAanpassen.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/javascript/H2/stijlenAanpassen.html" useBuiltInWebServerPort="true">
@@ -83,11 +84,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.imageSlider.html" />
         <item itemvalue="JavaScript Debug.car.html" />
         <item itemvalue="JavaScript Debug.H4.html" />
         <item itemvalue="JavaScript Debug.stijlenAanpassen.html" />
         <item itemvalue="JavaScript Debug.vulmetjs.html" />
-        <item itemvalue="JavaScript Debug.Opdracht3.html" />
       </list>
     </recent_temporary>
   </component>

@@ -3,19 +3,38 @@
 <head>
     <title>Imageslider</title>
     <style>
+        #sliderholder {
+            height: 300px;
+            width: 300px;
+            border: 3px black solid;
+            transition: 1s;
+        }
 
     </style>
 </head>
 <body>
+    <div id="sliderholder"></div>
+    <script>
+        var images = [1,2,3,4,5,6,7,8,9];
+        var teller = 0;
+        var slideholder = document.getElementById("sliderholder");
+        slideholder.style.backgroundImage = "url('../img/Link9.jpg')";
+        slideholder.style.backgroundSize = "300px 300px";
 
+        slideholder.addEventListener("click", function() {
+            slideholder.style.backgroundImage = "url('../img/Link" + getLink() + ".jpg')";
+        });
 
-
-
-
-
-
-
-
-
+        function getLink() {
+            if (teller >= images.length) {
+                teller = 1;
+            } else {
+                teller++
+            }
+            console.log(teller);
+            return teller;
+        }
+    </script>
 
 </body>
+</html>
