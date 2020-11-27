@@ -9,25 +9,38 @@
             border: 0;
             transition: 1s;
         }
-
+        #middle {
+            height: 100px;
+            width: 300px;
+            border: 0;
+            transition: 1s;
+        }
+        #bottom {
+            height: 100px;
+            width: 300px;
+            border: 0;
+            transition: 1s;
+        }
     </style>
 </head>
 <body>
 <div id="top"></div>
+<div id="middle"></div>
+<div id="bottom"></div>
 <script>
-    var images = [1,2,3,4];
+    var imagesTop = [1,2,3,4];
     var tellerTop = 0;
     var chars = ["M", "L", "W", "WL"];
-    var top = document.getElementById("top");
-    top.style.backgroundImage = "url('../img/WLtop.png')";
-    top.style.backgroundSize = "100px 300px";
+    var Top = document.getElementById("top");
+    Top.style.backgroundImage = "url('../img/WLtop.png')";
 
-    top.addEventListener("click", function() {
-        top.style.backgroundImage = "url('../img/" + getTop() + "top" + ".png')";
+
+    Top.addEventListener("click", function() {
+        Top.style.backgroundImage = "url('../img/" + getTop() + "top" + ".png')";
     });
 
     function getTop() {
-        if (tellerTop >= images.length) {
+        if (tellerTop >= imagesTop.length) {
             tellerTop = 1;
         } else {
             tellerTop++
@@ -46,6 +59,72 @@
         }
         console.log(tellerTop);
         return chars;
+    }
+
+    var imagesMiddle = [1,2,3,4];
+    var tellerMiddle = 0;
+    var charsMiddle = ["M", "L", "W", "WL"];
+    var Middle = document.getElementById("middle");
+    Middle.style.backgroundImage = "url('../img/WLmiddle.png')";
+
+
+    Middle.addEventListener("click", function() {
+        Middle.style.backgroundImage = "url('../img/" + getMiddle() + "middle" + ".png')";
+    });
+
+    function getMiddle() {
+        if (tellerMiddle >= imagesMiddle.length) {
+            tellerMiddle = 1;
+        } else {
+            tellerMiddle++
+        }
+        if (tellerMiddle === 1) {
+            charsMiddle = "M";
+        }
+        else if (tellerMiddle === 2) {
+            charsMiddle = "L";
+        }
+        else if (tellerMiddle === 3) {
+            charsMiddle = "W";
+        }
+        else if (tellerMiddle === 4) {
+            charsMiddle = "WL";
+        }
+        console.log(tellerMiddle);
+        return charsMiddle;
+    }
+
+    var imagesBottom = [1,2,3,4];
+    var tellerBottom = 0;
+    var charsBottom = ["M", "L", "W", "WL"];
+    var Bottom = document.getElementById("bottom");
+    Bottom.style.backgroundImage = "url('../img/WLbottom.png')";
+
+
+    Bottom.addEventListener("click", function() {
+        Bottom.style.backgroundImage = "url('../img/" + getBottom() + "bottom" + ".png')";
+    });
+
+    function getBottom() {
+        if (tellerBottom >= imagesBottom.length) {
+            tellerBottom = 1;
+        } else {
+            tellerBottom++
+        }
+        if (tellerBottom === 1) {
+            charsBottom = "M";
+        }
+        else if (tellerBottom === 2) {
+            charsBottom = "L";
+        }
+        else if (tellerBottom === 3) {
+            charsBottom = "W";
+        }
+        else if (tellerBottom === 4) {
+            charsBottom = "WL";
+        }
+        console.log(tellerBottom);
+        return charsBottom;
     }
 </script>
 
