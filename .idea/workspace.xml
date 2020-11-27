@@ -21,6 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c5475574-7e0c-4a54-bb73-5d31cdf8e08b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/H4/crook.html" beforeDir="false" afterPath="$PROJECT_DIR$/H4/crook.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,18 +58,21 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\sande\javascript\H2" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\sande\javascript\img" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\sande\javascript\H2" />
+    </key>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.imageSlider.html">
+  <component name="RunManager" selected="JavaScript Debug.crook.html">
     <configuration name="H4.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/javascript/H4/H4.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="car.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/javascript/H4/car.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="crook.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/javascript/H4/crook.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="imageSlider.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/javascript/H4/imageSlider.html" useBuiltInWebServerPort="true">
@@ -77,16 +81,13 @@
     <configuration name="stijlenAanpassen.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/javascript/H2/stijlenAanpassen.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="vulmetjs.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/javascript/H2/vulmetjs.html" useBuiltInWebServerPort="true">
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.crook.html" />
         <item itemvalue="JavaScript Debug.imageSlider.html" />
         <item itemvalue="JavaScript Debug.car.html" />
         <item itemvalue="JavaScript Debug.H4.html" />
         <item itemvalue="JavaScript Debug.stijlenAanpassen.html" />
-        <item itemvalue="JavaScript Debug.vulmetjs.html" />
       </list>
     </recent_temporary>
   </component>
@@ -105,7 +106,7 @@
       <workItem from="1606299151327" duration="54000" />
       <workItem from="1606301030770" duration="26000" />
       <workItem from="1606310012759" duration="5228000" />
-      <workItem from="1606464108545" duration="1193000" />
+      <workItem from="1606464108545" duration="2682000" />
     </task>
     <servers />
   </component>

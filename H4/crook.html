@@ -3,19 +3,51 @@
 <head>
     <title>Crookapp</title>
     <style>
+        #top {
+            height: 100px;
+            width: 300px;
+            border: 0px;
+            transition: 1s;
+        }
 
     </style>
 </head>
 <body>
+<div id="top"></div>
+<script>
+    var images = [1,2,3,4];
+    var tellerTop = 0;
+    var chars = ["M", "L", "W", "WL"];
+    var top = document.getElementById("top");
+    top.style.backgroundImage = "url('../img/WL-top.png')";
+    top.style.backgroundSize = "100px 300px";
 
+    top.addEventListener("click", function() {
+        top.style.backgroundImage = "url('../img/" + getTop() + "-top" + ".png')";
+    });
 
-
-
-
-
-
-
-
-
+    function getTop() {
+        if (tellerTop >= images.length) {
+            tellerTop = 1;
+        } else {
+            tellerTop++
+        }
+        if (tellerTop === 1) {
+            chars = "M";
+        }
+        else if (tellerTop === 2) {
+            chars = "L";
+        }
+        else if (tellerTop === 3) {
+            chars = "W";
+        }
+        else if (tellerTop === 4) {
+            chars = "WL";
+        }
+        console.log(tellerTop);
+        return chars;
+    }
+</script>
 
 </body>
+</html>
