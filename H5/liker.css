@@ -3,13 +3,22 @@ body {
     text-align: center;
 }
 
-div.picture {
+div.picture-holder {
     box-sizing: border-box;
     width: 300px;
     height: 450px;
     float: left;
-    background-color: darkslateblue;
     border: solid 1px black;
+
+}
+
+div.favorite {
+    width: 300px;
+    height: 150px;
+    background-color: darkslategray;
+    background-image: none;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 #gallery {
