@@ -1,0 +1,21 @@
+body {
+    font-family: 'Copse', serif;
+    text-align: center;
+}
+
+div.picture {
+    box-sizing: border-box;
+    width: 300px;
+    height: 450px;
+    float: left;
+    background-color: darkslateblue;
+    border: solid 1px black;
+}
+
+#gallery {
+    width: 900px;
+    height: 1350px;
+    border: solid 1px black;
+    font-size: 0;
+    margin: auto;
+}

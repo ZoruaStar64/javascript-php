@@ -20,8 +20,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c5475574-7e0c-4a54-bb73-5d31cdf8e08b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/H5/liker.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/H5/liker.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/H5/liker.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/Like1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/Like2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/Like3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/Like4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/Like5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/Like6.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/H5/H5.html" beforeDir="false" afterPath="$PROJECT_DIR$/H5/H5.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,19 +61,20 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/img" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\sande\javascript\img" />
+      <recent name="C:\Users\sande\javascript\H2" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\sande\javascript\img" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\sande\javascript\H2" />
-    </key>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.crook.html">
+  <component name="RunManager" selected="JavaScript Debug.liker.html">
     <configuration name="H4.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/javascript/H4/H4.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -78,16 +87,16 @@
     <configuration name="imageSlider.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/javascript/H4/imageSlider.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="stijlenAanpassen.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/javascript/H2/stijlenAanpassen.html" useBuiltInWebServerPort="true">
+    <configuration name="liker.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/javascript/H5/liker.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.liker.html" />
         <item itemvalue="JavaScript Debug.crook.html" />
         <item itemvalue="JavaScript Debug.imageSlider.html" />
         <item itemvalue="JavaScript Debug.car.html" />
         <item itemvalue="JavaScript Debug.H4.html" />
-        <item itemvalue="JavaScript Debug.stijlenAanpassen.html" />
       </list>
     </recent_temporary>
   </component>
@@ -108,7 +117,7 @@
       <workItem from="1606310012759" duration="5228000" />
       <workItem from="1606464108545" duration="3304000" />
       <workItem from="1606481824481" duration="1443000" />
-      <workItem from="1606731986131" duration="852000" />
+      <workItem from="1606731986131" duration="5177000" />
     </task>
     <servers />
   </component>
@@ -136,5 +145,17 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="165" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1605696167508" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/H5/liker.js</url>
+          <line>6</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
