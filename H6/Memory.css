@@ -1,0 +1,37 @@
+html {
+    background-color: deepskyblue;
+    font-family: sans-serif;
+}
+
+body {
+    height: 1500px;
+}
+
+div#gridcontainer {
+
+}
+
+.item {
+    background-color: bisque;
+    border: solid 1px black;
+}
+
+div#flexcontainer {
+
+}
+
+button#nextButton {
+
+}
+
+div#playerContainer {
+
+}
+
+div#currentPlayer {
+
+}
+
+div.points {
+
+}

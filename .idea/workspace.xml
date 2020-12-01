@@ -20,11 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c5475574-7e0c-4a54-bb73-5d31cdf8e08b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/H6/Memory.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/H6/Memory.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/H6/Memory.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/H6/H6.html" beforeDir="false" afterPath="$PROJECT_DIR$/H6/H6.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/H6/Memory.css" beforeDir="false" afterPath="$PROJECT_DIR$/H6/Memory.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/H6/Memory.html" beforeDir="false" afterPath="$PROJECT_DIR$/H6/Memory.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,8 +67,8 @@
       <recent name="C:\Users\sande\javascript\img" />
     </key>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.liker.html">
-    <configuration name="car.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/javascript/H4/car.html" useBuiltInWebServerPort="true">
+  <component name="RunManager" selected="JavaScript Debug.Memory.html">
+    <configuration name="Memory.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/javascript/H6/Memory.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="crook.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/javascript/H4/crook.html" useBuiltInWebServerPort="true">
@@ -87,11 +85,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.Memory.html" />
         <item itemvalue="JavaScript Debug.liker.html" />
         <item itemvalue="Node.js.liker.js" />
         <item itemvalue="JavaScript Debug.crook.html" />
         <item itemvalue="JavaScript Debug.imageSlider.html" />
-        <item itemvalue="JavaScript Debug.car.html" />
       </list>
     </recent_temporary>
   </component>
@@ -113,7 +111,7 @@
       <workItem from="1606464108545" duration="3304000" />
       <workItem from="1606481824481" duration="1443000" />
       <workItem from="1606731986131" duration="9722000" />
-      <workItem from="1606814213318" duration="1955000" />
+      <workItem from="1606814213318" duration="3437000" />
     </task>
     <servers />
   </component>
