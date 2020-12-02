@@ -4,11 +4,16 @@ html {
 }
 
 body {
-    height: 1500px;
+    height: 100vh;
 }
 
 div#gridcontainer {
-
+    position: absolute;
+    top: 100px;
+    display: grid;
+    grid-template-columns: repeat(6, 150px);
+    grid-template-rows: repeat(3, 150px);
+    grid-gap: 10px;
 }
 
 .item {
@@ -17,21 +22,47 @@ div#gridcontainer {
 }
 
 div#flexcontainer {
-
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
 }
 
 button#nextButton {
-
+    position: absolute;
+    border: solid 1px black;
+    top: 600px;
+    background-color: gold;
+    color: black;
+    font-size: 2em;
+    padding: 20px;
 }
 
 div#playerContainer {
-
+    display: flex;
+    position: absolute;
+    width: 90%;
+    top: 20px;
+    justify-content: space-between;
 }
 
 div#currentPlayer {
-
+    background: deeppink;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 800;
+    border: solid 1px black;
+    font-size: 1.5em;
+    padding: 20px;
 }
 
 div.points {
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    background: gold;
+    padding: 20px;
+    border: 1px solid black;
 }
