@@ -53,33 +53,89 @@ for (var i = 1; i <= 18; i++) {
 }
 
 function flipCard(id) {
-
+    let block = document.getElementById(id);
+    block.style.background = 'url("img/Memory0' + imageArray[id - 1] + '.png")';
+    if (movesMade === 1) {
+        flippedCards[0] = imageArray[id - 1];
+    } else {
+        flippedCards[1] = imageArray[id - 1];
+    }
+    console.log(flippedCards.toString());
 }
 
 function shuffleDeck(imageArray) {
-
+    for (let i = 0; i <= imageArray.length; i++) {
+    let random = Math.floor(Math.random() * imageArray.length);
+    let temp = imageArray[i];
+    imageArray[i] = imageArray[random];
+    imageArray[random] = temp;
+    }
 }
 
 function resetVariables() {
-
+//cancel repeat clicks
+    waitingForNextMove = false;
+    //show the nextbutton button
+    let nextButton = document.getElementById("nextButton");
+    if (pointsPlayer1 + pointsPlayer2 < 9) {
+        nextButton.style.display = "block";
+    } else {
+        determineWinner();
+    }
+    //make the nextbutton button clickable
+    nextButton.addEventListener('click', reactToSecondClick);
+    // empty the card array (basically reflipping the cards)
+    flippedCards = [null, null];
 }
 
 function showWhichPlayer() {
-
+    document.getElementById("turn").innerHTML = players[currentPlayer];
 }
 
 function showScore() {
-
+    document.getElementById(pointsPlayer1).innerHTML = pointsPlayer1;
+    document.getElementById(pointsPlayer2).innerHTML = pointsPlayer2;
 }
 
 function checkForMatch() {
+    if (flippedCards[0] === flippedCards[1]) {
+        let winningImage = flippedCards[0];
+        console.log(winningImage + " has been matched!");
+        if (currentPlayer === 0) {
+            pointsPlayer1++;
+        } else {
+            pointsPlayer2++;
+        }
+        // Switch the player to avoid extra playerswitches
+        switchPlayer();
+        showScore();
 
+        let allBlocks = document.getElementsByClassName("item");
+        for (let i = 0; i < imageArray.length; i++) {
+            if (imageArray[i] === winningImage) {
+                allBlocks[i].removeEventListener("click", reactToFirstClick);
+                console.log("removed eventlistener from block " + i);
+                imageArray[i] = null;
+            }
+        }
+    }
 }
 
 function switchPlayer() {
-
+    if (currentPlayer === 0) {
+        currentPlayer = 1;
+    } else {
+        currentPlayer = 0;
+    }
 }
 
 function determineWinner() {
-
+    if (pointsPlayer1 > pointsPlayer2) {
+        winner = "Player1";
+    } else {
+        winner = "Player2";
+    }
+    let nextButton = document.getElementById("nextButton");
+    nextButton.innerHTML = winner + " has won!";
+    nextButton.style.display = 'block';
 }
