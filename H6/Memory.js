@@ -12,7 +12,7 @@ showWhichPlayer();
 showScore();
 
 // makes cards react to clicks
-let reactToFirstClick = function () {
+let reactToFirstClick = function() {
     if (this.id !== lastBlockClicked && waitingForNextMove) {
         movesMade++;
         lastBlockClicked = this.id;
@@ -25,7 +25,7 @@ let reactToFirstClick = function () {
 };
 
 // function to react to second click
-let reactToSecondClick = function () {
+let reactToSecondClick = function() {
     let allBlocks = document.getElementsByClassName("item");
     for (let j = 0; j < allBlocks.length; j++){
         if (imageArray[j] !== null) {
@@ -54,7 +54,7 @@ for (var i = 1; i <= 18; i++) {
 
 function flipCard(id) {
     let block = document.getElementById(id);
-    block.style.background = 'url("img/Memory0' + imageArray[id - 1] + '.png")';
+    block.style.background = 'url("../img/Memory0' + imageArray[id - 1] + '.png")';
     if (movesMade === 1) {
         flippedCards[0] = imageArray[id - 1];
     } else {
@@ -113,7 +113,7 @@ function checkForMatch() {
         let allBlocks = document.getElementsByClassName("item");
         for (let i = 0; i < imageArray.length; i++) {
             if (imageArray[i] === winningImage) {
-                allBlocks[i].removeEventListener("click", reactToFirstClick);
+                allBlocks[i].removeEventListener('click', reactToFirstClick);
                 console.log("removed eventlistener from block " + i);
                 imageArray[i] = null;
             }
