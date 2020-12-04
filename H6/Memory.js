@@ -64,7 +64,7 @@ function flipCard(id) {
 }
 
 function shuffleDeck(imageArray) {
-    for (let i = 0; i <= imageArray.length; i++) {
+    for (let i = 0; i < imageArray.length; i++) {
     let random = Math.floor(Math.random() * imageArray.length);
     let temp = imageArray[i];
     imageArray[i] = imageArray[random];
@@ -93,8 +93,8 @@ function showWhichPlayer() {
 }
 
 function showScore() {
-    document.getElementById(pointsPlayer1).innerHTML = pointsPlayer1;
-    document.getElementById(pointsPlayer2).innerHTML = pointsPlayer2;
+    document.getElementById("pointsPlayer1").innerHTML = pointsPlayer1;
+    document.getElementById("pointsPlayer2").innerHTML = pointsPlayer2;
 }
 
 function checkForMatch() {
