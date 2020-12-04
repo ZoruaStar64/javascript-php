@@ -54,7 +54,7 @@ for (var i = 1; i <= 18; i++) {
 
 function flipCard(id) {
     let block = document.getElementById(id);
-    block.style.background = 'url("../img/Memory0' + imageArray[id - 1] + '.png")';
+    block.style.backgroundImage = 'url("../img/Memory' + imageArray[id - 1] + '.png")';
     if (movesMade === 1) {
         flippedCards[0] = imageArray[id - 1];
     } else {

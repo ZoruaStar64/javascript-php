@@ -26,7 +26,7 @@ div#flexcontainer {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    height: 100vh;
+    height: 95vh;
 }
 
 button#nextButton {
@@ -48,7 +48,7 @@ div#playerContainer {
 }
 
 div#currentPlayer {
-    background: deeppink;
+    background: darkred;
     color: white;
     text-transform: uppercase;
     font-weight: 800;
@@ -65,4 +65,11 @@ div.points {
     background: gold;
     padding: 20px;
     border: 1px solid black;
+}
+
+a#refresh {
+    position: center;
+    top: 10px;
+    right: 30px;
+    color: black;
 }
