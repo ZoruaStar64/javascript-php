@@ -138,4 +138,5 @@ function determineWinner() {
     let nextButton = document.getElementById("nextButton");
     nextButton.innerHTML = winner + " has won!";
     nextButton.style.display = 'block';
+
 }

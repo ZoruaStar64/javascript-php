@@ -20,9 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c5475574-7e0c-4a54-bb73-5d31cdf8e08b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/temp.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/temp.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/H6/Memory.css" beforeDir="false" afterPath="$PROJECT_DIR$/H6/Memory.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/H6/Memory.html" beforeDir="false" afterPath="$PROJECT_DIR$/H6/Memory.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/H3/shuffle.html" beforeDir="false" afterPath="$PROJECT_DIR$/H3/shuffle.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/H3/shuffle.js" beforeDir="false" afterPath="$PROJECT_DIR$/H3/shuffle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/H4/car.html" beforeDir="false" afterPath="$PROJECT_DIR$/H4/car.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/H6/Memory.js" beforeDir="false" afterPath="$PROJECT_DIR$/H6/Memory.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -55,7 +58,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/img" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -72,25 +75,25 @@
     <configuration name="Memory.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/javascript/H6/Memory.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="crook.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/javascript/H4/crook.html" useBuiltInWebServerPort="true">
-      <method v="2" />
-    </configuration>
-    <configuration name="imageSlider.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/javascript/H4/imageSlider.html" useBuiltInWebServerPort="true">
+    <configuration name="car.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/javascript/H4/car.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="liker.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/javascript/H5/liker.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="liker.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/H5/liker.js" working-dir="$PROJECT_DIR$/H5">
+    <configuration name="shuffle.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/javascript/H3/shuffle.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="Memory.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/H6/Memory.js" working-dir="$PROJECT_DIR$/H6">
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="JavaScript Debug.Memory.html" />
+        <item itemvalue="Node.js.Memory.js" />
         <item itemvalue="JavaScript Debug.liker.html" />
-        <item itemvalue="Node.js.liker.js" />
-        <item itemvalue="JavaScript Debug.crook.html" />
-        <item itemvalue="JavaScript Debug.imageSlider.html" />
+        <item itemvalue="JavaScript Debug.car.html" />
+        <item itemvalue="JavaScript Debug.shuffle.html" />
       </list>
     </recent_temporary>
   </component>
@@ -115,7 +118,13 @@
       <workItem from="1606814213318" duration="3495000" />
       <workItem from="1606903282392" duration="3117000" />
       <workItem from="1606988217703" duration="9087000" />
-      <workItem from="1607070503263" duration="4933000" />
+      <workItem from="1607070503263" duration="5532000" />
+      <workItem from="1607607351582" duration="945000" />
+      <workItem from="1607689181240" duration="1414000" />
+      <workItem from="1607941472502" duration="553000" />
+      <workItem from="1608120197584" duration="4116000" />
+      <workItem from="1608191623477" duration="13000" />
+      <workItem from="1609753348105" duration="7382000" />
     </task>
     <servers />
   </component>
@@ -139,6 +148,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1605695198456" />
+    <state x="850" y="313" key="FileChooserDialogImpl" timestamp="1608191634667">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="850" y="313" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1608191634667" />
     <state x="461" y="165" key="SettingsEditor" timestamp="1605696167508">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
