@@ -1,5 +1,5 @@
 html {
-    background-color: deepskyblue;
+    background-color: darkslateblue;
     font-family: sans-serif;
 }
 
@@ -72,4 +72,8 @@ a#refresh {
     top: 10px;
     right: 30px;
     color: black;
+    display: block;
+    width: 200px;
+    background-color: darkslategray;
+    height: 30px;
 }

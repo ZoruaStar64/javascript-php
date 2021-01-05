@@ -106,7 +106,8 @@ function checkForMatch() {
         } else {
             pointsPlayer2++;
         }
-        // Switch the player to avoid extra playerswitches
+        // Switch the player another time to let the player with the winningimage have another turn
+        // like in real memory.
         switchPlayer();
         showScore();
 
@@ -122,9 +123,12 @@ function checkForMatch() {
 }
 
 function switchPlayer() {
+    let nextButton = document.getElementById("nextButton");
     if (currentPlayer === 0) {
+        nextButton.innerHTML = "Switch the turn to Player 1!";
         currentPlayer = 1;
     } else {
+        nextButton.innerHTML = "Switch the turn to Player 2!";
         currentPlayer = 0;
     }
 }
