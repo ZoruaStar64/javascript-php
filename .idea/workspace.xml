@@ -21,8 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c5475574-7e0c-4a54-bb73-5d31cdf8e08b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/H6/Memory.css" beforeDir="false" afterPath="$PROJECT_DIR$/H6/Memory.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/H6/Memory.js" beforeDir="false" afterPath="$PROJECT_DIR$/H6/Memory.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/H4/crook.html" beforeDir="false" afterPath="$PROJECT_DIR$/H4/crook.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,25 +58,25 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\sande\javascript\img" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\sande\javascript\img" />
       <recent name="C:\Users\sande\javascript\H2" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\sande\javascript\img" />
-    </key>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.Memory.html">
+  <component name="RunManager" selected="JavaScript Debug.crook.html">
     <configuration name="Memory.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/javascript/H6/Memory.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="car.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/javascript/H4/car.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="liker.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/javascript/H5/liker.html" useBuiltInWebServerPort="true">
+    <configuration name="crook.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/javascript/H4/crook.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="shuffle.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/javascript/H3/shuffle.html" useBuiltInWebServerPort="true">
+    <configuration name="liker.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/javascript/H5/liker.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="Memory.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/H6/Memory.js" working-dir="$PROJECT_DIR$/H6">
@@ -85,11 +84,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.crook.html" />
+        <item itemvalue="JavaScript Debug.liker.html" />
         <item itemvalue="JavaScript Debug.Memory.html" />
         <item itemvalue="Node.js.Memory.js" />
-        <item itemvalue="JavaScript Debug.liker.html" />
         <item itemvalue="JavaScript Debug.car.html" />
-        <item itemvalue="JavaScript Debug.shuffle.html" />
       </list>
     </recent_temporary>
   </component>
@@ -121,7 +120,7 @@
       <workItem from="1608120197584" duration="4116000" />
       <workItem from="1608191623477" duration="13000" />
       <workItem from="1609753348105" duration="7978000" />
-      <workItem from="1609835263364" duration="3271000" />
+      <workItem from="1609835263364" duration="4870000" />
     </task>
     <servers />
   </component>
@@ -145,10 +144,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1605695198456" />
-    <state x="850" y="313" key="FileChooserDialogImpl" timestamp="1608191634667">
+    <state x="850" y="313" key="FileChooserDialogImpl" timestamp="1609850906360">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="850" y="313" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1608191634667" />
+    <state x="850" y="313" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1609850906360" />
     <state x="461" y="165" key="SettingsEditor" timestamp="1605696167508">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

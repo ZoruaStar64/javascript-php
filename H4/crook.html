@@ -28,11 +28,11 @@
 <div id="middle"></div>
 <div id="bottom"></div>
 <script>
-    var imagesTop = [1,2,3,4];
+    var imagesTop = [1,2,3,4,5];
     var tellerTop = 0;
-    var chars = ["M", "L", "W", "WL"];
+    var chars = ["M", "L", "W", "WL", "T"];
     var Top = document.getElementById("top");
-    Top.style.backgroundImage = "url('../img/WLtop.png')";
+    Top.style.backgroundImage = "url('../img/Ttop.png')";
 
 
     Top.addEventListener("click", function() {
@@ -57,15 +57,18 @@
         else if (tellerTop === 4) {
             chars = "WL";
         }
+        else if (tellerTop === 5) {
+            chars = "T"
+        }
         console.log(tellerTop);
         return chars;
     }
 
-    var imagesMiddle = [1,2,3,4];
+    var imagesMiddle = [1,2,3,4,5];
     var tellerMiddle = 0;
-    var charsMiddle = ["M", "L", "W", "WL"];
+    var charsMiddle = ["M", "L", "W", "WL", "T"];
     var Middle = document.getElementById("middle");
-    Middle.style.backgroundImage = "url('../img/WLmiddle.png')";
+    Middle.style.backgroundImage = "url('../img/Tmiddle.png')";
 
 
     Middle.addEventListener("click", function() {
@@ -90,15 +93,18 @@
         else if (tellerMiddle === 4) {
             charsMiddle = "WL";
         }
+        else if (tellerMiddle === 5) {
+            charsMiddle = "T"
+        }
         console.log(tellerMiddle);
         return charsMiddle;
     }
 
-    var imagesBottom = [1,2,3,4];
+    var imagesBottom = [1,2,3,4,5];
     var tellerBottom = 0;
-    var charsBottom = ["M", "L", "W", "WL"];
+    var charsBottom = ["M", "L", "W", "WL", "T"];
     var Bottom = document.getElementById("bottom");
-    Bottom.style.backgroundImage = "url('../img/WLbottom.png')";
+    Bottom.style.backgroundImage = "url('../img/Tbottom.png')";
 
 
     Bottom.addEventListener("click", function() {
@@ -122,6 +128,9 @@
         }
         else if (tellerBottom === 4) {
             charsBottom = "WL";
+        }
+        else if (tellerBottom === 5) {
+            charsBottom = "T"
         }
         console.log(tellerBottom);
         return charsBottom;
