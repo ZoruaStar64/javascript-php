@@ -28,11 +28,11 @@
 <div id="middle"></div>
 <div id="bottom"></div>
 <script>
-    var imagesTop = [1,2,3,4,5];
+    var imagesTop = [1,2,3,4,5,6,7];
     var tellerTop = 0;
-    var chars = ["M", "L", "W", "WL", "T"];
+    var chars = ["M", "L", "W", "WL", "T", "Y", "D"];
     var Top = document.getElementById("top");
-    Top.style.backgroundImage = "url('../img/Ttop.png')";
+    Top.style.backgroundImage = "url('../img/Dtop.png')";
 
 
     Top.addEventListener("click", function() {
@@ -60,15 +60,21 @@
         else if (tellerTop === 5) {
             chars = "T"
         }
+        else if (tellerTop === 6) {
+            chars = "Y"
+        }
+        else if (tellerTop === 7) {
+            chars = "D"
+        }
         console.log(tellerTop);
         return chars;
     }
 
-    var imagesMiddle = [1,2,3,4,5];
+    var imagesMiddle = [1,2,3,4,5,6,7];
     var tellerMiddle = 0;
-    var charsMiddle = ["M", "L", "W", "WL", "T"];
+    var charsMiddle = ["M", "L", "W", "WL", "T", "Y", "D"];
     var Middle = document.getElementById("middle");
-    Middle.style.backgroundImage = "url('../img/Tmiddle.png')";
+    Middle.style.backgroundImage = "url('../img/Dmiddle.png')";
 
 
     Middle.addEventListener("click", function() {
@@ -96,15 +102,21 @@
         else if (tellerMiddle === 5) {
             charsMiddle = "T"
         }
+        else if (tellerMiddle === 6) {
+            charsMiddle = "Y"
+        }
+        else if (tellerMiddle === 7) {
+            charsMiddle = "D"
+        }
         console.log(tellerMiddle);
         return charsMiddle;
     }
 
-    var imagesBottom = [1,2,3,4,5];
+    var imagesBottom = [1,2,3,4,5,6,7];
     var tellerBottom = 0;
-    var charsBottom = ["M", "L", "W", "WL", "T"];
+    var charsBottom = ["M", "L", "W", "WL", "T", "Y", "D"];
     var Bottom = document.getElementById("bottom");
-    Bottom.style.backgroundImage = "url('../img/Tbottom.png')";
+    Bottom.style.backgroundImage = "url('../img/Dbottom.png')";
 
 
     Bottom.addEventListener("click", function() {
@@ -131,6 +143,12 @@
         }
         else if (tellerBottom === 5) {
             charsBottom = "T"
+        }
+        else if (tellerBottom === 6) {
+            charsBottom = "Y"
+        }
+        else if (tellerBottom === 7) {
+            charsBottom = "D"
         }
         console.log(tellerBottom);
         return charsBottom;
