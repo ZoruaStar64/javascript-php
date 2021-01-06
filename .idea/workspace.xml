@@ -20,8 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c5475574-7e0c-4a54-bb73-5d31cdf8e08b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Extra's/randomImageSlider.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Extra's/randomImageSlider.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/H4/crook.html" beforeDir="false" afterPath="$PROJECT_DIR$/H4/crook.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,11 +67,8 @@
       <recent name="C:\Users\sande\javascript\H2" />
     </key>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.crook.html">
+  <component name="RunManager" selected="JavaScript Debug.randomImageSlider.html">
     <configuration name="Memory.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/javascript/H6/Memory.html" useBuiltInWebServerPort="true">
-      <method v="2" />
-    </configuration>
-    <configuration name="car.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/javascript/H4/car.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="crook.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/javascript/H4/crook.html" useBuiltInWebServerPort="true">
@@ -79,16 +77,19 @@
     <configuration name="liker.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/javascript/H5/liker.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
+    <configuration name="randomImageSlider.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/javascript/Extra's/randomImageSlider.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
     <configuration name="Memory.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/H6/Memory.js" working-dir="$PROJECT_DIR$/H6">
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.randomImageSlider.html" />
         <item itemvalue="JavaScript Debug.crook.html" />
         <item itemvalue="JavaScript Debug.liker.html" />
         <item itemvalue="JavaScript Debug.Memory.html" />
         <item itemvalue="Node.js.Memory.js" />
-        <item itemvalue="JavaScript Debug.car.html" />
       </list>
     </recent_temporary>
   </component>
@@ -120,7 +121,8 @@
       <workItem from="1608120197584" duration="4116000" />
       <workItem from="1608191623477" duration="13000" />
       <workItem from="1609753348105" duration="7978000" />
-      <workItem from="1609835263364" duration="5963000" />
+      <workItem from="1609835263364" duration="6558000" />
+      <workItem from="1609920227565" duration="3662000" />
     </task>
     <servers />
   </component>
