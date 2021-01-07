@@ -11,10 +11,10 @@ slideholder.addEventListener("click", function() {
 function getLink() {
     random = Math.floor(Math.random() * 9) + 1;
 
-
+    document.getElementById("randomNumber").innerHTML = "" + random;
     console.log(random);
     return random;
 }
 
-//document.getElementById("randomShower").innerHTML = "" + random;
+
 
