@@ -20,6 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c5475574-7e0c-4a54-bb73-5d31cdf8e08b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/H4/car.html" beforeDir="false" afterPath="$PROJECT_DIR$/H4/car.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -65,8 +67,8 @@
       <recent name="C:\Users\sande\javascript\H2" />
     </key>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.index.html">
-    <configuration name="Memory.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/javascript/H6/Memory.html" useBuiltInWebServerPort="true">
+  <component name="RunManager" selected="JavaScript Debug.car.html">
+    <configuration name="car.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/javascript/H4/car.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="crook.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/javascript/H4/crook.html" useBuiltInWebServerPort="true">
@@ -83,11 +85,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.car.html" />
         <item itemvalue="JavaScript Debug.index.html" />
         <item itemvalue="JavaScript Debug.randomImageSlider.html" />
         <item itemvalue="JavaScript Debug.crook.html" />
         <item itemvalue="JavaScript Debug.liker.html" />
-        <item itemvalue="JavaScript Debug.Memory.html" />
       </list>
     </recent_temporary>
   </component>
@@ -121,6 +123,7 @@
       <workItem from="1609753348105" duration="7978000" />
       <workItem from="1609835263364" duration="6558000" />
       <workItem from="1609920227565" duration="4245000" />
+      <workItem from="1610006505447" duration="475000" />
     </task>
     <servers />
   </component>
