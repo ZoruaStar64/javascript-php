@@ -1,0 +1,102 @@
+body {
+    background-color: rgb(231, 95, 5);
+}
+
+div.flexcontainer {
+    size: 95vh;
+}
+
+div.playerOne {
+    display: block;
+    background-color: sandybrown;
+    width: 350px;
+    height: 600px;
+    float: left;
+    margin-top: 50px;
+    margin-left: 10px;
+}
+
+div.playerTwo {
+    display: block;
+    background-color: sandybrown;
+    width: 350px;
+    height: 600px;
+    float: right;
+    margin-top: 50px;
+    margin-right: 10px;
+}
+
+div.boardPlusDice {
+    display: block;
+    background-color: #c8c6c6;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    float: left;
+    margin-left: 65px;
+    margin-top: 65px;
+}
+
+div.outerBoardRing {
+    display: block;
+    background-color: #acacac;
+    width: 730px;
+    height: 730px;
+    border-radius: 50%;
+    float: left;
+    margin-left: 185px;
+    margin-top: 25px;
+}
+
+div.nextButton {
+    display: block;
+    background-color: #d04b03;
+    color: black;
+    border: 2px black;
+    border-radius: 50%;
+    text-align: center;
+
+
+    width: 200px;
+    height: 30px;
+}
+
+a.refresh {
+    display: block;
+    background-color: #d04b03;
+    color: black;
+    border: 2px black;
+    border-radius: 50%;
+    text-align: center;
+    padding-top: 10px;
+    float: left;
+    width: 200px;
+    height: 30px;
+
+}
+
+p.one {
+    display: block;
+    background-color: #d04b03;
+    color: black;
+    border: 2px black;
+    border-radius: 50%;
+    text-align: center;
+    padding-top: 10px;
+    margin-left: 70px;
+    width: 200px;
+    height: 30px;
+}
+
+p.two {
+    display: block;
+    background-color: #d04b03;
+    color: black;
+    border: 2px black;
+    border-radius: 50%;
+    text-align: center;
+    padding-top: 10px;
+    margin-left: 70px;
+    width: 200px;
+    height: 30px;
+}
