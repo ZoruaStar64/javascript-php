@@ -67,7 +67,7 @@
       <recent name="C:\Users\sande\javascript\H2" />
     </key>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.Memory.html">
+  <component name="RunManager" selected="JavaScript Debug.Yathzee.html">
     <configuration name="Memory.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/javascript/H6/Memory.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -85,8 +85,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JavaScript Debug.Memory.html" />
         <item itemvalue="JavaScript Debug.Yathzee.html" />
+        <item itemvalue="JavaScript Debug.Memory.html" />
         <item itemvalue="JavaScript Debug.randomImageSlider.html" />
         <item itemvalue="JavaScript Debug.car.html" />
         <item itemvalue="JavaScript Debug.index.html" />
@@ -125,7 +125,8 @@
       <workItem from="1609920227565" duration="4245000" />
       <workItem from="1610006505447" duration="2637000" />
       <workItem from="1610366588264" duration="1040000" />
-      <workItem from="1610626718158" duration="3638000" />
+      <workItem from="1610626718158" duration="4234000" />
+      <workItem from="1610705318411" duration="2690000" />
     </task>
     <servers />
   </component>
