@@ -20,6 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c5475574-7e0c-4a54-bb73-5d31cdf8e08b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/img/dice1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/dice2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/dice3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/dice4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/dice5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/dice6.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/H6/Yathzee.css" beforeDir="false" afterPath="$PROJECT_DIR$/H6/Yathzee.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/H6/Yathzee.html" beforeDir="false" afterPath="$PROJECT_DIR$/H6/Yathzee.html" afterDir="false" />
@@ -59,12 +65,12 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\sande\javascript\img" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\sande\javascript\img" />
       <recent name="C:\Users\sande\javascript\H2" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\sande\javascript\img" />
     </key>
   </component>
   <component name="RunManager" selected="JavaScript Debug.Yathzee.html">
@@ -127,7 +133,8 @@
       <workItem from="1610366588264" duration="1040000" />
       <workItem from="1610626718158" duration="4234000" />
       <workItem from="1610705318411" duration="2751000" />
-      <workItem from="1610973217649" duration="2957000" />
+      <workItem from="1610973217649" duration="4183000" />
+      <workItem from="1611042129772" duration="2423000" />
     </task>
     <servers />
   </component>

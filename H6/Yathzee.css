@@ -44,13 +44,32 @@ div.playerTwo {
 div.dices {
     position: absolute;
     display: grid;
-    top: 400px;
-    left: 690px;
+    top: 200px;
+    left: 650px;
     grid-template-columns: repeat(5, 100px);
-    grid-template-rows: repeat(1, 100px);
+    grid-template-rows: repeat(5, 100px);
     grid-gap: 15px 15px;
-    background-color: white;
-
+    background-color: #c8c6c6;
+}
+div.dices img#diceOne {
+    grid-row: 1 / 5;
+    grid-column: 3 / 5;
+}
+div.dices img#diceTwo img#diceThree {
+    grid-row: 3 / 5;
+    grid-column: 1 / 5;
+}
+div.dices img#diceThree {
+    grid-row: 3 / 5;
+    grid-column: 5 / 5;
+}
+div.dices img#diceFour {
+    grid-row: 5 / 5;
+    grid-column: 2 / 5;
+}
+div.dices img#diceFive {
+    grid-row: 5 / 5;
+    grid-column: 4 / 5;
 }
 
 div.innerBoardRing {
