@@ -76,19 +76,19 @@
     <configuration name="car.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/javascript/H4/car.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/javascript/index.html" useBuiltInWebServerPort="true">
+    <configuration name="randomImageSlider.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/javascript/Extra's/randomImageSlider.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="randomImageSlider.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/javascript/Extra's/randomImageSlider.html" useBuiltInWebServerPort="true">
+    <configuration name="Yathzee.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/H6/Yathzee.js" working-dir="$PROJECT_DIR$/H6">
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="JavaScript Debug.Yathzee.html" />
+        <item itemvalue="Node.js.Yathzee.js" />
         <item itemvalue="JavaScript Debug.Memory.html" />
         <item itemvalue="JavaScript Debug.randomImageSlider.html" />
         <item itemvalue="JavaScript Debug.car.html" />
-        <item itemvalue="JavaScript Debug.index.html" />
       </list>
     </recent_temporary>
   </component>
@@ -130,7 +130,8 @@
       <workItem from="1611042129772" duration="5692000" />
       <workItem from="1611063618498" duration="752000" />
       <workItem from="1611151882259" duration="1060000" />
-      <workItem from="1611231053566" duration="3389000" />
+      <workItem from="1611231053566" duration="3558000" />
+      <workItem from="1611300901809" duration="3901000" />
     </task>
     <servers />
   </component>

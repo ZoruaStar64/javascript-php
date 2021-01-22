@@ -1,3 +1,5 @@
+"use strict";
+
 let winner = null;
 let rollsLeft = 3;
 let diceNumbers = [];
@@ -7,57 +9,72 @@ let totalPointsPlayer1 = 0;
 let totalPointsPlayer2 = 0;
 let players = ["Player 1", "Player 2"];
 let currentPlayer = Math.floor(Math.random() * 2);
-let dice = document.getElementsByTagName("img")
+//let dice = document.getElementsByTagName("img")
 
+const dice1Image = document.getElementById("diceOne");
+const dice2Image = document.getElementById("diceTwo");
+const dice3Image = document.getElementById("diceThree");
+const dice4Image = document.getElementById("diceFour");
+const dice5Image = document.getElementById("diceFive")
+const diceImages = ["dice1Image", "dice2Image", "dice3Image", "dice4Image", "dice5Image"];
+
+
+//de andere vier ophalen
+console.log(dice1Image);
 // let keepDice = function() {
 //    if (this.id) {removeEventListener('click', rollsLeft)
 //    }
 // };
 
-let rollButton = document.getElementsByClassName("rollButton");
-rollButton.addEventListener('çlick', rollDices())
+let rollButton = document.querySelector(".rollButton");
+console.log(rollButton);
+rollButton.addEventListener("click", rollDices);
 
 function rollDices() {
     if (rollsLeft > 0) {
-        for (let i = 0; i < diceNumbers.length; i++) {
-            let random = Math.floor(Math.random() * diceNumbers.length);
-            let temp = diceNumbers[i];
-            diceNumbers[i] = diceNumbers[random];
-            diceNumbers[random] = temp;
-        }
-        }
-        rollsLeft = rollsLeft -1;
-        if (rollsLeft === 3) {
-           let rollButton = document.getElementsByClassName("rollButton");
-            rollButton.innerHTML = "Rolls left = 3"
+        //array vullen
+
+        for (let teller = 0; teller < 5; teller++){
+            let randomDiceRoll = Math.floor(Math.random() * 6 + 1);
+            diceImages[teller].src = "../img/dice" + randomDiceRoll +".jpg"; //template literal
+
+            //om de beurt vullen
         }
 
-        else if (rollsLeft === 2) {
-            let rollButton = document.getElementsByClassName("rollButton");
-            rollButton.innerHTML = "Rolls left = 3"
-        }
 
-        else if (rollsLeft === 1) {
-            let rollButton = document.getElementsByClassName("rollButton");
-            rollButton.innerHTML = "Rolls left = 3"
-        }
-
-        else if (rollsLeft === 0) {
-            rollButton.removeEventListener('click');
-        }
+    }
+    rollsLeft = rollsLeft -1;
+    if (rollsLeft === 3) {
+       let rollButton = document.querySelector(".rollButton");
+        rollButton.innerHTML = "Rolls left = 3"
     }
 
+    else if (rollsLeft === 2) {
+        let rollButton = document.querySelector(".rollButton");
+        rollButton.innerHTML = "Rolls left = 3"
+    }
 
+    else if (rollsLeft === 1) {
+        let rollButton = document.querySelector(".rollButton");
+        rollButton.innerHTML = "Rolls left = 3"
+    }
+
+    else if (rollsLeft === 0) {
+        rollButton.removeEventListener('click', rollDices);
+    }
+}
 
 
 function resetVariables() {
-    waitingForNextMove = false;
-    let nextButton = document.getElementsByClassName("nextButton");
-    nextButton.addEventListener('click', );
+    rollsLeft = 3;
+
 }
 
+let nextButton = document.querySelector(".nextButton");
+nextButton.addEventListener('click', switchPlayer, resetVariables);
+
 function switchPlayer() {
-    let nextButton = document.getElementById("nextButton");
+    let nextButton = document.querySelector(".nextButton");
     if (currentPlayer === 0) {
         nextButton.innerHTML = "Switch the turn to Player 1!";
         currentPlayer = 1;
