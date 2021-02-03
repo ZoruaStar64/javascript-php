@@ -109,6 +109,14 @@ div.infoButton {
     margin-top: 35px;
 }
 
+div.infoButton:hover {
+    background-color: #056ddb;
+}
+
+div.infoButton:active {
+    background-color: #00519d;
+}
+
 div.rulesButton {
     display: block;
     background-color: limegreen;
@@ -122,6 +130,14 @@ div.rulesButton {
     padding-top: 30px;
     margin-top: 35px;
     margin-left: 10px;
+}
+
+div.rulesButton:hover {
+    background-color: #12c412;
+}
+
+div.rulesButton:active {
+    background-color: #009b00;
 }
 
 div.rollButton {
@@ -138,6 +154,14 @@ div.rollButton {
     padding-top: 30px;
 }
 
+div.rollButton:hover {
+    background-color: #d0b010;
+}
+
+div.rollButton:active {
+    background-color: #a08301;
+}
+
 div.nextButton {
     display: block;
     background-color: #9d1919;
@@ -150,6 +174,14 @@ div.nextButton {
     height: 50px;
     margin-left: 500px;
     padding-top: 30px;
+}
+
+div.nextButton:hover {
+    background-color: #9d0c0c;
+}
+
+div.nextButton:active {
+    background-color: #960000;
 }
 
 a.refresh {
@@ -191,3 +223,28 @@ p.two {
     width: 200px;
     height: 30px;
 }
+
+/*
+a:link {
+    color: #0479b3;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:visited {
+    color: DarkCyan;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:hover {
+    color: white;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+a:active {
+    color: yellow;
+    background-color: transparent;
+    text-decoration: underline;
+}*/

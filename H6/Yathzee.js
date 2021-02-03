@@ -21,21 +21,24 @@ const diceImages = ["dice1Image", "dice2Image", "dice3Image", "dice4Image", "dic
 
 //de andere vier ophalen
 console.log(dice1Image);
+console.log(dice2Image);
+console.log(dice3Image);
+console.log(dice4Image);
+console.log(dice5Image);
 // let keepDice = function() {
 //    if (this.id) {removeEventListener('click', rollsLeft)
 //    }
 // };
 
-let rollButton = document.querySelector(".rollButton");
-console.log(rollButton);
-rollButton.addEventListener("click", rollDices);
+
 
 function rollDices() {
     if (rollsLeft > 0) {
         //array vullen
 
-        for (let teller = 0; teller < 5; teller++){
+        for (let teller = 1; teller < 6; teller++){
             let randomDiceRoll = Math.floor(Math.random() * 6 + 1);
+            //randomDiceRoll.push(randomDiceRoll);
             diceImages[teller].src = "../img/dice" + randomDiceRoll +".jpg"; //template literal
 
             //om de beurt vullen
@@ -51,27 +54,30 @@ function rollDices() {
 
     else if (rollsLeft === 2) {
         let rollButton = document.querySelector(".rollButton");
-        rollButton.innerHTML = "Rolls left = 3"
+        rollButton.innerHTML = "Rolls left = 2"
     }
 
     else if (rollsLeft === 1) {
         let rollButton = document.querySelector(".rollButton");
-        rollButton.innerHTML = "Rolls left = 3"
+        rollButton.innerHTML = "Rolls left = 1"
     }
 
     else if (rollsLeft === 0) {
+        rollButton.innerHTML = "No more rolls left!"
         rollButton.removeEventListener('click', rollDices);
     }
 }
 
+let rollButton = document.querySelector(".rollButton");
+console.log(rollButton);
+rollButton.addEventListener("click", rollDices);
 
 function resetVariables() {
     rollsLeft = 3;
 
 }
 
-let nextButton = document.querySelector(".nextButton");
-nextButton.addEventListener('click', switchPlayer, resetVariables);
+
 
 function switchPlayer() {
     let nextButton = document.querySelector(".nextButton");
@@ -83,3 +89,6 @@ function switchPlayer() {
         currentPlayer = 0;
     }
 }
+
+let nextButton = document.querySelector(".nextButton");
+nextButton.addEventListener('click', switchPlayer, resetVariables);
