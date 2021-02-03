@@ -160,6 +160,7 @@ div.rollButton:hover {
 
 div.rollButton:active {
     background-color: #a08301;
+    color: #cd6100;
 }
 
 div.nextButton {

@@ -16,15 +16,11 @@ const dice2Image = document.getElementById("diceTwo");
 const dice3Image = document.getElementById("diceThree");
 const dice4Image = document.getElementById("diceFour");
 const dice5Image = document.getElementById("diceFive")
-const diceImages = ["dice1Image", "dice2Image", "dice3Image", "dice4Image", "dice5Image"];
+const diceImages = [dice1Image, dice2Image, dice3Image, dice4Image, dice5Image];
 
 
 //de andere vier ophalen
-console.log(dice1Image);
-console.log(dice2Image);
-console.log(dice3Image);
-console.log(dice4Image);
-console.log(dice5Image);
+
 // let keepDice = function() {
 //    if (this.id) {removeEventListener('click', rollsLeft)
 //    }
@@ -36,7 +32,7 @@ function rollDices() {
     if (rollsLeft > 0) {
         //array vullen
 
-        for (let teller = 1; teller < 6; teller++){
+        for (let teller = 0; teller < 5; teller++){
             let randomDiceRoll = Math.floor(Math.random() * 6 + 1);
             //randomDiceRoll.push(randomDiceRoll);
             diceImages[teller].src = "../img/dice" + randomDiceRoll +".jpg"; //template literal
@@ -45,7 +41,32 @@ function rollDices() {
         }
         rollsLeft = rollsLeft -1;
     }
+    if (rollsLeft === 3) {
+        //let rollButton = document.querySelector(".rollButton");
+        rollButton.innerHTML = "Rolls left = 3"
+        rollButton.style.color = "green"
+    }
+
+    else if (rollsLeft === 2) {
+        //let rollButton = document.querySelector(".rollButton");
+        rollButton.innerHTML = "Rolls left = 2"
+        rollButton.style.color = "yellow"
+    }
+
+    else if (rollsLeft === 1) {
+        //let rollButton = document.querySelector(".rollButton");
+        rollButton.innerHTML = "Rolls left = 1"
+        rollButton.style.color = "#cd6100"
+    }
+
+    else if (rollsLeft === 0) {
+        rollButton.innerHTML = "No more rolls left!"
+        rollButton.style.color = "red"
+        rollButton.removeEventListener('click', rollDices);
+    }
 }
+
+
 
 let rollButton = document.querySelector(".rollButton");
 console.log(rollButton);
@@ -57,31 +78,12 @@ if (rollsLeft === 3) {
     rollButton.style.color = "green"
 }
 
-else if (rollsLeft === 2) {
-    //let rollButton = document.querySelector(".rollButton");
-    rollButton.innerHTML = "Rolls left = 2"
-    rollButton.style.color = "yellow"
-}
-
-else if (rollsLeft === 1) {
-    //let rollButton = document.querySelector(".rollButton");
-    rollButton.innerHTML = "Rolls left = 1"
-    rollButton.style.color = "orange"
-}
-
-else if (rollsLeft === 0) {
-    rollButton.innerHTML = "No more rolls left!"
-    rollButton.style.color = "red"
-    rollButton.removeEventListener('click', rollDices);
-}
-
 
 
 function resetVariables() {
     rollsLeft = 3;
 
 }
-
 
 
 function switchPlayer() {
