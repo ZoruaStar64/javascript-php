@@ -69,7 +69,6 @@ console.log(rollButton);
 rollButton.addEventListener("click", rollDices);
 
 if (rollsLeft === 3) {
-    //let rollButton = document.querySelector(".rollButton");
     rollButton.innerHTML = "Rolls left = 3"
     rollButton.style.color = "green"
 }
@@ -78,8 +77,9 @@ if (rollsLeft === 3) {
 
 function resetVariables() {
     rollsLeft = 3;
-    //rollButton.addEventListener("click", rollDices);
-    console.log(rollsLeft)
+    rollButton.addEventListener("click", rollDices);
+    rollButton.innerHTML = "Rolls left = 3"
+    rollButton.style.color = "green"
 }
 
 
@@ -88,13 +88,12 @@ function switchPlayer() {
     if (currentPlayer === 0) {
         nextButton.innerHTML = "Switch the turn to Player 1!";
         currentPlayer = 1;
-        rollButton.addEventListener('click', rollDices);
     } else {
         nextButton.innerHTML = "Switch the turn to Player 2!";
         currentPlayer = 0;
-        rollButton.addEventListener('click', rollDices);
     }
 }
 
 let nextButton = document.querySelector(".nextButton");
-nextButton.addEventListener('click', switchPlayer, resetVariables);
+nextButton.addEventListener('click', resetVariables);
+nextButton.addEventListener('click', switchPlayer);
