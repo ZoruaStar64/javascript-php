@@ -18,14 +18,10 @@ const dice4Image = document.getElementById("diceFour");
 const dice5Image = document.getElementById("diceFive")
 const diceImages = [dice1Image, dice2Image, dice3Image, dice4Image, dice5Image];
 
-
-//de andere vier ophalen
-
 // let keepDice = function() {
 //    if (this.id) {removeEventListener('click', rollsLeft)
 //    }
 // };
-
 
 
 function rollDices() {
@@ -42,19 +38,19 @@ function rollDices() {
         rollsLeft = rollsLeft -1;
     }
     if (rollsLeft === 3) {
-        //let rollButton = document.querySelector(".rollButton");
+
         rollButton.innerHTML = "Rolls left = 3"
         rollButton.style.color = "green"
     }
 
     else if (rollsLeft === 2) {
-        //let rollButton = document.querySelector(".rollButton");
+
         rollButton.innerHTML = "Rolls left = 2"
         rollButton.style.color = "yellow"
     }
 
     else if (rollsLeft === 1) {
-        //let rollButton = document.querySelector(".rollButton");
+
         rollButton.innerHTML = "Rolls left = 1"
         rollButton.style.color = "#cd6100"
     }
@@ -82,7 +78,8 @@ if (rollsLeft === 3) {
 
 function resetVariables() {
     rollsLeft = 3;
-
+    //rollButton.addEventListener("click", rollDices);
+    console.log(rollsLeft)
 }
 
 
@@ -91,9 +88,11 @@ function switchPlayer() {
     if (currentPlayer === 0) {
         nextButton.innerHTML = "Switch the turn to Player 1!";
         currentPlayer = 1;
+        rollButton.addEventListener('click', rollDices);
     } else {
         nextButton.innerHTML = "Switch the turn to Player 2!";
         currentPlayer = 0;
+        rollButton.addEventListener('click', rollDices);
     }
 }
 
