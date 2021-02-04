@@ -1,6 +1,10 @@
+/** {
+    width: 600px
+}*/
+
 body {
     background-color: rgb(231, 95, 5);
-    height: 1000px;
+
 }
 
 div.flexcontainer {
@@ -54,22 +58,32 @@ div.dices {
 div.dices img#diceOne {
     grid-row: 1 / 5;
     grid-column: 3 / 5;
+    width: 100px;
+    height: 100px;
 }
 div.dices img#diceTwo {
     grid-row: 3 / 5;
     grid-column: 1 / 5;
+    width: 100px;
+    height: 100px;
 }
 div.dices img#diceThree {
     grid-row: 3 / 5;
     grid-column: 5 / 5;
+    width: 100px;
+    height: 100px;
 }
 div.dices img#diceFour {
     grid-row: 5 / 5;
     grid-column: 2 / 5;
+    width: 100px;
+    height: 100px;
 }
 div.dices img#diceFive {
     grid-row: 5 / 5;
     grid-column: 4 / 5;
+    width: 100px;
+    height: 100px;
 }
 
 div.innerBoardRing {

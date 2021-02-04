@@ -27,14 +27,17 @@ const diceImages = [dice1Image, dice2Image, dice3Image, dice4Image, dice5Image];
 function rollDices() {
     if (rollsLeft > 0) {
         //array vullen
-
+        diceNumbers = [];
         for (let teller = 0; teller < 5; teller++){
-            let randomDiceRoll = Math.floor(Math.random() * 6 + 1);
-            //randomDiceRoll.push(randomDiceRoll);
-            diceImages[teller].src = "../img/dice" + randomDiceRoll +".jpg"; //template literal
-            //diceImages[teller].style.backgroundImage = 'url("../img/dice' + randomDiceRoll + '.jpg")';
-            //om de beurt vullen
-        }
+                let randomDiceRoll = Math.floor(Math.random() * 6 + 1);
+                diceNumbers.push(randomDiceRoll);
+                console.log(randomDiceRoll);
+                console.log(diceNumbers);
+
+                diceImages[teller].src = "../img/dice" + randomDiceRoll + ".jpg"; //template literal
+                //om de beurt vullen
+            }
+
         rollsLeft = rollsLeft -1;
     }
     if (rollsLeft === 3) {
