@@ -4,6 +4,7 @@ let winner = null;
 let rollsLeft = 3;
 let diceNumbers = [];
 let dicesClicked = ["1", "2", "3", "4", "5"];
+let dicesClickedTotal = 0;
 let waitingForNextMove = true;
 let totalPointsPlayer1 = 0;
 let totalPointsPlayer2 = 0;
@@ -83,6 +84,9 @@ function resetVariables() {
     rollButton.addEventListener("click", rollDices);
     rollButton.innerHTML = "Rolls left = 3"
     rollButton.style.color = "green"
+    //diceImages.src = "../img/dice0.jpg"
+    diceNumbers = []
+    console.log(diceNumbers);
 }
 
 
