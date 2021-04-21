@@ -7,6 +7,19 @@ body {
 
 }
 
+label {
+    font-size: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+
+}
+
+
+
+input {
+    cursor: grab;
+}
+
 div.flexcontainer {
     size: 100vh;
 }
