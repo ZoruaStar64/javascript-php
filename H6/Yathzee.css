@@ -14,10 +14,19 @@ label {
 
 }
 
-
+p.parts {
+    font-size: 28px;
+    margin: 0;
+    border-bottom: 5px solid #d04b03;
+    border-top: 5px solid #d04b03;
+}
 
 input {
     cursor: grab;
+    float: right;
+    margin-right: 20px;
+    background-color: #d04b03;
+    border-color: #6d2803;
 }
 
 div.flexcontainer {

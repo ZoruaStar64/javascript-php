@@ -10,94 +10,94 @@
 
     <div class="gameContainer">
     <div class="playerOne"><p class="one">Player One</p>
-        <p style="font-size: 28px; margin: 0;
-         border-bottom: 5px solid #d04b03; border-top: 5px solid #d04b03">
+        <p class="parts">
             Part 1/Basic Moves</p>
 
         <label> Aces :
-            <input type="checkbox">
+            <input type="submit" id="P1Aces" value="+ 0 Points">
         </label>
 
         <br>
 
         <label> Twos :
-            <input type="checkbox">
+            <input type="submit" id="P1Twos" value="+ 0 Points">
         </label>
 
         <br>
 
         <label> Threes :
-            <input type="checkbox">
+            <input type="submit" id="P1Threes" value="+ 0 Points">
         </label>
 
         <br>
 
         <label> Fours :
-            <input type="checkbox">
+            <input type="submit" id="P1Fours" value="+ 0 Points">
         </label>
 
         <br>
 
         <label> Fives :
-            <input type="checkbox">
+            <input type="submit" id="P1Fives" value="+ 0 Points">
         </label>
 
         <br>
 
         <label> Sixes :
-            <input type="checkbox">
+            <input type="submit" id="P1Sixes" value="+ 0 Points">
         </label>
 
         <br>
 
+        <div style="margin: 0; border-top: 2px solid #d04b03">
         <label style="margin-bottom: 0">
             Extra bonus points
             <br>
             <label style="font-size: 15px">
-                if total basic points => 63
+                (+35 points)
+            </label>
+            <br>
+            <label style="font-size: 15px">
+                if total top points => 63
             </label>
         </label>
+        </div>
 
-        <br>
-
-        <label>Total Top half : <span id="P1Top"></span></label>
-
-        <p style="font-size: 28px; margin: 0;
-         border-bottom: 5px solid #d04b03; border-top: 5px solid #d04b03">
+        <p class="parts">
             Part 2/Advanced Moves</p>
 
         <label> Three of a Kind :
-            <input type="checkbox">
+            <input type="submit" id="P1X3" value="+ 0 Points">
         </label>
 
         <br>
 
-        <label> Four of a kind :
-            <input type="checkbox">
+        <label> Four of a Kind :
+            <input type="submit" id="P1X4" value="+ 0 Points">
         </label>
 
         <br>
 
         <label> Full House :
-            <input type="checkbox">
+            <input type="submit" id="P1House" value="+ 0 Points">
         </label>
 
         <br>
 
         <label> Small Street :
-            <input type="checkbox">
+            <input type="submit" id="P1SmallS" value="+ 0 Points">
         </label>
 
         <br>
 
         <label> Large Street :
-            <input type="checkbox">
+            <input type="submit" id="P1LargeS" value="+ 0 Points">
         </label>
 
         <br>
 
         <label> Yathzee :
-            <input type="checkbox">
+            <input type="submit" id="P1Yathzee" value="+ 0 Points">
             <br>
             <label style="font-size: 15px; margin-left: 20px">
                 (Five of a kind)
@@ -107,7 +107,7 @@
         <br>
 
         <label> Chance :
-            <input type="checkbox">
+            <input type="submit" id="P1Chance" value="+ 0 Points">
             <br>
             <label style="font-size: 15px; margin-left: 20px">
                 (Numbers of all Dices combined)
@@ -115,8 +115,16 @@
         </label>
         <br>
 
+
+        <p class="parts">Summary of total points</p>
+
+        <label>Total Top half : <span id="P1Top"></span></label>
+        <br>
         <label>Total Bottom half : <span id="P1Bottom"></span></label>
+        <br>
+        <label>Combined Total/Final Score : <span id="P1Total"></span></label>
     </div>
+
         <div class="rulesButton" style="display: block">Click to view the Rules!</div>
     <div class="outerBoardRing">
         <div class="innerBoardRing">
@@ -130,8 +138,121 @@
         </div>
     </div>
         <div class="infoButton" style="display: block">Click to<br> view some answers to your questions</div>
-    <div class="playerTwo"><p class="two">Player Two</p>
 
+    <div class="playerTwo"><p class="two">Player Two</p>
+        <p class="parts">
+            Part 1/Basic Moves</p>
+
+        <label> Aces :
+            <input type="submit" name="P2Aces">
+        </label>
+
+        <br>
+
+        <label> Twos :
+            <input type="submit" name="P2Twos">
+        </label>
+
+        <br>
+
+        <label> Threes :
+            <input type="submit" name="P2Threes">
+        </label>
+
+        <br>
+
+        <label> Fours :
+            <input type="submit" name="P2Fours">
+        </label>
+
+        <br>
+
+        <label> Fives :
+            <input type="submit" name="P2Fives">
+        </label>
+
+        <br>
+
+        <label> Sixes :
+            <input type="submit" name="P2Sixes">
+        </label>
+
+        <br>
+
+        <div style="margin: 0; border-top: 2px solid #d04b03">
+            <label style="margin-bottom: 0">
+                Extra bonus points
+                <br>
+                <label style="font-size: 15px">
+                    (+35 points)
+                </label>
+                <br>
+                <label style="font-size: 15px">
+                    if total top points => 63
+                </label>
+            </label>
+        </div>
+
+        <p class="parts">
+            Part 2/Advanced Moves</p>
+
+        <label> Three of a Kind :
+            <input type="submit" name="P2X3">
+        </label>
+
+        <br>
+
+        <label> Four of a Kind :
+            <input type="submit" name="P2X4">
+        </label>
+
+        <br>
+
+        <label> Full House :
+            <input type="submit" name="P2House">
+        </label>
+
+        <br>
+
+        <label> Small Street :
+            <input type="submit" name="P2SmallS">
+        </label>
+
+        <br>
+
+        <label> Large Street :
+            <input type="submit" name="P2LargeS">
+        </label>
+
+        <br>
+
+        <label> Yathzee :
+            <input type="submit" name="P2Yathzee">
+            <br>
+            <label style="font-size: 15px; margin-left: 20px">
+                (Five of a kind)
+            </label>
+        </label>
+
+        <br>
+
+        <label> Chance :
+            <input type="submit" name="P2Chance">
+            <br>
+            <label style="font-size: 15px; margin-left: 20px">
+                (Numbers of all Dices combined)
+            </label>
+        </label>
+        <br>
+
+
+        <p class="parts">Summary of total points</p>
+
+        <label>Total Top half : <span id="P2Top"></span></label>
+        <br>
+        <label>Total Bottom half : <span id="P2Bottom"></span></label>
+        <br>
+        <label>Combined Total/Final Score : <span id="P2Total"></span></label>
     </div>
     </div>
 
