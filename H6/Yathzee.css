@@ -29,6 +29,12 @@ input {
     border-color: #6d2803;
 }
 
+#bonusImageP1 {
+    float: right;
+    margin-right: 40px;
+    margin-top: 20px;
+}
+
 div.flexcontainer {
     size: 100vh;
 }

@@ -3,17 +3,26 @@
 let winner = null;
 let rollsLeft = 3;
 let diceNumbers = [];
+
 let ones = 0;
 let twos = 0;
 let threes = 0;
 let fours = 0;
 let fives = 0;
 let sixes = 0;
+
 let dicesClicked = ["1", "2", "3", "4", "5"];
 let dicesClickedTotal = 0;
 let waitingForNextMove = true;
-let totalPointsPlayer1 = 0;
-let totalPointsPlayer2 = 0;
+
+let topPointsPlayer1 = 0;
+let bottomPointsPlayer1 = 0
+let totalPointsPlayer1 = topPointsPlayer1 + bottomPointsPlayer1;
+
+let topPointsPlayer2 = 0;
+let bottomPointsPlayer2 = 0;
+let totalPointsPlayer2 = topPointsPlayer2 + bottomPointsPlayer2;
+
 let players = ["Player 1", "Player 2"];
 let currentPlayer = Math.floor(Math.random() * 2);
 //let dice = document.getElementsByTagName("img")
@@ -24,6 +33,15 @@ const dice3Image = document.getElementById("diceThree");
 const dice4Image = document.getElementById("diceFour");
 const dice5Image = document.getElementById("diceFive")
 const diceImages = [dice1Image, dice2Image, dice3Image, dice4Image, dice5Image];
+
+let P1Top = document.getElementById("P1Top")
+P1Top.innerHTML = topPointsPlayer1;
+
+let P1Bottom = document.getElementById("P1Bottom")
+P1Bottom.innerHTML = bottomPointsPlayer1;
+
+let P1Total = document.getElementById("P1Total")
+P1Total.innerHTML = totalPointsPlayer1;
 
 // let keepDice = function() {
 //    if (this.id) {removeEventListener('click', rollsLeft)
@@ -139,6 +157,63 @@ function rollDices() {
     }
 }
 
+function P1AddOnes() {
+    topPointsPlayer1 += ones;
+    P1Top.innerHTML = topPointsPlayer1;
+}
+
+function P1AddTwos() {
+    topPointsPlayer1 += (2 * twos);
+    P1Top.innerHTML = topPointsPlayer1;
+}
+
+function P1AddThrees() {
+    topPointsPlayer1 += (3 * threes);
+    P1Top.innerHTML = topPointsPlayer1;
+}
+
+function P1AddFours() {
+    topPointsPlayer1 += (4 * fours);
+    P1Top.innerHTML = topPointsPlayer1;
+}
+
+function P1AddFives() {
+    topPointsPlayer1 += (5 * fives);
+    P1Top.innerHTML = topPointsPlayer1;
+}
+
+function P1AddSixes() {
+    topPointsPlayer1 += (6 * sixes);
+    P1Top.innerHTML = topPointsPlayer1;
+}
+
+if (currentPlayer === 0) {
+    let P1Aces = document.getElementById("P1Aces");
+    P1Aces.addEventListener('click', P1AddOnes);
+
+    let P1Twos = document.getElementById("P1Twos");
+    P1Twos.addEventListener('click', P1AddTwos);
+
+    let P1Threes = document.getElementById("P1Threes");
+    P1Threes.addEventListener('click', P1AddThrees);
+
+    let P1Fours = document.getElementById("P1Fours");
+    P1Fours.addEventListener('click', P1AddFours);
+
+    let P1Fives = document.getElementById("P1Fives");
+    P1Fives.addEventListener('click', P1AddFives);
+
+    let P1Sixes = document.getElementById("P1Sixes");
+    P1Sixes.addEventListener('click', P1AddSixes);
+}
+else if (currentPlayer === 1) {
+
+}
+
+if (topPointsPlayer1 > 62) {
+    let bonusImageP1 = document.getElementById("bonusImageP1")
+    bonusImageP1.style.backgroundImage = "../img/check.png";
+}
 
 
 let rollButton = document.querySelector(".rollButton");
@@ -220,6 +295,9 @@ function switchPlayer() {
         currentPlayer = 0;
     }
 }
+
+
+
 
 let nextButton = document.querySelector(".nextButton");
 nextButton.addEventListener('click', resetVariables);
