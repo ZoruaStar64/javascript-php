@@ -78,8 +78,10 @@ function rollDices() {
                 let P1Aces = document.getElementById("P1Aces")
                 if (ones => 1) {
                     P1Aces.value = '+ ' + ones + ' points';
+                    P1Aces.style.backgroundColor = "#ff7423";
                 } else if (ones === 0) {
                     P1Aces.value = '0 Points';
+                    P1Aces.style.backgroundColor = "#d04b03";
                 }
 
                 if (randomDiceRoll === 2) {
@@ -88,8 +90,10 @@ function rollDices() {
                 let P1Twos = document.getElementById("P1Twos")
                 if (twos => 1) {
                     P1Twos.value = '+ ' + (2 * twos) + ' points';
+                    P1Twos.style.backgroundColor = "#ff7423";
                 } else if (twos === 0) {
                     P1Twos.value = '0 Points';
+                    P1Twos.style.backgroundColor = "#d04b03";
                 }
 
                 if (randomDiceRoll === 3) {
@@ -98,8 +102,10 @@ function rollDices() {
                 let P1Threes = document.getElementById("P1Threes")
                 if (threes => 1) {
                     P1Threes.value = '+ ' + (3 * threes) + ' points';
+                    P1Threes.style.backgroundColor = "#ff7423";
                 } else if (threes === 0) {
                     P1Threes.value = '0 Points';
+                    P1Threes.style.backgroundColor = "#d04b03";
                 }
 
                 if (randomDiceRoll === 4) {
@@ -108,8 +114,10 @@ function rollDices() {
                 let P1Fours = document.getElementById("P1Fours")
                 if (fours => 1) {
                     P1Fours.value = '+ ' + (4 * fours) + ' points';
+                    P1Fours.style.backgroundColor = "#ff7423";
                 } else if (fours === 0) {
                     P1Fours.value = '0 Points';
+                    P1Fours.style.backgroundColor = "#d04b03";
                 }
 
                 if (randomDiceRoll === 5) {
@@ -118,8 +126,10 @@ function rollDices() {
                 let P1Fives = document.getElementById("P1Fives")
                 if (fives => 1) {
                     P1Fives.value = '+ ' + (5 * fives) + ' points';
+                    P1Fives.style.backgroundColor = "#ff7423";
                 } else if (fives === 0) {
                     P1Fives.value = '0 Points';
+                    P1Fives.style.backgroundColor = "#d04b03";
                 }
 
                 if (randomDiceRoll === 6) {
@@ -128,8 +138,10 @@ function rollDices() {
                 let P1Sixes = document.getElementById("P1Sixes")
                 if (sixes => 1) {
                     P1Sixes.value = '+ ' + (6 * sixes) + ' points';
+                    P1Sixes.style.backgroundColor = "#ff7423";
                 } else if (sixes === 0) {
                     P1Sixes.value = '0 Points';
+                    P1Sixes.style.backgroundColor = "#d04b03";
                 }
 
                 //Part 2 Player 1
