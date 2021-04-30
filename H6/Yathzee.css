@@ -35,6 +35,12 @@ input {
     margin-top: 20px;
 }
 
+#bonusImageP2 {
+    float: right;
+    margin-right: 40px;
+    margin-top: 20px;
+}
+
 div.flexcontainer {
     size: 100vh;
 }
