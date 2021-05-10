@@ -27,7 +27,7 @@ let bottomPointsPlayer2 = 0;
 let totalPointsPlayer2 = topPointsPlayer2 + bottomPointsPlayer2;
 
 let players = ["Player 1", "Player 2"];
-let currentPlayer = Math.floor(Math.random() * 2);
+let currentPlayer = 0;
 //let dice = document.getElementsByTagName("img")
 
 const dice1Image = document.getElementById("diceOne");
@@ -46,6 +46,15 @@ P1Bottom.innerHTML = bottomPointsPlayer1;
 let P1Total = document.getElementById("P1Total")
 P1Total.innerHTML = totalPointsPlayer1;
 
+let P2Top = document.getElementById("P2Top")
+P2Top.innerHTML = topPointsPlayer2;
+
+let P2Bottom = document.getElementById("P2Bottom")
+P2Bottom.innerHTML = bottomPointsPlayer2;
+
+let P2Total = document.getElementById("P2Total")
+P2Total.innerHTML = totalPointsPlayer2;
+
 // let keepDice = function() {
 //    if (this.id) {removeEventListener('click', rollsLeft)
 //    }
@@ -59,6 +68,9 @@ function rollDices() {
     fours = 0;
     fives = 0;
     sixes = 0;
+    doubles = false;
+    triples = false;
+    fullHouse = false;
     if (rollsLeft > 0) {
         //array vullen
         diceNumbers = [];
@@ -70,314 +82,173 @@ function rollDices() {
 
             diceImages[teller].src = "../img/dice" + randomDiceRoll + ".jpg"; //template literal
             //om de beurt vullen
+            if (randomDiceRoll === 1) {
+                ones += 1;
+            }
 
-            if (currentPlayer === 0) {
-                if (randomDiceRoll === 1) {
-                    ones += 1;
-                }
-                let P1Aces = document.getElementById("P1Aces")
-                if (ones => 1) {
-                    P1Aces.value = '+ ' + ones + ' points';
-                    P1Aces.style.backgroundColor = "#ff7423";
-                } else if (ones === 0) {
-                    P1Aces.value = '0 Points';
-                    P1Aces.style.backgroundColor = "#d04b03";
-                }
+            let Aces = currentPlayer === 0 ? document.getElementById("P1Aces") : document.getElementById("P2Aces");
+            if (ones => 1) {
+                Aces.value = '+ ' + ones + ' points';
+                Aces.style.backgroundColor = "#ff7423";
+            } else if (ones === 0) {
+                Aces.value = '0 Points';
+                Aces.style.backgroundColor = "#d04b03";
+            }
 
-                if (randomDiceRoll === 2) {
-                    twos += 1;
-                }
-                let P1Twos = document.getElementById("P1Twos")
-                if (twos => 1) {
-                    P1Twos.value = '+ ' + (2 * twos) + ' points';
-                    P1Twos.style.backgroundColor = "#ff7423";
-                } else if (twos === 0) {
-                    P1Twos.value = '0 Points';
-                    P1Twos.style.backgroundColor = "#d04b03";
-                }
 
-                if (randomDiceRoll === 3) {
-                    threes += 1;
-                }
-                let P1Threes = document.getElementById("P1Threes")
-                if (threes => 1) {
-                    P1Threes.value = '+ ' + (3 * threes) + ' points';
-                    P1Threes.style.backgroundColor = "#ff7423";
-                } else if (threes === 0) {
-                    P1Threes.value = '0 Points';
-                    P1Threes.style.backgroundColor = "#d04b03";
-                }
+            if (randomDiceRoll === 2) {
+                twos += 1;
+            }
+            let Twos = currentPlayer === 0 ? document.getElementById("P1Twos") : document.getElementById("P2Twos");
+            if (twos => 1) {
+                Twos.value = '+ ' + (2 * twos) + ' points';
+                Twos.style.backgroundColor = "#ff7423";
+            } else if (twos === 0) {
+                Twos.value = '0 Points';
+                Twos.style.backgroundColor = "#d04b03";
+            }
 
-                if (randomDiceRoll === 4) {
-                    fours += 1;
-                }
-                let P1Fours = document.getElementById("P1Fours")
-                if (fours => 1) {
-                    P1Fours.value = '+ ' + (4 * fours) + ' points';
-                    P1Fours.style.backgroundColor = "#ff7423";
-                } else if (fours === 0) {
-                    P1Fours.value = '0 Points';
-                    P1Fours.style.backgroundColor = "#d04b03";
-                }
+            if (randomDiceRoll === 3) {
+                threes += 1;
+            }
+            let Threes = currentPlayer === 0 ? document.getElementById("P1Threes") : document.getElementById("P2Threes");
+            if (threes => 1) {
+                Threes.value = '+ ' + (3 * threes) + ' points';
+                Threes.style.backgroundColor = "#ff7423";
+            } else if (threes === 0) {
+                Threes.value = '0 Points';
+                Threes.style.backgroundColor = "#d04b03";
+            }
 
-                if (randomDiceRoll === 5) {
-                    fives += 1;
-                }
-                let P1Fives = document.getElementById("P1Fives")
-                if (fives => 1) {
-                    P1Fives.value = '+ ' + (5 * fives) + ' points';
-                    P1Fives.style.backgroundColor = "#ff7423";
-                } else if (fives === 0) {
-                    P1Fives.value = '0 Points';
-                    P1Fives.style.backgroundColor = "#d04b03";
-                }
+            if (randomDiceRoll === 4) {
+                fours += 1;
+            }
+            let Fours = currentPlayer === 0 ? document.getElementById("P1Fours") : document.getElementById("P2Fours");
+            if (fours => 1) {
+                Fours.value = '+ ' + (4 * fours) + ' points';
+                Fours.style.backgroundColor = "#ff7423";
+            } else if (fours === 0) {
+                Fours.value = '0 Points';
+                Fours.style.backgroundColor = "#d04b03";
+            }
 
-                if (randomDiceRoll === 6) {
-                    sixes += 1;
-                }
-                let P1Sixes = document.getElementById("P1Sixes")
-                if (sixes => 1) {
-                    P1Sixes.value = '+ ' + (6 * sixes) + ' points';
-                    P1Sixes.style.backgroundColor = "#ff7423";
-                } else if (sixes === 0) {
-                    P1Sixes.value = '0 Points';
-                    P1Sixes.style.backgroundColor = "#d04b03";
-                }
+            if (randomDiceRoll === 5) {
+                fives += 1;
+            }
+            let Fives = currentPlayer === 0 ? document.getElementById("P1Fives") : document.getElementById("P2Fives");
+            if (fives => 1) {
+                Fives.value = '+ ' + (5 * fives) + ' points';
+                Fives.style.backgroundColor = "#ff7423";
+            } else if (fives === 0) {
+                Fives.value = '0 Points';
+                Fives.style.backgroundColor = "#d04b03";
+            }
 
-                //Part 2 Player 1
-                //Three of a kind
-                if (ones > 2 || twos > 2 || threes > 2 || fours > 2 || fives > 2 || sixes > 2) {
-                    let P1X3 = document.getElementById("P1X3")
-                    P1X3.value = '+ ' + ((ones) + (2 * twos) + (3 * threes) + (4 * fours) + (5 * fives) + (6 * sixes)) + ' points';
-                    P1X3.style.backgroundColor = "#ff7423";
-                } else {
-                    P1X3.value = '+ 0 Points';
-                    P1X3.style.backgroundColor = "#d04b03";
-                }
+            if (randomDiceRoll === 6) {
+                sixes += 1;
+            }
+            let Sixes = currentPlayer === 0 ? document.getElementById("P1Sixes") : document.getElementById("P2Sixes");
+            if (sixes => 1) {
+                Sixes.value = '+ ' + (6 * sixes) + ' points';
+                Sixes.style.backgroundColor = "#ff7423";
+            } else if (sixes === 0) {
+                Sixes.value = '0 Points';
+                Sixes.style.backgroundColor = "#d04b03";
+            }
 
-                //Four of a kind
-                if (ones > 3 || twos > 3 || threes > 3 || fours > 3 || fives > 3 || sixes > 3) {
-                    let P1X4 = document.getElementById("P1X4")
-                    P1X4.value = '+ ' + ((ones) + (2 * twos) + (3 * threes) + (4 * fours) + (5 * fives) + (6 * sixes)) + ' points';
-                    P1X4.style.backgroundColor = "#ff7423";
-                } else {
-                    P1X4.value = '+ 0 Points';
-                    P1X4.style.backgroundColor = "#d04b03";
-                }
+            //Part 2
+            //Three of a kind
+            let X3 = currentPlayer === 0 ? document.getElementById("P1X3") : document.getElementById("P2X3");
+            if (ones > 2 || twos > 2 || threes > 2 || fours > 2 || fives > 2 || sixes > 2) {
 
-                //Full House
-                if (ones === 2 || twos === 2 || threes === 2 || fours === 2 || fives === 2 || sixes === 2) {
-                    doubles = true;
-                    if (ones === 3 || twos === 3 || threes === 3 || fours === 3 || fives === 3 || sixes === 3) {
-                        triples = true;
-                        if (doubles === true && triples === true) {
-                            fullHouse = true
-                        }
-                        if (fullHouse === true) {
-                            let P1House = document.getElementById("P1House")
-                            P1House.value = '+ 25 Points';
-                            P1House.style.backgroundColor = "#ff7423";
-                        } else {
-                            P1House.value = '+ 0 Points';
-                            P1House.style.backgroundColor = "#d04b03";
-                        }
-                    }
-                }
+                X3.value = '+ ' + ((ones) + (2 * twos) + (3 * threes) + (4 * fours) + (5 * fives) + (6 * sixes)) + ' points';
+                X3.style.backgroundColor = "#ff7423";
+            } else {
+                X3.value = '+ 0 Points';
+                X3.style.backgroundColor = "#d04b03";
+            }
+
+            //Four of a kind
+            let X4 = currentPlayer === 0 ? document.getElementById("P1X4") : document.getElementById("P2X4");
+            if (ones > 3 || twos > 3 || threes > 3 || fours > 3 || fives > 3 || sixes > 3) {
+
+                X4.value = '+ ' + ((ones) + (2 * twos) + (3 * threes) + (4 * fours) + (5 * fives) + (6 * sixes)) + ' points';
+                X4.style.backgroundColor = "#ff7423";
+            } else {
+                X4.value = '+ 0 Points';
+                X4.style.backgroundColor = "#d04b03";
+            }
+
+            //Full House
+
+            let House = currentPlayer === 0 ? document.getElementById("P1House") : document.getElementById("P2House");
+            if (ones === 3 || twos === 3 || threes === 3 || fours === 3 || fives === 3 || sixes === 3) {
+                triples = true;
+                doubles = false;
+            }
+            if (ones === 2 || twos === 2 || threes === 2 || fours === 2 || fives === 2 || sixes === 2) {
+                doubles = true;
+            }
+            if (doubles === true && triples === true) {
+                fullHouse = true
+            }
+            if (fullHouse === true) {
+
+                House.value = '+ 25 Points';
+                House.style.backgroundColor = "#ff7423";
+            } else if (fullHouse === false) {
+                House.value = '+ 0 Points';
+                House.style.backgroundColor = "#d04b03";
+            }
+
+
 
                 //Small Street
+            let SmallS = currentPlayer === 0 ? document.getElementById("P1SmallS") : document.getElementById("P2SmallS");
                 if (ones > 0 && twos > 0 && threes > 0 && fours > 0 ||
                     twos > 0 && threes > 0 && fours > 0 && fives > 0 ||
                     threes > 0 && fours > 0 && fives > 0 && sixes > 0) {
-                    let P1SmallS = document.getElementById("P1SmallS")
-                    P1SmallS.value = '+ 30 Points';
-                    P1SmallS.style.backgroundColor = "#ff7423";
+
+                    SmallS.value = '+ 30 Points';
+                    SmallS.style.backgroundColor = "#ff7423";
                 } else {
-                    P1SmallS.value = '+ 0 Points';
-                    P1SmallS.style.backgroundColor = "#d04b03";
+                    SmallS.value = '+ 0 Points';
+                    SmallS.style.backgroundColor = "#d04b03";
                 }
 
                 //Large Street
+            let LargeS = currentPlayer === 0 ? document.getElementById("P1LargeS") : document.getElementById("P2LargeS");
                 if (ones > 0 && twos > 0 && threes > 0 && fours > 0 && fives > 0 ||
                     twos > 0 && threes > 0 && fours > 0 && fives > 0 && sixes > 0) {
-                    let P1LargeS = document.getElementById("P1LargeS")
-                    P1LargeS.value = '+ 40 Points';
-                    P1LargeS.style.backgroundColor = "#ff7423";
+
+                    LargeS.value = '+ 40 Points';
+                    LargeS.style.backgroundColor = "#ff7423";
                 } else {
-                    P1LargeS.value = '+ 0 Points';
-                    P1LargeS.style.backgroundColor = "#d04b03";
+                    LargeS.value = '+ 0 Points';
+                    LargeS.style.backgroundColor = "#d04b03";
                 }
 
                 //Yathzee
+            let Yathzee = currentPlayer === 0 ? document.getElementById("P1Yathzee") : document.getElementById("P2Yathzee");
                 if (ones === 5 || twos === 5 || threes === 5 || fours === 5 || fives === 5 || sixes === 5) {
-                    let P1Yathzee = document.getElementById("P1Yathzee")
-                    P1Yathzee.value = '+ 50 Points';
-                    P1Yathzee.style.backgroundColor = "#ff7423";
+
+                    Yathzee.value = '+ 50 Points';
+                    Yathzee.style.backgroundColor = "#ff7423";
                 } else {
-                    P1Yathzee.value = '+ 0 Points';
-                    P1Yathzee.style.backgroundColor = "#d04b03";
+                    Yathzee.value = '+ 0 Points';
+                    Yathzee.style.backgroundColor = "#d04b03";
                 }
 
                 //Chance
+            let Chance = currentPlayer === 0 ? document.getElementById("P1Chance") : document.getElementById("P2Chance");
                 if (ones > 0 || twos > 0 || threes > 0 || fours > 0 || fives > 0 || sixes > 0) {
-                    let P1Chance = document.getElementById("P1Chance")
-                    P1Chance.value = '+ ' + ((ones) + (2 * twos) + (3 * threes) + (4 * fours) + (5 * fives) + (6 * sixes)) + ' points';
-                    P1Chance.style.backgroundColor = "#ff7423";
+
+                    Chance.value = '+ ' + ((ones) + (2 * twos) + (3 * threes) + (4 * fours) + (5 * fives) + (6 * sixes)) + ' points';
+                    Chance.style.backgroundColor = "#ff7423";
                 }
             }
-            else {
-                if (randomDiceRoll === 1) {
-                    ones += 1;
-                }
-                let P2Aces = document.getElementById("P2Aces")
-                if (ones => 1) {
-                    P2Aces.value = '+ ' + ones + ' points';
-                    P2Aces.style.backgroundColor = "#ff7423";
-                } else if (ones === 0) {
-                    P2Aces.value = '0 Points';
-                    P2Aces.style.backgroundColor = "#d04b03";
-                }
 
-                if (randomDiceRoll === 2) {
-                    twos += 1;
-                }
-                let P2Twos = document.getElementById("P2Twos")
-                if (twos => 1) {
-                    P2Twos.value = '+ ' + (2 * twos) + ' points';
-                    P2Twos.style.backgroundColor = "#ff7423";
-                } else if (twos === 0) {
-                    P2Twos.value = '0 Points';
-                    P2Twos.style.backgroundColor = "#d04b03";
-                }
 
-                if (randomDiceRoll === 3) {
-                    threes += 1;
-                }
-                let P2Threes = document.getElementById("P2Threes")
-                if (threes => 1) {
-                    P2Threes.value = '+ ' + (3 * threes) + ' points';
-                    P2Threes.style.backgroundColor = "#ff7423";
-                } else if (threes === 0) {
-                    P2Threes.value = '0 Points';
-                    P2Threes.style.backgroundColor = "#d04b03";
-                }
-
-                if (randomDiceRoll === 4) {
-                    fours += 1;
-                }
-                let P2Fours = document.getElementById("P2Fours")
-                if (fours => 1) {
-                    P2Fours.value = '+ ' + (4 * fours) + ' points';
-                    P2Fours.style.backgroundColor = "#ff7423";
-                } else if (fours === 0) {
-                    P2Fours.value = '0 Points';
-                    P2Fours.style.backgroundColor = "#d04b03";
-                }
-
-                if (randomDiceRoll === 5) {
-                    fives += 1;
-                }
-                let P2Fives = document.getElementById("P2Fives")
-                if (fives => 1) {
-                    P2Fives.value = '+ ' + (5 * fives) + ' points';
-                    P2Fives.style.backgroundColor = "#ff7423";
-                } else if (fives === 0) {
-                    P2Fives.value = '0 Points';
-                    P2Fives.style.backgroundColor = "#d04b03";
-                }
-
-                if (randomDiceRoll === 6) {
-                    sixes += 1;
-                }
-                let P2Sixes = document.getElementById("P2Sixes")
-                if (sixes => 1) {
-                    P2Sixes.value = '+ ' + (6 * sixes) + ' points';
-                    P2Sixes.style.backgroundColor = "#ff7423";
-                } else if (sixes === 0) {
-                    P2Sixes.value = '0 Points';
-                    P2Sixes.style.backgroundColor = "#d04b03";
-                }
-
-                //Part 2 Player 2
-                //Three of a kind
-                if (ones > 2 || twos > 2 || threes > 2 || fours > 2 || fives > 2 || sixes > 2) {
-                    let P2X3 = document.getElementById("P2X3")
-                    P2X3.value = '+ ' + ((ones) + (2 * twos) + (3 * threes) + (4 * fours) + (5 * fives) + (6 * sixes)) + ' points';
-                    P2X3.style.backgroundColor = "#ff7423";
-                } else {
-                    P2X3.value = '+ 0 Points';
-                    P2X3.style.backgroundColor = "#d04b03";
-                }
-
-                //Four of a kind
-                if (ones > 3 || twos > 3 || threes > 3 || fours > 3 || fives > 3 || sixes > 3) {
-                    let P2X4 = document.getElementById("P2X4")
-                    P2X4.value = '+ ' + ((ones) + (2 * twos) + (3 * threes) + (4 * fours) + (5 * fives) + (6 * sixes)) + ' points';
-                    P2X4.style.backgroundColor = "#ff7423";
-                } else {
-                    P2X4.value = '+ 0 Points';
-                    P2X4.style.backgroundColor = "#d04b03";
-                }
-
-                //Full House
-                if (ones === 2 || twos === 2 || threes === 2 || fours === 2 || fives === 2 || sixes === 2) {
-                    doubles = true;
-                    if (ones === 3 || twos === 3 || threes === 3 || fours === 3 || fives === 3 || sixes === 3) {
-                        triples = true;
-                        if (doubles === true && triples === true) {
-                            fullHouse = true
-                        }
-                        if (fullHouse === true) {
-                            let P2House = document.getElementById("P2House")
-                            P2House.value = '+ 25 Points';
-                            P2House.style.backgroundColor = "#ff7423";
-                        } else {
-                            P2House.value = '+ 0 Points';
-                            P2House.style.backgroundColor = "#d04b03";
-                        }
-                    }
-                }
-
-                //Small Street
-                if (ones > 0 && twos > 0 && threes > 0 && fours > 0 ||
-                    twos > 0 && threes > 0 && fours > 0 && fives > 0 ||
-                    threes > 0 && fours > 0 && fives > 0 && sixes > 0) {
-                    let P2SmallS = document.getElementById("P2SmallS")
-                    P2SmallS.value = '+ 30 Points';
-                    P2SmallS.style.backgroundColor = "#ff7423";
-                } else {
-                    P2SmallS.value = '+ 0 Points';
-                    P2SmallS.style.backgroundColor = "#d04b03";
-                }
-
-                //Large Street
-                if (ones > 0 && twos > 0 && threes > 0 && fours > 0 && fives > 0 ||
-                    twos > 0 && threes > 0 && fours > 0 && fives > 0 && sixes > 0) {
-                    let P2LargeS = document.getElementById("P2LargeS")
-                    P2LargeS.value = '+ 40 Points';
-                    P2LargeS.style.backgroundColor = "#ff7423";
-                } else {
-                    P2LargeS.value = '+ 0 Points';
-                    P2LargeS.style.backgroundColor = "#d04b03";
-                }
-
-                //Yathzee
-                if (ones === 5 || twos === 5 || threes === 5 || fours === 5 || fives === 5 || sixes === 5) {
-                    let P2Yathzee = document.getElementById("P2Yathzee")
-                    P2Yathzee.value = '+ 50 Points';
-                    P2Yathzee.style.backgroundColor = "#ff7423";
-                } else {
-                    P2Yathzee.value = '+ 0 Points';
-                    P2Yathzee.style.backgroundColor = "#d04b03";
-                }
-
-                //Chance
-                if (ones > 0 || twos > 0 || threes > 0 || fours > 0 || fives > 0 || sixes > 0) {
-                    let P2Chance = document.getElementById("P2Chance")
-                    P2Chance.value = '+ ' + ((ones) + (2 * twos) + (3 * threes) + (4 * fours) + (5 * fives) + (6 * sixes)) + ' points';
-                    P2Chance.style.backgroundColor = "#ff7423";
-                }
-            }
-        }
 
         rollsLeft = rollsLeft -1;
     }
@@ -407,18 +278,36 @@ function rollDices() {
     }
 }
 
-function P1AddOnes() {
-    topPointsPlayer1 += ones;
-    P1Top.innerHTML = topPointsPlayer1;
-    totalPointsPlayer1 = (topPointsPlayer1 + bottomPointsPlayer1)
-    P1Total.innerHTML = totalPointsPlayer1;
-    if (topPointsPlayer1 > 62) {
-        let BonusP1 = true;
-        if (BonusP1 === true) {
-            let bonusImageP1 = document.getElementById("bonusImageP1")
-            bonusImageP1.src = "../img/check.png";
-            totalPointsPlayer1 += 35;
-            P1Total.innerHTML = totalPointsPlayer1;
+//Player add functions
+function AddOnes() {
+    if (currentPlayer === 0) {
+        topPointsPlayer1 += ones;
+        P1Top.innerHTML = topPointsPlayer1;
+        totalPointsPlayer1 = (topPointsPlayer1 + bottomPointsPlayer1)
+        P1Total.innerHTML = totalPointsPlayer1;
+        if (topPointsPlayer1 > 62) {
+            let BonusP1 = true;
+            if (BonusP1 === true) {
+                let bonusImageP1 = document.getElementById("bonusImageP1")
+                bonusImageP1.src = "../img/check.png";
+                totalPointsPlayer1 += 35;
+                P1Total.innerHTML = totalPointsPlayer1;
+            }
+        }
+    }
+    else {
+        topPointsPlayer2 += ones;
+        P2Top.innerHTML = topPointsPlayer2;
+        totalPointsPlayer2 = (topPointsPlayer2 + bottomPointsPlayer2)
+        P2Total.innerHTML = totalPointsPlayer2;
+        if (topPointsPlayer2 > 62) {
+            let BonusP2 = true;
+            if (BonusP2 === true) {
+                let bonusImageP2 = document.getElementById("bonusImageP2")
+                bonusImageP2.src = "../img/check.png";
+                totalPointsPlayer2 += 35;
+                P2Total.innerHTML = totalPointsPlayer2;
+            }
         }
     }
 }
@@ -591,9 +480,26 @@ function P1AddChance() {
     P1Total.innerHTML = totalPointsPlayer1;
 }
 
-if (currentPlayer === 0) {
-    let P1Aces = document.getElementById("P1Aces");
-    P1Aces.addEventListener('click', P1AddOnes);
+
+
+//eventlistener giver
+
+    if (currentPlayer === 0) {
+        let Aces = document.getElementById("P1Aces");
+        Aces.addEventListener('click', AddOnes);
+
+        Aces = document.getElementById("P2Aces");
+        Aces.removeEventListener('click', AddOnes)
+        console.log("P1")
+}
+    else {
+       let Aces = document.getElementById("P1Aces");
+        Aces.removeEventListener('click', AddOnes)
+
+        Aces = document.getElementById("P2Aces");
+        Aces.addEventListener('click', AddOnes);
+        console.log("P2")
+    }
 
     let P1Twos = document.getElementById("P1Twos");
     P1Twos.addEventListener('click', P1AddTwos);
@@ -632,13 +538,6 @@ if (currentPlayer === 0) {
     P1Chance.addEventListener('click', P1AddChance);
 
 
-}
-else if (currentPlayer === 1) {
-
-}
-
-
-
 
 let rollButton = document.querySelector(".rollButton");
 console.log(rollButton);
@@ -660,52 +559,148 @@ function resetVariables() {
     diceNumbers = []
     console.log(diceNumbers);
     ones = 0;
-    let P1Aces = document.getElementById("P1Aces")
+    let Aces = currentPlayer === 0 ? document.getElementById("P1Aces") : document.getElementById("P2Aces");
     if (ones => 1) {
-        P1Aces.value = '+ ' + ones + ' points';
+        Aces.value = '+ ' + ones + ' points';
+        Aces.style.backgroundColor = "#ff7423";
     } else if (ones === 0) {
-        P1Aces.value = '0 Points';
+        Aces.value = '0 Points';
+        Aces.style.backgroundColor = "#d04b03";
     }
 
-    twos = 0;
-    let P1Twos = document.getElementById("P1Twos")
+        twos = 0;
+    let Twos = currentPlayer === 0 ? document.getElementById("P1Twos") : document.getElementById("P2Twos");
     if (twos => 1) {
-        P1Twos.value = '+ ' + (2 * twos) + ' points';
+        Twos.value = '+ ' + (2 * twos) + ' points';
+        Twos.style.backgroundColor = "#ff7423";
     } else if (twos === 0) {
-        P1Twos.value = '0 Points';
+        Twos.value = '0 Points';
+        Twos.style.backgroundColor = "#d04b03";
     }
 
-    threes = 0;
-    let P1Threes = document.getElementById("P1Threes")
+        threes = 0;
+    let Threes = currentPlayer === 0 ? document.getElementById("P1Threes") : document.getElementById("P2Threes");
     if (threes => 1) {
-        P1Threes.value = '+ ' + (3 * threes) + ' points';
+        Threes.value = '+ ' + (3 * threes) + ' points';
+        Threes.style.backgroundColor = "#ff7423";
     } else if (threes === 0) {
-        P1Threes.value = '0 Points';
+        Threes.value = '0 Points';
+        Threes.style.backgroundColor = "#d04b03";
     }
 
-    fours = 0;
-    let P1Fours = document.getElementById("P1Fours")
+        fours = 0;
+    let Fours = currentPlayer === 0 ? document.getElementById("P1Fours") : document.getElementById("P2Fours");
     if (fours => 1) {
-        P1Fours.value = '+ ' + (4 * fours) + ' points';
+        Fours.value = '+ ' + (4 * fours) + ' points';
+        Fours.style.backgroundColor = "#ff7423";
     } else if (fours === 0) {
-        P1Fours.value = '0 Points';
+        Fours.value = '0 Points';
+        Fours.style.backgroundColor = "#d04b03";
     }
 
-    fives = 0;
-    let P1Fives = document.getElementById("P1Fives")
+        fives = 0;
+    let Fives = currentPlayer === 0 ? document.getElementById("P1Fives") : document.getElementById("P2Fives");
     if (fives => 1) {
-        P1Fives.value = '+ ' + (5 * fives) + ' points';
+        Fives.value = '+ ' + (5 * fives) + ' points';
+        Fives.style.backgroundColor = "#ff7423";
     } else if (fives === 0) {
-        P1Fives.value = '0 Points';
+        Fives.value = '0 Points';
+        Fives.style.backgroundColor = "#d04b03";
     }
 
-    sixes = 0;
-    let P1Sixes = document.getElementById("P1Sixes")
+        sixes = 0;
+    let Sixes = currentPlayer === 0 ? document.getElementById("P1Sixes") : document.getElementById("P2Sixes");
     if (sixes => 1) {
-        P1Sixes.value = '+ ' + (6 * sixes) + ' points';
+        Sixes.value = '+ ' + (6 * sixes) + ' points';
+        Sixes.style.backgroundColor = "#ff7423";
     } else if (sixes === 0) {
-        P1Sixes.value = '0 Points';
+        Sixes.value = '0 Points';
+        Sixes.style.backgroundColor = "#d04b03";
     }
+
+    //Part 2
+    //Three of a kind
+    let X3 = currentPlayer === 0 ? document.getElementById("P1X3") : document.getElementById("P2X3");
+    if (ones > 2 || twos > 2 || threes > 2 || fours > 2 || fives > 2 || sixes > 2) {
+        X3.value = '+ ' + ((ones) + (2 * twos) + (3 * threes) + (4 * fours) + (5 * fives) + (6 * sixes)) + ' points';
+        X3.style.backgroundColor = "#ff7423";
+    } else {
+        X3.value = '+ 0 Points';
+        X3.style.backgroundColor = "#d04b03";
+    }
+
+    //Four of a kind
+    let X4 = currentPlayer === 0 ? document.getElementById("P1X4") : document.getElementById("P2X4");
+    if (ones > 3 || twos > 3 || threes > 3 || fours > 3 || fives > 3 || sixes > 3) {
+        X4.value = '+ ' + ((ones) + (2 * twos) + (3 * threes) + (4 * fours) + (5 * fives) + (6 * sixes)) + ' points';
+        X4.style.backgroundColor = "#ff7423";
+    } else {
+        X4.value = '+ 0 Points';
+        X4.style.backgroundColor = "#d04b03";
+    }
+
+    //Full House
+    doubles = false;
+    triples = false;
+    fullHouse = false;
+    let House = currentPlayer === 0 ? document.getElementById("P1House") : document.getElementById("P2House");
+    if (ones === 3 || twos === 3 || threes === 3 || fours === 3 || fives === 3 || sixes === 3) {
+        triples = true;
+        doubles = false;
+    }
+    if (ones === 2 || twos === 2 || threes === 2 || fours === 2 || fives === 2 || sixes === 2) {
+        doubles = true;
+    }
+    if (doubles === true && triples === true) {
+        fullHouse = true
+    }
+    if (fullHouse === true) {
+
+        House.value = '+ 25 Points';
+        House.style.backgroundColor = "#ff7423";
+    } else if (fullHouse === false) {
+        House.value = '+ 0 Points';
+        House.style.backgroundColor = "#d04b03";
+    }
+
+    //Small Street
+    let SmallS = currentPlayer === 0 ? document.getElementById("P1SmallS") : document.getElementById("P2SmallS");
+    if (ones > 0 && twos > 0 && threes > 0 && fours > 0 ||
+        twos > 0 && threes > 0 && fours > 0 && fives > 0 ||
+        threes > 0 && fours > 0 && fives > 0 && sixes > 0) {
+        SmallS.value = '+ 30 Points';
+        SmallS.style.backgroundColor = "#ff7423";
+    } else {
+        SmallS.value = '+ 0 Points';
+        SmallS.style.backgroundColor = "#d04b03";
+    }
+
+    //Large Street
+    let LargeS = currentPlayer === 0 ? document.getElementById("P1LargeS") : document.getElementById("P2LargeS");
+    if (ones > 0 && twos > 0 && threes > 0 && fours > 0 && fives > 0 ||
+        twos > 0 && threes > 0 && fours > 0 && fives > 0 && sixes > 0) {
+        LargeS.value = '+ 40 Points';
+        LargeS.style.backgroundColor = "#ff7423";
+    } else {
+        LargeS.value = '+ 0 Points';
+        LargeS.style.backgroundColor = "#d04b03";
+    }
+
+    //Yathzee
+    let Yathzee = currentPlayer === 0 ? document.getElementById("P1Yathzee") : document.getElementById("P2Yathzee");
+    if (ones === 5 || twos === 5 || threes === 5 || fours === 5 || fives === 5 || sixes === 5) {
+        Yathzee.value = '+ 50 Points';
+        Yathzee.style.backgroundColor = "#ff7423";
+    } else {
+        Yathzee.value = '+ 0 Points';
+        Yathzee.style.backgroundColor = "#d04b03";
+    }
+
+    //Chance
+    let Chance = currentPlayer === 0 ? document.getElementById("P1Chance") : document.getElementById("P2Chance");
+        Chance.value = '+ 0 points';
+        Chance.style.backgroundColor = "#ff7423";
+
 }
 
 
@@ -714,9 +709,11 @@ function switchPlayer() {
     if (currentPlayer === 0) {
         nextButton.innerHTML = "Switch the turn to Player 1!";
         currentPlayer = 1;
+
     } else {
         nextButton.innerHTML = "Switch the turn to Player 2!";
         currentPlayer = 0;
+        
     }
 }
 

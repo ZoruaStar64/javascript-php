@@ -46,17 +46,19 @@ input {
         size: 100vh;
         margin: auto;
     }
+    div.gameContainer {
+        width: 100%;
+        margin: auto;
+    }
+    div.buttonContainer {
+        width: 100%;
+        margin: auto;
+    }
 }
 
-div.gameContainer {
-    width: 100%;
 
-}
 
-div.buttonContainer {
-    width: 100%;
 
-}
 
 div.playerOne {
     display: block;
