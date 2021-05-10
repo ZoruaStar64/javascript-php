@@ -20,6 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c5475574-7e0c-4a54-bb73-5d31cdf8e08b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/H6/Yathzee.css" beforeDir="false" afterPath="$PROJECT_DIR$/H6/Yathzee.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/H6/Yathzee.js" beforeDir="false" afterPath="$PROJECT_DIR$/H6/Yathzee.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -52,7 +54,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../PHP" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Documents/GitHub/HTML-CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -149,7 +151,8 @@
       <workItem from="1613124660677" duration="349000" />
       <workItem from="1615544916835" duration="1416000" />
       <workItem from="1619700931477" duration="4548000" />
-      <workItem from="1619767348804" duration="8384000" />
+      <workItem from="1619767348804" duration="8964000" />
+      <workItem from="1620631298348" duration="3596000" />
     </task>
     <servers />
   </component>

@@ -41,8 +41,11 @@ input {
     margin-top: 20px;
 }
 
-div.flexcontainer {
-    size: 100vh;
+@media all and (min-width:920px) {
+    div.flexcontainer {
+        size: 100vh;
+        margin: auto;
+    }
 }
 
 div.gameContainer {
