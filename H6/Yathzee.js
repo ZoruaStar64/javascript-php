@@ -1,6 +1,8 @@
 "use strict";
 
 let winner = null;
+let buttonsPlayer1Clicked = 0; //if this is 13 and buttonsplayer2 is also 13 then the game ends
+let buttonsPlayer2Clicked = 0; //and picks the winner with the higher Final Score
 let rollsLeft = 3;
 let diceNumbers = [];
 
@@ -312,39 +314,73 @@ function AddOnes() {
     }
 }
 
-function P1AddTwos() {
-    topPointsPlayer1 += (2 * twos);
-    P1Top.innerHTML = topPointsPlayer1;
-    totalPointsPlayer1 = (topPointsPlayer1 + bottomPointsPlayer1)
-    P1Total.innerHTML = totalPointsPlayer1;
-    if (topPointsPlayer1 > 62) {
-        let BonusP1 = true;
-        if (BonusP1 === true) {
-            let bonusImageP1 = document.getElementById("bonusImageP1")
-            bonusImageP1.src = "../img/check.png";
-            totalPointsPlayer1 += 35;
-            P1Total.innerHTML = totalPointsPlayer1;
+function AddTwos() {
+    if (currentPlayer === 0) {
+        topPointsPlayer1 += (2 * twos);
+        P1Top.innerHTML = topPointsPlayer1;
+        totalPointsPlayer1 = (topPointsPlayer1 + bottomPointsPlayer1)
+        P1Total.innerHTML = totalPointsPlayer1;
+        if (topPointsPlayer1 > 62) {
+            let BonusP1 = true;
+            if (BonusP1 === true) {
+                let bonusImageP1 = document.getElementById("bonusImageP1")
+                bonusImageP1.src = "../img/check.png";
+                totalPointsPlayer1 += 35;
+                P1Total.innerHTML = totalPointsPlayer1;
+            }
+        }
+    } else {
+        topPointsPlayer2 += (2 * twos);
+        P2Top.innerHTML = topPointsPlayer2;
+        totalPointsPlayer2 = (topPointsPlayer2 + bottomPointsPlayer2)
+        P2Total.innerHTML = totalPointsPlayer2;
+        if (topPointsPlayer2 > 62) {
+            let BonusP2 = true;
+            if (BonusP2 === true) {
+                let bonusImageP2 = document.getElementById("bonusImageP2")
+                bonusImageP2.src = "../img/check.png";
+                totalPointsPlayer2 += 35;
+                P2Total.innerHTML = totalPointsPlayer2;
+            }
         }
     }
 }
 
-function P1AddThrees() {
-    topPointsPlayer1 += (3 * threes);
-    P1Top.innerHTML = topPointsPlayer1;
-    totalPointsPlayer1 = (topPointsPlayer1 + bottomPointsPlayer1)
-    P1Total.innerHTML = totalPointsPlayer1;
-    if (topPointsPlayer1 > 62) {
-        let BonusP1 = true;
-        if (BonusP1 === true) {
-            let bonusImageP1 = document.getElementById("bonusImageP1")
-            bonusImageP1.src = "../img/check.png";
-            totalPointsPlayer1 += 35;
-            P1Total.innerHTML = totalPointsPlayer1;
+function AddThrees() {
+    if (currentPlayer === 0) {
+        topPointsPlayer1 += (3 * threes);
+        P1Top.innerHTML = topPointsPlayer1;
+        totalPointsPlayer1 = (topPointsPlayer1 + bottomPointsPlayer1)
+        P1Total.innerHTML = totalPointsPlayer1;
+        if (topPointsPlayer1 > 62) {
+            let BonusP1 = true;
+            if (BonusP1 === true) {
+                let bonusImageP1 = document.getElementById("bonusImageP1")
+                bonusImageP1.src = "../img/check.png";
+                totalPointsPlayer1 += 35;
+                P1Total.innerHTML = totalPointsPlayer1;
+            }
+        }
+    }
+    else {
+        topPointsPlayer2 += (3 * threes);
+        P2Top.innerHTML = topPointsPlayer2;
+        totalPointsPlayer2 = (topPointsPlayer2 + bottomPointsPlayer2)
+        P2Total.innerHTML = totalPointsPlayer2;
+        if (topPointsPlayer2 > 62) {
+            let BonusP2 = true;
+            if (BonusP2 === true) {
+                let bonusImageP2 = document.getElementById("bonusImageP2")
+                bonusImageP2.src = "../img/check.png";
+                totalPointsPlayer2 += 35;
+                P2Total.innerHTML = totalPointsPlayer2;
+            }
         }
     }
 }
 
-function P1AddFours() {
+function AddFours() {
+    if (currentPlayer === 0) {
     topPointsPlayer1 += (4 * fours);
     P1Top.innerHTML = topPointsPlayer1;
     totalPointsPlayer1 = (topPointsPlayer1 + bottomPointsPlayer1)
@@ -359,8 +395,25 @@ function P1AddFours() {
         }
     }
 }
+    else {
+        topPointsPlayer2 += (4 * fours);
+        P2Top.innerHTML = topPointsPlayer2;
+        totalPointsPlayer2 = (topPointsPlayer2 + bottomPointsPlayer2)
+        P2Total.innerHTML = totalPointsPlayer2;
+        if (topPointsPlayer2 > 62) {
+            let BonusP2 = true;
+            if (BonusP2 === true) {
+                let bonusImageP2 = document.getElementById("bonusImageP2")
+                bonusImageP2.src = "../img/check.png";
+                totalPointsPlayer2 += 35;
+                P2Total.innerHTML = totalPointsPlayer2;
+            }
+        }
+    }
+}
 
-function P1AddFives() {
+function AddFives() {
+    if (currentPlayer === 0) {
     topPointsPlayer1 += (5 * fives);
     P1Top.innerHTML = topPointsPlayer1;
     totalPointsPlayer1 = (topPointsPlayer1 + bottomPointsPlayer1)
@@ -375,8 +428,25 @@ function P1AddFives() {
         }
     }
 }
+    else {
+        topPointsPlayer2 += (5 * fives);
+        P2Top.innerHTML = topPointsPlayer2;
+        totalPointsPlayer2 = (topPointsPlayer2 + bottomPointsPlayer2)
+        P2Total.innerHTML = totalPointsPlayer2;
+        if (topPointsPlayer2 > 62) {
+            let BonusP2 = true;
+            if (BonusP2 === true) {
+                let bonusImageP2 = document.getElementById("bonusImageP2")
+                bonusImageP2.src = "../img/check.png";
+                totalPointsPlayer2 += 35;
+                P2Total.innerHTML = totalPointsPlayer2;
+            }
+        }
+    }
+}
 
-function P1AddSixes() {
+function AddSixes() {
+    if (currentPlayer === 0) {
     topPointsPlayer1 += (6 * sixes);
     P1Top.innerHTML = topPointsPlayer1;
     totalPointsPlayer1 = (topPointsPlayer1 + bottomPointsPlayer1)
@@ -391,151 +461,235 @@ function P1AddSixes() {
         }
     }
 }
+    else {
+        topPointsPlayer2 += (6 * sixes);
+        P2Top.innerHTML = topPointsPlayer2;
+        totalPointsPlayer2 = (topPointsPlayer2 + bottomPointsPlayer2)
+        P2Total.innerHTML = totalPointsPlayer2;
+        if (topPointsPlayer2 > 62) {
+            let BonusP2 = true;
+            if (BonusP2 === true) {
+                let bonusImageP2 = document.getElementById("bonusImageP2")
+                bonusImageP2.src = "../img/check.png";
+                totalPointsPlayer2 += 35;
+                P2Total.innerHTML = totalPointsPlayer2;
+            }
+        }
+    }
+}
 
-function P1AddX3() {
-    if (ones > 2 || twos > 2 || threes > 2 || fours > 2 || fives > 2 || sixes > 2) {
+function AddX3() {
+    if (currentPlayer === 0) {
+        if (ones > 2 || twos > 2 || threes > 2 || fours > 2 || fives > 2 || sixes > 2) {
+            bottomPointsPlayer1 += ((ones) + (2 * twos) + (3 * threes) + (4 * fours) + (5 * fives) + (6 * sixes));
+            P1Bottom.innerHTML = bottomPointsPlayer1;
+        } else {
+            bottomPointsPlayer1 += 0;
+            P1Bottom.innerHTML = bottomPointsPlayer1;
+        }
+        totalPointsPlayer1 = (topPointsPlayer1 + bottomPointsPlayer1)
+        P1Total.innerHTML = totalPointsPlayer1;
+    } else {
+        if (ones > 2 || twos > 2 || threes > 2 || fours > 2 || fives > 2 || sixes > 2) {
+            bottomPointsPlayer2 += ((ones) + (2 * twos) + (3 * threes) + (4 * fours) + (5 * fives) + (6 * sixes));
+            P2Bottom.innerHTML = bottomPointsPlayer2;
+        }
+        else {
+            bottomPointsPlayer2 += 0;
+            P2Bottom.innerHTML = bottomPointsPlayer2;
+        }
+        totalPointsPlayer2 = (topPointsPlayer2 + bottomPointsPlayer2)
+        P2Total.innerHTML = totalPointsPlayer2;
+    }
+}
+
+function AddX4() {
+    if (currentPlayer === 0) {
+        if (ones > 3 || twos > 3 || threes > 3 || fours > 3 || fives > 3 || sixes > 3) {
+            bottomPointsPlayer1 += ((ones) + (2 * twos) + (3 * threes) + (4 * fours) + (5 * fives) + (6 * sixes));
+            P1Bottom.innerHTML = bottomPointsPlayer1;
+        } else {
+            bottomPointsPlayer1 += 0;
+            P1Bottom.innerHTML = bottomPointsPlayer1;
+        }
+        totalPointsPlayer1 = (topPointsPlayer1 + bottomPointsPlayer1)
+        P1Total.innerHTML = totalPointsPlayer1;
+    } else {
+        if (ones > 3 || twos > 3 || threes > 3 || fours > 3 || fives > 3 || sixes > 3) {
+            bottomPointsPlayer2 += ((ones) + (2 * twos) + (3 * threes) + (4 * fours) + (5 * fives) + (6 * sixes));
+            P2Bottom.innerHTML = bottomPointsPlayer2;
+        }
+        else {
+            bottomPointsPlayer2 += 0;
+            P2Bottom.innerHTML = bottomPointsPlayer2;
+        }
+        totalPointsPlayer2 = (topPointsPlayer2 + bottomPointsPlayer2)
+        P2Total.innerHTML = totalPointsPlayer2;
+    }
+}
+
+function AddFH() {
+    if (currentPlayer === 0) {
+        if (fullHouse === true) {
+            bottomPointsPlayer1 += 25;
+            P1Bottom.innerHTML = bottomPointsPlayer1;
+        } else {
+            bottomPointsPlayer1 += 0;
+            P1Bottom.innerHTML = bottomPointsPlayer1;
+        }
+        totalPointsPlayer1 = (topPointsPlayer1 + bottomPointsPlayer1)
+        P1Total.innerHTML = totalPointsPlayer1;
+    } else {
+        if (fullHouse === true) {
+            bottomPointsPlayer2 += 25;
+            P2Bottom.innerHTML = bottomPointsPlayer2;
+        }
+        else {
+            bottomPointsPlayer2 += 0;
+            P2Bottom.innerHTML = bottomPointsPlayer2;
+        }
+        totalPointsPlayer2 = (topPointsPlayer2 + bottomPointsPlayer2)
+        P2Total.innerHTML = totalPointsPlayer2;
+    }
+}
+
+function AddSS() {
+    if (currentPlayer === 0) {
+        if (ones > 0 && twos > 0 && threes > 0 && fours > 0 ||
+            twos > 0 && threes > 0 && fours > 0 && fives > 0 ||
+            threes > 0 && fours > 0 && fives > 0 && sixes > 0) {
+            bottomPointsPlayer1 += 30;
+            P1Bottom.innerHTML = bottomPointsPlayer1;
+        } else {
+            bottomPointsPlayer1 += 0;
+            P1Bottom.innerHTML = bottomPointsPlayer1;
+        }
+        totalPointsPlayer1 = (topPointsPlayer1 + bottomPointsPlayer1)
+        P1Total.innerHTML = totalPointsPlayer1;
+    } else {
+        if (ones > 0 && twos > 0 && threes > 0 && fours > 0 ||
+            twos > 0 && threes > 0 && fours > 0 && fives > 0 ||
+            threes > 0 && fours > 0 && fives > 0 && sixes > 0) {
+            bottomPointsPlayer2 += 30;
+            P2Bottom.innerHTML = bottomPointsPlayer2;
+        }
+        else {
+            bottomPointsPlayer2 += 0;
+            P2Bottom.innerHTML = bottomPointsPlayer2;
+        }
+        totalPointsPlayer2 = (topPointsPlayer2 + bottomPointsPlayer2)
+        P2Total.innerHTML = totalPointsPlayer2;
+    }
+}
+
+function AddLS() {
+    if (currentPlayer === 0) {
+        if (ones > 0 && twos > 0 && threes > 0 && fours > 0 && fives > 0 ||
+            twos > 0 && threes > 0 && fours > 0 && fives > 0 && sixes > 0) {
+            bottomPointsPlayer1 += 40;
+            P1Bottom.innerHTML = bottomPointsPlayer1;
+        } else {
+            bottomPointsPlayer1 += 0;
+            P1Bottom.innerHTML = bottomPointsPlayer1;
+        }
+        totalPointsPlayer1 = (topPointsPlayer1 + bottomPointsPlayer1)
+        P1Total.innerHTML = totalPointsPlayer1;
+    } else {
+        if (ones > 0 && twos > 0 && threes > 0 && fours > 0 && fives > 0 ||
+            twos > 0 && threes > 0 && fours > 0 && fives > 0 && sixes > 0) {
+            bottomPointsPlayer2 += 40;
+            P2Bottom.innerHTML = bottomPointsPlayer2;
+        }
+        else {
+            bottomPointsPlayer2 += 0;
+            P2Bottom.innerHTML = bottomPointsPlayer2;
+        }
+        totalPointsPlayer2 = (topPointsPlayer2 + bottomPointsPlayer2)
+        P2Total.innerHTML = totalPointsPlayer2;
+    }
+}
+
+function AddYathzee() {
+    if (currentPlayer === 0) {
+        if (ones === 5 || twos === 5 || threes === 5 || fours === 5 || fives === 5 || sixes === 5) {
+            bottomPointsPlayer1 += 50;
+            P1Bottom.innerHTML = bottomPointsPlayer1;
+        } else {
+            bottomPointsPlayer1 += 0;
+            P1Bottom.innerHTML = bottomPointsPlayer1;
+        }
+        totalPointsPlayer1 = (topPointsPlayer1 + bottomPointsPlayer1)
+        P1Total.innerHTML = totalPointsPlayer1;
+    } else {
+        if (ones === 5 || twos === 5 || threes === 5 || fours === 5 || fives === 5 || sixes === 5) {
+            bottomPointsPlayer2 += 50;
+            P2Bottom.innerHTML = bottomPointsPlayer2;
+        }
+        else {
+            bottomPointsPlayer2 += 0;
+            P2Bottom.innerHTML = bottomPointsPlayer2;
+        }
+        totalPointsPlayer2 = (topPointsPlayer2 + bottomPointsPlayer2)
+        P2Total.innerHTML = totalPointsPlayer2;
+    }
+}
+
+function AddChance() {
+    if (currentPlayer === 0) {
         bottomPointsPlayer1 += ((ones) + (2 * twos) + (3 * threes) + (4 * fours) + (5 * fives) + (6 * sixes));
         P1Bottom.innerHTML = bottomPointsPlayer1;
+        totalPointsPlayer1 = (topPointsPlayer1 + bottomPointsPlayer1)
+        P1Total.innerHTML = totalPointsPlayer1;
+    } else {
+        bottomPointsPlayer2 += ((ones) + (2 * twos) + (3 * threes) + (4 * fours) + (5 * fives) + (6 * sixes));
+        P2Bottom.innerHTML = bottomPointsPlayer2;
+        totalPointsPlayer2 = (topPointsPlayer2 + bottomPointsPlayer2)
+        P2Total.innerHTML = totalPointsPlayer2;
     }
-    else {
-        bottomPointsPlayer1 += 0;
-        P1Bottom.innerHTML = bottomPointsPlayer1;
-    }
-    totalPointsPlayer1 = (topPointsPlayer1 + bottomPointsPlayer1)
-    P1Total.innerHTML = totalPointsPlayer1;
-}
-
-function P1AddX4() {
-    if (ones > 3 || twos > 3 || threes > 3 || fours > 3 || fives > 3 || sixes > 3) {
-        bottomPointsPlayer1 += ((ones) + (2 * twos) + (3 * threes) + (4 * fours) + (5 * fives) + (6 * sixes));
-        P1Bottom.innerHTML = bottomPointsPlayer1;
-    }
-    else {
-        bottomPointsPlayer1 += 0;
-        P1Bottom.innerHTML = bottomPointsPlayer1;
-    }
-    totalPointsPlayer1 = (topPointsPlayer1 + bottomPointsPlayer1)
-    P1Total.innerHTML = totalPointsPlayer1;
-}
-
-function P1AddFH() {
-    if (fullHouse === true) {
-        bottomPointsPlayer1 += 25;
-        P1Bottom.innerHTML = bottomPointsPlayer1;
-    }
-else {
-        bottomPointsPlayer1 += 0;
-        P1Bottom.innerHTML = bottomPointsPlayer1;
-    }
-    totalPointsPlayer1 = (topPointsPlayer1 + bottomPointsPlayer1)
-    P1Total.innerHTML = totalPointsPlayer1;
-}
-
-function P1AddSS() {
-    if (ones > 0 && twos > 0 && threes > 0 && fours > 0 ||
-        twos > 0 && threes > 0 && fours > 0 && fives > 0 ||
-        threes > 0 && fours > 0 && fives > 0 && sixes > 0) {
-        bottomPointsPlayer1 += 30;
-        P1Bottom.innerHTML = bottomPointsPlayer1;
-    }
-    else {
-        bottomPointsPlayer1 += 0;
-        P1Bottom.innerHTML = bottomPointsPlayer1;
-    }
-    totalPointsPlayer1 = (topPointsPlayer1 + bottomPointsPlayer1)
-    P1Total.innerHTML = totalPointsPlayer1;
-}
-
-function P1AddLS() {
-    if (ones > 0 && twos > 0 && threes > 0 && fours > 0 && fives > 0 ||
-        twos > 0 && threes > 0 && fours > 0 && fives > 0 && sixes > 0) {
-        bottomPointsPlayer1 += 40;
-        P1Bottom.innerHTML = bottomPointsPlayer1;
-    }
-else {
-        bottomPointsPlayer1 += 0;
-        P1Bottom.innerHTML = bottomPointsPlayer1;
-    }
-    totalPointsPlayer1 = (topPointsPlayer1 + bottomPointsPlayer1)
-    P1Total.innerHTML = totalPointsPlayer1;
-}
-
-function P1AddYathzee() {
-    if (ones === 5 || twos === 5 || threes === 5 || fours === 5 || fives === 5 || sixes === 5) {
-        bottomPointsPlayer1 += 50;
-        P1Bottom.innerHTML = bottomPointsPlayer1;
-    }
-    else {
-        bottomPointsPlayer1 += 0;
-        P1Bottom.innerHTML = bottomPointsPlayer1;
-    }
-    totalPointsPlayer1 = (topPointsPlayer1 + bottomPointsPlayer1)
-    P1Total.innerHTML = totalPointsPlayer1;
-}
-
-function P1AddChance() {
-    bottomPointsPlayer1 += ((ones) + (2 * twos) + (3 * threes) + (4 * fours) + (5 * fives) + (6 * sixes));
-    P1Bottom.innerHTML = bottomPointsPlayer1;
-    totalPointsPlayer1 = (topPointsPlayer1 + bottomPointsPlayer1)
-    P1Total.innerHTML = totalPointsPlayer1;
 }
 
 
 
 //eventlistener giver
 
-    if (currentPlayer === 0) {
-        let Aces = document.getElementById("P1Aces");
-        Aces.addEventListener('click', AddOnes);
+    let Aces = document.getElementById("P1Aces");
+    Aces.addEventListener('click', AddOnes);
 
-        Aces = document.getElementById("P2Aces");
-        Aces.removeEventListener('click', AddOnes)
-        console.log("P1")
-}
-    else {
-       let Aces = document.getElementById("P1Aces");
-        Aces.removeEventListener('click', AddOnes)
+    let Twos = document.getElementById("P1Twos");
+    Twos.addEventListener('click', AddTwos);
 
-        Aces = document.getElementById("P2Aces");
-        Aces.addEventListener('click', AddOnes);
-        console.log("P2")
-    }
+    let Threes = document.getElementById("P1Threes");
+    Threes.addEventListener('click', AddThrees);
 
-    let P1Twos = document.getElementById("P1Twos");
-    P1Twos.addEventListener('click', P1AddTwos);
+    let Fours = document.getElementById("P1Fours");
+    Fours.addEventListener('click', AddFours);
 
-    let P1Threes = document.getElementById("P1Threes");
-    P1Threes.addEventListener('click', P1AddThrees);
+    let Fives = document.getElementById("P1Fives");
+    Fives.addEventListener('click', AddFives);
 
-    let P1Fours = document.getElementById("P1Fours");
-    P1Fours.addEventListener('click', P1AddFours);
+    let Sixes = document.getElementById("P1Sixes");
+    Sixes.addEventListener('click', AddSixes);
 
-    let P1Fives = document.getElementById("P1Fives");
-    P1Fives.addEventListener('click', P1AddFives);
+    let X3 = document.getElementById("P1X3");
+    X3.addEventListener('click', AddX3);
 
-    let P1Sixes = document.getElementById("P1Sixes");
-    P1Sixes.addEventListener('click', P1AddSixes);
+    let X4 = document.getElementById("P1X4");
+    X4.addEventListener('click', AddX4);
 
-    let P1X3 = document.getElementById("P1X3");
-    P1X3.addEventListener('click', P1AddX3);
+    let House = document.getElementById("P1House");
+    House.addEventListener('click', AddFH);
 
-    let P1X4 = document.getElementById("P1X4");
-    P1X4.addEventListener('click', P1AddX4);
+    let SmallS = document.getElementById("P1SmallS");
+    SmallS.addEventListener('click', AddSS);
 
-    let P1House = document.getElementById("P1House");
-    P1House.addEventListener('click', P1AddFH);
+    let LargeS = document.getElementById("P1LargeS");
+    LargeS.addEventListener('click', AddLS);
 
-    let P1SmallS = document.getElementById("P1SmallS");
-    P1SmallS.addEventListener('click', P1AddSS);
+    let Yathzee = document.getElementById("P1Yathzee");
+    Yathzee.addEventListener('click', AddYathzee);
 
-    let P1LargeS = document.getElementById("P1LargeS");
-    P1LargeS.addEventListener('click', P1AddLS);
-
-    let P1Yathzee = document.getElementById("P1Yathzee");
-    P1Yathzee.addEventListener('click', P1AddYathzee);
-
-    let P1Chance = document.getElementById("P1Chance");
-    P1Chance.addEventListener('click', P1AddChance);
+    let Chance = document.getElementById("P1Chance");
+    Chance.addEventListener('click', AddChance);
 
 
 
@@ -710,10 +864,142 @@ function switchPlayer() {
         nextButton.innerHTML = "Switch the turn to Player 1!";
         currentPlayer = 1;
 
-    } else {
+        //Player 2's functions
+        let Aces = document.getElementById("P1Aces");
+        Aces.removeEventListener('click', AddOnes)
+        Aces = document.getElementById("P2Aces");
+        Aces.addEventListener('click', AddOnes);
+
+        let Twos = document.getElementById("P1Twos");
+        Twos.removeEventListener('click', AddTwos)
+        Twos = document.getElementById("P2Twos");
+        Twos.addEventListener('click', AddTwos);
+
+        let Threes = document.getElementById("P1Threes");
+        Threes.removeEventListener('click', AddThrees)
+        Threes = document.getElementById("P2Threes");
+        Threes.addEventListener('click', AddThrees);
+
+        let Fours = document.getElementById("P1Fours");
+        Fours.removeEventListener('click', AddFours)
+        Fours = document.getElementById("P2Fours");
+        Fours.addEventListener('click', AddFours);
+
+        let Fives = document.getElementById("P1Fives");
+        Fives.removeEventListener('click', AddFives)
+        Fives = document.getElementById("P2Fives");
+        Fives.addEventListener('click', AddFives);
+
+        let Sixes = document.getElementById("P1Sixes");
+        Sixes.removeEventListener('click', AddSixes)
+        Sixes = document.getElementById("P2Sixes");
+        Sixes.addEventListener('click', AddSixes);
+
+        let X3 = document.getElementById("P1X3");
+        X3.removeEventListener('click', AddX3)
+        X3 = document.getElementById("P2X3");
+        X3.addEventListener('click', AddX3);
+
+        let X4 = document.getElementById("P1X4");
+        X4.removeEventListener('click', AddX4)
+        X4 = document.getElementById("P2X4");
+        X4.addEventListener('click', AddX4);
+
+        let House = document.getElementById("P1House");
+        House.removeEventListener('click', AddFH)
+        House = document.getElementById("P2House");
+        House.addEventListener('click', AddFH);
+
+        let SmallS = document.getElementById("P1SmallS");
+        SmallS.removeEventListener('click', AddSS)
+        SmallS = document.getElementById("P2SmallS");
+        SmallS.addEventListener('click', AddSS);
+
+        let LargeS = document.getElementById("P1LargeS");
+        LargeS.removeEventListener('click', AddLS)
+        LargeS = document.getElementById("P2LargeS");
+        LargeS.addEventListener('click', AddLS);
+
+        let Yathzee = document.getElementById("P1Yathzee");
+        Yathzee.removeEventListener('click', AddYathzee)
+        Yathzee = document.getElementById("P2Yathzee");
+        Yathzee.addEventListener('click', AddYathzee);
+
+        let Chance = document.getElementById("P1Chance");
+        Chance.removeEventListener('click', AddChance)
+        Chance = document.getElementById("P2Chance");
+        Chance.addEventListener('click', AddChance);
+
+    }
+    //Player 1's functions
+    else {
         nextButton.innerHTML = "Switch the turn to Player 2!";
         currentPlayer = 0;
-        
+
+        let Aces = document.getElementById("P1Aces");
+        Aces.addEventListener('click', AddOnes);
+        Aces = document.getElementById("P2Aces");
+        Aces.removeEventListener('click', AddOnes)
+
+        let Twos = document.getElementById("P2Twos");
+        Twos.removeEventListener('click', AddTwos)
+        Twos = document.getElementById("P1Twos");
+        Twos.addEventListener('click', AddTwos);
+
+        let Threes = document.getElementById("P2Threes");
+        Threes.removeEventListener('click', AddThrees)
+        Threes = document.getElementById("P1Threes");
+        Threes.addEventListener('click', AddThrees);
+
+        let Fours = document.getElementById("P2Fours");
+        Fours.removeEventListener('click', AddFours)
+        Fours = document.getElementById("P1Fours");
+        Fours.addEventListener('click', AddFours);
+
+        let Fives = document.getElementById("P2Fives");
+        Fives.removeEventListener('click', AddFives)
+        Fives = document.getElementById("P1Fives");
+        Fives.addEventListener('click', AddFives);
+
+        let Sixes = document.getElementById("P2Sixes");
+        Sixes.removeEventListener('click', AddSixes)
+        Sixes = document.getElementById("P1Sixes");
+        Sixes.addEventListener('click', AddSixes);
+
+        let X3 = document.getElementById("P2X3");
+        X3.removeEventListener('click', AddX3)
+        X3 = document.getElementById("P1X3");
+        X3.addEventListener('click', AddX3);
+
+        let X4 = document.getElementById("P2X4");
+        X4.removeEventListener('click', AddX4)
+        X4 = document.getElementById("P1X4");
+        X4.addEventListener('click', AddX4);
+
+        let House = document.getElementById("P2House");
+        House.removeEventListener('click', AddFH)
+        House = document.getElementById("P1House");
+        House.addEventListener('click', AddFH);
+
+        let SmallS = document.getElementById("P2SmallS");
+        SmallS.removeEventListener('click', AddSS)
+        SmallS = document.getElementById("P1SmallS");
+        SmallS.addEventListener('click', AddSS);
+
+        let LargeS = document.getElementById("P2LargeS");
+        LargeS.removeEventListener('click', AddLS)
+        LargeS = document.getElementById("P1LargeS");
+        LargeS.addEventListener('click', AddLS);
+
+        let Yathzee = document.getElementById("P2Yathzee");
+        Yathzee.removeEventListener('click', AddYathzee)
+        Yathzee = document.getElementById("P1Yathzee");
+        Yathzee.addEventListener('click', AddYathzee);
+
+        let Chance = document.getElementById("P2Chance");
+        Chance.removeEventListener('click', AddChance)
+        Chance = document.getElementById("P1Chance");
+        Chance.addEventListener('click', AddChance);
     }
 }
 
