@@ -99,7 +99,10 @@ function throwDice2() {
     dicesClickedNumber -= 1;
     trueDiceNumbers.splice(1, 1)
     trueDiceNumbers.splice(1, 0, null)
+    diceImages.splice(1, 1)
+    diceImages.splice(1, 0, dice1Image)
     console.log(trueDiceNumbers);
+    console.log(diceImages)
     if (trueDiceNumbers !== [4]) {
         rollButton.addEventListener('click', rollDices)
     }
@@ -111,7 +114,10 @@ function keepDice2() {
     dicesClickedNumber += 1;
     trueDiceNumbers.splice(1, 1)
     trueDiceNumbers.splice(1, 0, diceNumbers[1]);
+    diceImages.splice(1, 1)
+    diceImages.splice(1, 0, null)
     console.log(trueDiceNumbers);
+    console.log(diceImages)
     if (trueDiceNumbers === [4]) {
         rollButton.removeEventListener('click', rollDices)
     }
@@ -124,7 +130,10 @@ function throwDice3() {
     dicesClickedNumber -= 1;
     trueDiceNumbers.splice(2, 1)
     trueDiceNumbers.splice(2, 0, null)
+    diceImages.splice(2, 1)
+    diceImages.splice(2, 0, dice1Image)
     console.log(trueDiceNumbers);
+    console.log(diceImages)
     if (trueDiceNumbers !== [4]) {
         rollButton.addEventListener('click', rollDices)
     }
@@ -136,7 +145,10 @@ function keepDice3() {
     dicesClickedNumber += 1;
     trueDiceNumbers.splice(2, 1)
     trueDiceNumbers.splice(2, 0, diceNumbers[2]);
+    diceImages.splice(2, 1)
+    diceImages.splice(2, 0, null)
     console.log(trueDiceNumbers);
+    console.log(diceImages)
     if (trueDiceNumbers === [4]) {
         rollButton.removeEventListener('click', rollDices)
     }
@@ -149,7 +161,10 @@ function throwDice4() {
     dicesClickedNumber -= 1;
     trueDiceNumbers.splice(3, 1)
     trueDiceNumbers.splice(3, 0, null)
+    diceImages.splice(3, 1)
+    diceImages.splice(3, 0, dice1Image)
     console.log(trueDiceNumbers);
+    console.log(diceImages)
     if (trueDiceNumbers !== [4]) {
         rollButton.addEventListener('click', rollDices)
     }
@@ -161,7 +176,10 @@ function keepDice4() {
     dicesClickedNumber += 1;
     trueDiceNumbers.splice(3, 1)
     trueDiceNumbers.splice(3, 0, diceNumbers[3]);
+    diceImages.splice(3, 1)
+    diceImages.splice(3, 0, null)
     console.log(trueDiceNumbers);
+    console.log(diceImages)
     if (trueDiceNumbers === [4]) {
         rollButton.removeEventListener('click', rollDices)
         console.log("eventlistener removed!");
@@ -175,7 +193,10 @@ function throwDice5() {
     dicesClickedNumber -= 1;
     trueDiceNumbers.splice(4, 1)
     trueDiceNumbers.splice(4, 0, null)
+    diceImages.splice(4, 1)
+    diceImages.splice(4, 0, dice1Image)
     console.log(trueDiceNumbers);
+    console.log(diceImages)
     if (trueDiceNumbers !== [4]) {
         rollButton.addEventListener('click', rollDices)
 
@@ -188,7 +209,10 @@ function keepDice5() {
     dicesClickedNumber += 1;
     trueDiceNumbers.splice(4, 1)
     trueDiceNumbers.splice(4, 0, diceNumbers[4]);
+    diceImages.splice(4, 1)
+    diceImages.splice(4, 0, null)
     console.log(trueDiceNumbers);
+    console.log(diceImages)
     if (trueDiceNumbers === [4]) {
         rollButton.removeEventListener('click', rollDices)
         console.log("eventlistener removed!");
@@ -236,22 +260,28 @@ function rollDices() {
     if (rollsLeft > 0) {
         //array vullen
         diceNumbers = [];
-/*        if (diceImages[0] === null) {
-            continue;
-        }
-        if (diceImages[1] === null) {
-            continue;
-        }
-        if (diceImages[2] === null) {
-            continue;
-        }
-        if (diceImages[3] === null) {
-            continue;
-        }
-        if (diceImages[4] === null) {
-            continue;
-        }*/
-        for (teller = 0; teller < 5; teller++) {
+
+        for (teller; teller < 5; teller++) {
+            if (diceImages[0] === null && teller === 0) {
+                teller += 1;
+                console.log("dice 1 skipt!")
+            }
+            if (diceImages[1] === null && teller === 1) {
+                teller += 1;
+                console.log("dice 2 skipt!")
+            }
+            if (diceImages[2] === null && teller === 2) {
+                teller += 1;
+                console.log("dice 3 skipt!")
+            }
+            if (diceImages[3] === null && teller === 3) {
+                teller += 1;
+                console.log("dice 4 skipt!")
+            }
+            if (diceImages[4] === null && teller === 4) {
+                console.log("dice 5 skipt!")
+                break;
+            }
 
             let randomDiceRoll = Math.floor(Math.random() * 6 + 1);
             diceNumbers.push(randomDiceRoll);

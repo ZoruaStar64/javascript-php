@@ -3,6 +3,23 @@ function P1AddOnes() {
     P1Top.innerHTML = topPointsPlayer1;
 }
 
+if (trueDiceNumbers[0].includes(1) || trueDiceNumbers[1].includes(1)
+    || trueDiceNumbers[2].includes(1) || trueDiceNumbers[3].includes(1)
+    || trueDiceNumbers[4].includes(1)) {
+    ones += 1;
+    if (trueDiceNumbers[1].includes(1) || trueDiceNumbers[2].includes(1)
+        || trueDiceNumbers[3].includes(1) || trueDiceNumbers[4].includes(1)) {
+        ones += 1;
+        if (trueDiceNumbers[2].includes(1)
+            || trueDiceNumbers[3].includes(1) || trueDiceNumbers[4].includes(1)) {
+            ones += 1;
+            if (trueDiceNumbers[3].includes(1) || trueDiceNumbers[4].includes(1)) {
+                ones += 1;
+            }
+        }
+    }
+}
+
 else if (currentPlayer === 1) {
     if (randomDiceRoll === 1) {
         ones += 1;
