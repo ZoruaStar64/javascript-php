@@ -22,7 +22,7 @@ p.parts {
 }
 
 input {
-    cursor: grab;
+    cursor: copy;
     float: right;
     margin-right: 20px;
     background-color: #d04b03;
@@ -99,30 +99,35 @@ div.dices img#diceOne {
     grid-column: 3 / 5;
     width: 100px;
     height: 100px;
+    cursor: cell;
 }
 div.dices img#diceTwo {
     grid-row: 3 / 5;
     grid-column: 1 / 5;
     width: 100px;
     height: 100px;
+    cursor: cell;
 }
 div.dices img#diceThree {
     grid-row: 3 / 5;
     grid-column: 5 / 5;
     width: 100px;
     height: 100px;
+    cursor: cell;
 }
 div.dices img#diceFour {
     grid-row: 5 / 5;
     grid-column: 2 / 5;
     width: 100px;
     height: 100px;
+    cursor: cell;
 }
 div.dices img#diceFive {
     grid-row: 5 / 5;
     grid-column: 4 / 5;
     width: 100px;
     height: 100px;
+    cursor: cell;
 }
 
 div.innerBoardRing {
