@@ -3,6 +3,22 @@ function P1AddOnes() {
     P1Top.innerHTML = topPointsPlayer1;
 }
 
+/*for (teller; teller < 5; teller++) {
+    if (diceImages[teller] == null) {
+        let randomDiceRoll = Math.floor(Math.random() * 6 + 1);
+        diceNumbers[teller] = randomDiceRoll;
+
+    } else {
+        diceNumbers[teller] = trueDiceNumbers[teller];
+        console.log("dice " + teller +  " skipt!");
+    }
+
+
+
+
+    console.log(randomDiceRoll);
+    console.log(diceNumbers);*/
+
 if (trueDiceNumbers[0].includes(1) || trueDiceNumbers[1].includes(1)
     || trueDiceNumbers[2].includes(1) || trueDiceNumbers[3].includes(1)
     || trueDiceNumbers[4].includes(1)) {
