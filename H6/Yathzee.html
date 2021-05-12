@@ -129,7 +129,17 @@
         <label>Combined Total/Final Score : <span id="P1Total"></span></label>
     </div>
 
-        <div class="rulesButton" style="display: block">Click to view the Rules!</div>
+        <div class="buttonContainer">
+
+            <div class="rollButton" style="display: block">Rolls left: <span id="rollNumber"></span> </div>
+            <div class="nextButton" style="display: block">Switch to Player 2</div>
+            <div class="playerTurnBox" style="display: block"><span id="currentTurn"></span></div>
+            <div class="rulesButton" style="display: block">Click to view the Rules!</div>
+            <div class="infoButton" style="display: block">Click to<br> view some answers to your questions</div>
+
+        </div>
+
+
     <div class="outerBoardRing">
         <div class="innerBoardRing">
             <div class="dices">
@@ -141,7 +151,7 @@
             </div>
         </div>
     </div>
-        <div class="infoButton" style="display: block">Click to<br> view some answers to your questions</div>
+
 
     <div class="playerTwo"><p class="two">Player Two</p>
         <p class="parts">
@@ -261,14 +271,17 @@
     </div>
     </div>
 
-    <div class="buttonContainer">
-
-    <div class="rollButton" style="display: block">Rolls left: <span id="rollNumber"></span> </div>
-    <div class="nextButton" style="display: block">Switch to Player 2</div>
-    </div>
+<div id="rulesTextBox" style="display: none"><p>Bij Yathzee gelden de volgende regels:</p>
+    <p>1: je mag 3 keer rollen en na de eerste keer en
+        <br>tweede keer mag je dobbelstenen vasthouden daarna moet je iets invullen</p>
+    <p>2: je mag na de eerste keer, tweede keer en derde keer een vakje invullen<br>
+    het is ook toegestaan om een nul in te vullen, maar dat kan je niet meer veranderen</p>
+    <p>3: Daarnaast zijn er wat regels zoals:<br> niet jouw tegenstander's turn switchen.<br>
+    niet jouw tegenstander's rolls doen/dobbelstenen vasthouden/dobbelstenen niet meer vasthouden<br>
+    en als laatste niet jouw tegenstander's velden invullen</p></div>
 
 </div>
-<a class="refresh" href="../H6/Yathzee.html">Click to refresh/play again!</a>
+
 <script src="../H6/Yathzee.js"></script>
 
 </body>

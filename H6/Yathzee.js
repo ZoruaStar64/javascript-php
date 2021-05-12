@@ -262,7 +262,7 @@ function rollDices() {
         diceNumbers = [];
 
         for (teller; teller < 5; teller++) {
-            if (diceImages[0] === null && teller === 0) {
+            if (diceImages[teller] === null && teller === 0) {
                 teller += 1;
                 console.log("dice 1 skipt!")
             }
@@ -1068,11 +1068,19 @@ function resetVariables() {
 
 }
 
+let currentTurn = document.getElementById('currentTurn')
+currentTurn.innerHTML = "It is currently Player 1's turn";
 
 function switchPlayer() {
+    throwDice1();
+    throwDice2();
+    throwDice3();
+    throwDice4();
+    throwDice5();
     let nextButton = document.querySelector(".nextButton");
     if (currentPlayer === 0) {
         nextButton.innerHTML = "Switch the turn to Player 1!";
+        currentTurn.innerHTML = "It is currently Player 2's turn";
         currentPlayer = 1;
 
         //Player 2's functions
@@ -1145,6 +1153,7 @@ function switchPlayer() {
     //Player 1's functions
     else {
         nextButton.innerHTML = "Switch the turn to Player 2!";
+        currentTurn.innerHTML = "It is currently Player 1's turn";
         currentPlayer = 0;
 
         let Aces = document.getElementById("P1Aces");
@@ -1213,6 +1222,17 @@ function switchPlayer() {
         Chance.addEventListener('click', AddChance);
     }
 }
+
+let rulesButton = document.querySelector(".rulesButton");
+function showRules() {
+    let rulesTextBox = document.getElementById("rulesTextBox")
+    if (rulesTextBox.style.display === 'none') {
+        rulesTextBox.style.display = 'block';
+    }
+    console.log("function active")
+}
+
+rulesButton.addEventListener('click', showRules);
 
 
 let nextButton = document.querySelector(".nextButton");
