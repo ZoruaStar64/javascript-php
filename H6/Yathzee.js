@@ -1049,7 +1049,7 @@ let currentTurn = document.getElementById('currentTurn')
 currentTurn.innerHTML = "It is currently Player 1's turn";
 
 function switchPlayer() {
-/*    throwDice1();
+    throwDice1();
     throwDice2();
     throwDice3();
     throwDice4();
@@ -1058,7 +1058,7 @@ function switchPlayer() {
     dice2Image.removeEventListener('click', keepDice2)
     dice3Image.removeEventListener('click', keepDice3)
     dice4Image.removeEventListener('click', keepDice4)
-    dice5Image.removeEventListener('click', keepDice5)*/
+    dice5Image.removeEventListener('click', keepDice5)
     let nextButton = document.querySelector(".nextButton");
     if (currentPlayer === 0) {
         nextButton.innerHTML = "Switch the turn to Player 1!";
