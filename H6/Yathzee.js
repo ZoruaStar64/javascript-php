@@ -1206,14 +1206,20 @@ function switchPlayer() {
 }
 
 let rulesButton = document.querySelector(".rulesButton");
+let rulesTextBox = document.getElementById("rulesTextBox")
 function showRules() {
-    let rulesTextBox = document.getElementById("rulesTextBox")
     if (rulesTextBox.style.display === 'none') {
         rulesTextBox.style.display = 'block';
     }
     console.log("function active")
 }
-
+let exitRulesButton = document.getElementById("rulesExitBox")
+function exitRules() {
+    if (rulesTextBox.style.display === 'block') {
+        rulesTextBox.style.display = 'none';
+    }
+}
+exitRulesButton.addEventListener('click', exitRules);
 rulesButton.addEventListener('click', showRules);
 
 
