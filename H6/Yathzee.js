@@ -257,7 +257,7 @@ function rollDices() {
             if (diceImages[4] === null && teller === 4) {
                 teller += 1;
                 console.log("dice 5 skipt!")
-                
+
             }
 
             let randomDiceRoll = Math.floor(Math.random() * 6 + 1);
