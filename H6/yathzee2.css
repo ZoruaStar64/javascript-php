@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.buttonContainer {
+    grid-area: buttonContainer;
+    background-color: #6d2803;
+}
+
+.playerOne {
+    grid-area: playerOne;
+    background-color: #12c412;
+}
+
+.outerBoardRing {
+    grid-area: outerBoardRing;
+    background-color: burlywood;
+}
+
+.playerTwo {
+    grid-area: playerTwo;
+    background-color: #a08301;
+}
+
+.gameContainer {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "buttonContainer buttonContainer buttonContainer"
+    "playerOne outerBoardRing playerTwo"
+    "playerOne outerBoardRing playerTwo";
+}
+
