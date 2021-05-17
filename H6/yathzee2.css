@@ -2,35 +2,118 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /*font-size: 16px;*/
 }
 
-.buttonContainer {
-    grid-area: buttonContainer;
-    background-color: #6d2803;
+.flexcontainer {
+    background-color: rgb(231, 95, 5);
 }
 
 .playerOne {
     grid-area: playerOne;
-    background-color: #12c412;
+
 }
 
 .outerBoardRing {
     grid-area: outerBoardRing;
-    background-color: burlywood;
+
 }
 
 .playerTwo {
     grid-area: playerTwo;
-    background-color: #a08301;
+
 }
 
 .gameContainer {
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: auto;
     grid-template-areas:
-    "buttonContainer buttonContainer buttonContainer"
-    "playerOne outerBoardRing playerTwo"
-    "playerOne outerBoardRing playerTwo";
+    "buttonContainer buttonContainer buttonContainer buttonContainer"
+    " playerOne playerOne  playerTwo playerTwo"
+    "outerBoardRing outerBoardRing outerBoardRing outerBoardRing";
 }
+
+.buttonContainer {
+    display: flex;
+    gap: 1em;
+    grid-area: buttonContainer;
+    margin: auto;
+    padding: 1em;
+    cursor: pointer;
+
+}
+
+.rollButton {
+    display: flex;
+    background-color: #d9bb34;
+    border: 2px black solid;
+    /*border-radius: 0% 20% 0% 20%;*/
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1em;
+
+}
+
+.nextButton {
+    display: flex;
+    background-color: #9d1919;
+    border: 2px black solid;
+    /*border-radius: 50%;*/
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1em;
+    /*height: 50px;*/
+}
+
+div.playerTurnBox {
+    display: flex;
+    background-color: #9d0c0c;
+    border: 3px solid #6d2803;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1em;
+    /*height: 50px;*/
+
+}
+
+div.rulesButton {
+    display: flex;
+    background-color: limegreen;
+    border: 2px black solid;
+    /*border-radius: 50%;*/
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+}
+
+div.infoButton {
+    display: flex;
+    background-color: dodgerblue;
+    border: 2px black solid;
+    /*border-radius: 50%;*/
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+}
+
+.dices {
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    margin: 1em;
+}
+
+#diceOne, #diceTwo, #diceThree, #diceFour, #diceFive {
+    min-width: 4em;
+    max-width: 10em;
+}
+
 
