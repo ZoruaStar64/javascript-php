@@ -58,11 +58,10 @@ input {
 
 
 
-
-
 div.playerOne {
     display: block;
     background-color: sandybrown;
+
     width: 350px;
     height: 600px;
     float: left;
