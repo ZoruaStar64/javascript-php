@@ -116,4 +116,20 @@ div.infoButton {
     max-width: 10em;
 }
 
+.playerOne {
+    background-color: sandybrown;
+}
+
+.playerTwo {
+    background-color: sandybrown;
+}
+
+.one {
+    text-align: center;
+}
+
+.two {
+    text-align: center;
+}
+
 

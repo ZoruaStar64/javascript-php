@@ -1046,7 +1046,7 @@ function resetVariables() {
 }
 
 let currentTurn = document.getElementById('currentTurn')
-currentTurn.innerHTML = "It is currently Player 1's turn";
+currentTurn.innerHTML = "Player 1's turn";
 
 function switchPlayer() {
     throwDice1();
@@ -1062,7 +1062,7 @@ function switchPlayer() {
     let nextButton = document.querySelector(".nextButton");
     if (currentPlayer === 0) {
         nextButton.innerHTML = "Switch the turn to Player 1!";
-        currentTurn.innerHTML = "It is currently Player 2's turn";
+        currentTurn.innerHTML = "Player 2's turn";
         currentPlayer = 1;
 
         //Player 2's functions
@@ -1135,7 +1135,7 @@ function switchPlayer() {
     //Player 1's functions
     else {
         nextButton.innerHTML = "Switch the turn to Player 2!";
-        currentTurn.innerHTML = "It is currently Player 1's turn";
+        currentTurn.innerHTML = "Player 1's turn";
         currentPlayer = 0;
 
         let Aces = document.getElementById("P1Aces");
