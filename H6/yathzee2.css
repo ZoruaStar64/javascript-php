@@ -16,9 +16,11 @@
 
 .outerBoardRing {
     grid-area: outerBoardRing;
-
 }
-
+.dices {
+    display: flex;
+    flex-direction: column;
+}
 .playerTwo {
     grid-area: playerTwo;
 
@@ -26,12 +28,11 @@
 
 .gameContainer {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: auto;
     grid-template-areas:
-    "buttonContainer buttonContainer buttonContainer buttonContainer"
-    " playerOne playerOne  playerTwo playerTwo"
-    "outerBoardRing outerBoardRing outerBoardRing outerBoardRing";
+    "buttonContainer buttonContainer buttonContainer buttonContainer buttonContainer"
+    "playerOne playerOne outerBoardRing playerTwo playerTwo";
 }
 
 .buttonContainer {
@@ -106,32 +107,29 @@ div.infoButton {
     gap: 1em;
     justify-content: center;
     align-items: center;
-    padding: 1em;
-    margin: 1em;
+    padding: 1em 0;
+    margin: 1em 0;
 }
 
 #diceOne, #diceTwo, #diceThree, #diceFour, #diceFive {
-    min-width: 4em;
-    max-width: 10em;
+    width: 50px;
 }
 
 .playerOne {
     background-color: sandybrown;
-    padding-right: 1em;
+    padding-right: 0.5em;
     background: linear-gradient(to right, sandybrown, #cd5418);
 }
 
 .playerTwo {
     background-color: sandybrown;
-    padding-left: 1em;
-
+    padding-left: 0.5em;
 }
 
 .one {
     text-align: center;
     border: 1px solid black;
     background-color: #d04b03;
-
 }
 
 .two {
@@ -143,7 +141,6 @@ div.infoButton {
 .parts {
     border-bottom: 2px solid #d04b03;
     border-top: 2px solid #d04b03;
-
 }
 
 .bonus {
@@ -156,12 +153,22 @@ div.infoButton {
 
 .playerOne input {
     float: right;
-    height: 18px;
-    margin-right: 3em;
+    height: 16px;
+    margin-right: 2em;
+    border: none;
+    background-color: #d04b03;
+    padding: 0.5em;
+    font-size: 12px;
+    line-height: 2px;
 }
 
 .upperScorecard {
-    margin-left: 2em;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    /*align-items: baseline;*/
+    margin-left: 1em;
+    margin-right: 2em;
 }
 
 
