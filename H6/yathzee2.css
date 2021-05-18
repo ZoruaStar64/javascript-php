@@ -113,6 +113,7 @@ div.infoButton {
 
 #diceOne, #diceTwo, #diceThree, #diceFour, #diceFive {
     width: 50px;
+    height: auto;
 }
 
 .playerOne {
@@ -184,9 +185,94 @@ div.infoButton {
     margin: 0.5em 0.5em 0.5em 0.5em;
 }
 
+/* Tabllets */
 @media only screen and (min-width: 768px) {
-    .lowerScorecard{
-        display: none;
+    .gameContainer {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+    "buttonContainer buttonContainer buttonContainer"
+    "playerOne outerBoardRing playerTwo";
+    }
+
+    #diceOne, #diceTwo, #diceThree, #diceFour, #diceFive {
+        width: 75px;
+        height: auto;
+    }
+}
+
+/* Laptop / PC */
+@media only screen and (min-width: 1200px) {
+    div.dices {
+        /*position: absolute;*/
+        display: grid;
+        /*top: 135px;*/
+        /*left: 695px;*/
+        grid-template-columns: repeat(5, 75px);
+        grid-template-rows: repeat(5, 75px);
+        grid-gap: 5px 5px;
+        padding-top: 40px;
+
+    }
+    div.dices img#diceOne {
+        grid-row: 1 / 2;
+        grid-column: 3 / 4;
+        width: 75px;
+        height: 75px;
+        cursor: cell;
+    }
+    div.dices img#diceTwo {
+        grid-row: 3 / 4;
+        grid-column: 1 / 2;
+        width: 75px;
+        height: 75px;
+        cursor: cell;
+    }
+    div.dices img#diceThree {
+        grid-row: 3 / 4;
+        grid-column: 5 / 6;
+        width: 75px;
+        height: 75px;
+        cursor: cell;
+    }
+    div.dices img#diceFour {
+        grid-row: 5 / 6;
+        grid-column: 2 / 3;
+        width: 75px;
+        height: 75px;
+        cursor: cell;
+    }
+    div.dices img#diceFive {
+        grid-row: 5 / 6;
+        grid-column: 4 / 5;
+        width: 75px;
+        height: 75px;
+        cursor: cell;
+    }
+
+    div.innerBoardRing {
+        display: block;
+        background-color: #c8c6c6;
+        width: 500px;
+        height: 500px;
+        border-radius: 50%;
+        /*float: left;*/
+        margin-left: 65px;
+        margin-top: 70px;
+    }
+
+    div.outerBoardRing {
+        display: block;
+        background-color: #acacac;
+        width: 630px;
+        height: 630px;
+        border-radius: 50%;
+        margin: auto;
+        /*float: left;*/
+        /*margin-left: 225px;*/
+        /*margin-top: 30px;*/
+
     }
 }
 
