@@ -7,11 +7,11 @@
 
 .flexcontainer {
     background-color: rgb(231, 95, 5);
+    height: 100vh;
 }
 
 .playerOne {
     grid-area: playerOne;
-
 }
 
 .outerBoardRing {
@@ -23,7 +23,6 @@
 }
 .playerTwo {
     grid-area: playerTwo;
-
 }
 
 .gameContainer {
