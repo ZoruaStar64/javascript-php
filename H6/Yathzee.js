@@ -283,8 +283,11 @@ function rollDices() {
                 console.log("dice 4 skipt!")
             }
             if (diceImages[4] === null && teller === 4) {
-                teller += 1;
+                /*teller += 1;*/
+                /*teller = 5*/
                 console.log("dice 5 skipt!")
+                break;
+
 
             }
 
@@ -546,9 +549,10 @@ rollButton.addEventListener("click", rollDices);
 //Player add functions
 function AddOnes() {
     if (currentPlayer === 0) {
+        let P1AcesText = document.getElementById("P1AcesText");
+        P1AcesText.innerHTML = "" + ones;
         P1One = true;
         buttonsPlayer1Clicked += 1;
-        Aces.style.backgroundColor = '#9d3700'
         topPointsPlayer1 += ones;
         P1Top.innerHTML = topPointsPlayer1;
         totalPointsPlayer1 = (topPointsPlayer1 + bottomPointsPlayer1)
@@ -562,6 +566,7 @@ function AddOnes() {
                 P1Total.innerHTML = totalPointsPlayer1;
             }
         }
+        eventListenerRemovalForPointButtons()
     }
     else {
         P2One = true;
@@ -579,11 +584,14 @@ function AddOnes() {
                 P2Total.innerHTML = totalPointsPlayer2;
             }
         }
+        eventListenerRemovalForPointButtons()
     }
 }
 
 function AddTwos() {
     if (currentPlayer === 0) {
+        let P1TwosText = document.getElementById("P1TwosText");
+        P1TwosText.innerHTML = "" + (2 * twos);
         P1Two = true;
         buttonsPlayer1Clicked += 1;
         topPointsPlayer1 += (2 * twos);
@@ -599,6 +607,7 @@ function AddTwos() {
                 P1Total.innerHTML = totalPointsPlayer1;
             }
         }
+        eventListenerRemovalForPointButtons()
     } else {
         P2Two = true;
         buttonsPlayer2Clicked += 1;
@@ -615,11 +624,14 @@ function AddTwos() {
                 P2Total.innerHTML = totalPointsPlayer2;
             }
         }
+        eventListenerRemovalForPointButtons()
     }
 }
 
 function AddThrees() {
     if (currentPlayer === 0) {
+        let P1ThreesText = document.getElementById("P1ThreesText");
+        P1ThreesText.innerHTML = "" + (3 * threes);
         P1Three = true;
         buttonsPlayer1Clicked += 1;
         topPointsPlayer1 += (3 * threes);
@@ -635,6 +647,7 @@ function AddThrees() {
                 P1Total.innerHTML = totalPointsPlayer1;
             }
         }
+        eventListenerRemovalForPointButtons()
     }
     else {
         P2Three = true;
@@ -652,11 +665,14 @@ function AddThrees() {
                 P2Total.innerHTML = totalPointsPlayer2;
             }
         }
+        eventListenerRemovalForPointButtons()
     }
 }
 
 function AddFours() {
     if (currentPlayer === 0) {
+        let P1FoursText = document.getElementById("P1FoursText");
+        P1FoursText.innerHTML = "" + (4 * fours);
         P1Four = true;
         buttonsPlayer1Clicked += 1;
     topPointsPlayer1 += (4 * fours);
@@ -672,6 +688,7 @@ function AddFours() {
             P1Total.innerHTML = totalPointsPlayer1;
         }
     }
+        eventListenerRemovalForPointButtons()
 }
     else {
         P2Four = true;
@@ -689,11 +706,14 @@ function AddFours() {
                 P2Total.innerHTML = totalPointsPlayer2;
             }
         }
+        eventListenerRemovalForPointButtons()
     }
 }
 
 function AddFives() {
     if (currentPlayer === 0) {
+        let P1FivesText = document.getElementById("P1FivesText");
+        P1FivesText.innerHTML = "" + (5 * fives);
         P1Five = true;
         buttonsPlayer1Clicked += 1;
     topPointsPlayer1 += (5 * fives);
@@ -709,6 +729,7 @@ function AddFives() {
             P1Total.innerHTML = totalPointsPlayer1;
         }
     }
+        eventListenerRemovalForPointButtons()
 }
     else {
         P2Five = true;
@@ -726,11 +747,14 @@ function AddFives() {
                 P2Total.innerHTML = totalPointsPlayer2;
             }
         }
+        eventListenerRemovalForPointButtons()
     }
 }
 
 function AddSixes() {
     if (currentPlayer === 0) {
+        let P1SixesText = document.getElementById("P1SixesText");
+        P1SixesText.innerHTML = "" + (6 * sixes);
         P1Six = true;
         buttonsPlayer1Clicked += 1;
     topPointsPlayer1 += (6 * sixes);
@@ -746,6 +770,7 @@ function AddSixes() {
             P1Total.innerHTML = totalPointsPlayer1;
         }
     }
+        eventListenerRemovalForPointButtons()
 }
     else {
         P2Six = true;
@@ -763,11 +788,14 @@ function AddSixes() {
                 P2Total.innerHTML = totalPointsPlayer2;
             }
         }
+        eventListenerRemovalForPointButtons()
     }
 }
 
 function AddX3() {
     if (currentPlayer === 0) {
+        let P1X3Text = document.getElementById("P1X3Text");
+        P1X3Text.innerHTML = "" + ((ones) + (2 * twos) + (3 * threes) + (4 * fours) + (5 * fives) + (6 * sixes));
         P1ThreeX = true;
         buttonsPlayer1Clicked += 1;
         if (ones > 2 || twos > 2 || threes > 2 || fours > 2 || fives > 2 || sixes > 2) {
@@ -779,6 +807,7 @@ function AddX3() {
         }
         totalPointsPlayer1 = (topPointsPlayer1 + bottomPointsPlayer1)
         P1Total.innerHTML = totalPointsPlayer1;
+        eventListenerRemovalForPointButtons()
     } else {
         P2ThreeX = true;
         buttonsPlayer2Clicked += 1;
@@ -792,11 +821,14 @@ function AddX3() {
         }
         totalPointsPlayer2 = (topPointsPlayer2 + bottomPointsPlayer2)
         P2Total.innerHTML = totalPointsPlayer2;
+        eventListenerRemovalForPointButtons()
     }
 }
 
 function AddX4() {
     if (currentPlayer === 0) {
+        let P1X4Text = document.getElementById("P1X4Text");
+        P1X4Text.innerHTML = "" + ((ones) + (2 * twos) + (3 * threes) + (4 * fours) + (5 * fives) + (6 * sixes));
         P1FourX = true;
         buttonsPlayer1Clicked += 1;
         if (ones > 3 || twos > 3 || threes > 3 || fours > 3 || fives > 3 || sixes > 3) {
@@ -808,6 +840,7 @@ function AddX4() {
         }
         totalPointsPlayer1 = (topPointsPlayer1 + bottomPointsPlayer1)
         P1Total.innerHTML = totalPointsPlayer1;
+        eventListenerRemovalForPointButtons()
     } else {
         P2FourX = true;
         buttonsPlayer2Clicked += 1;
@@ -821,11 +854,14 @@ function AddX4() {
         }
         totalPointsPlayer2 = (topPointsPlayer2 + bottomPointsPlayer2)
         P2Total.innerHTML = totalPointsPlayer2;
+        eventListenerRemovalForPointButtons()
     }
 }
 
 function AddFH() {
     if (currentPlayer === 0) {
+        let P1HouseText = document.getElementById("P1HouseText");
+        P1HouseText.innerHTML = "25";
         P1FH = true;
         buttonsPlayer1Clicked += 1;
         if (fullHouse === true) {
@@ -837,6 +873,7 @@ function AddFH() {
         }
         totalPointsPlayer1 = (topPointsPlayer1 + bottomPointsPlayer1)
         P1Total.innerHTML = totalPointsPlayer1;
+        eventListenerRemovalForPointButtons()
     } else {
         P2FH = true;
         buttonsPlayer2Clicked += 1;
@@ -850,13 +887,17 @@ function AddFH() {
         }
         totalPointsPlayer2 = (topPointsPlayer2 + bottomPointsPlayer2)
         P2Total.innerHTML = totalPointsPlayer2;
+        eventListenerRemovalForPointButtons()
     }
 }
 
 function AddSS() {
     if (currentPlayer === 0) {
+        let P1SSText = document.getElementById("P1SSText");
+        P1SSText.innerHTML = "30";
         P1SS = true;
         buttonsPlayer1Clicked += 1;
+        SmallS.style.backgroundColor = '#9d3700';
         if (ones > 0 && twos > 0 && threes > 0 && fours > 0 ||
             twos > 0 && threes > 0 && fours > 0 && fives > 0 ||
             threes > 0 && fours > 0 && fives > 0 && sixes > 0) {
@@ -868,9 +909,11 @@ function AddSS() {
         }
         totalPointsPlayer1 = (topPointsPlayer1 + bottomPointsPlayer1)
         P1Total.innerHTML = totalPointsPlayer1;
+        eventListenerRemovalForPointButtons()
     } else {
         P2SS = true;
         buttonsPlayer2Clicked += 1;
+        SmallS.style.backgroundColor = '#9d3700';
         if (ones > 0 && twos > 0 && threes > 0 && fours > 0 ||
             twos > 0 && threes > 0 && fours > 0 && fives > 0 ||
             threes > 0 && fours > 0 && fives > 0 && sixes > 0) {
@@ -883,11 +926,14 @@ function AddSS() {
         }
         totalPointsPlayer2 = (topPointsPlayer2 + bottomPointsPlayer2)
         P2Total.innerHTML = totalPointsPlayer2;
+        eventListenerRemovalForPointButtons()
     }
 }
 
 function AddLS() {
     if (currentPlayer === 0) {
+        let P1LSText = document.getElementById("P1LSText");
+        P1LSText.innerHTML = "40";
         P1LS = true;
         buttonsPlayer1Clicked += 1;
         if (ones > 0 && twos > 0 && threes > 0 && fours > 0 && fives > 0 ||
@@ -900,6 +946,7 @@ function AddLS() {
         }
         totalPointsPlayer1 = (topPointsPlayer1 + bottomPointsPlayer1)
         P1Total.innerHTML = totalPointsPlayer1;
+        eventListenerRemovalForPointButtons()
     } else {
         P2LS = true;
         buttonsPlayer2Clicked += 1;
@@ -914,11 +961,14 @@ function AddLS() {
         }
         totalPointsPlayer2 = (topPointsPlayer2 + bottomPointsPlayer2)
         P2Total.innerHTML = totalPointsPlayer2;
+        eventListenerRemovalForPointButtons()
     }
 }
 
 function AddYathzee() {
     if (currentPlayer === 0) {
+        let P1YathzeeText = document.getElementById("P1YathzeeText");
+        P1YathzeeText.innerHTML = "50";
         P1Y = true;
         buttonsPlayer1Clicked += 1;
         if (ones === 5 || twos === 5 || threes === 5 || fours === 5 || fives === 5 || sixes === 5) {
@@ -930,6 +980,7 @@ function AddYathzee() {
         }
         totalPointsPlayer1 = (topPointsPlayer1 + bottomPointsPlayer1)
         P1Total.innerHTML = totalPointsPlayer1;
+        eventListenerRemovalForPointButtons()
     } else {
         P2Y = true;
         buttonsPlayer2Clicked += 1;
@@ -943,17 +994,21 @@ function AddYathzee() {
         }
         totalPointsPlayer2 = (topPointsPlayer2 + bottomPointsPlayer2)
         P2Total.innerHTML = totalPointsPlayer2;
+        eventListenerRemovalForPointButtons()
     }
 }
 
 function AddChance() {
     if (currentPlayer === 0) {
+        let P1ChanceText = document.getElementById("P1ChanceText");
+        P1ChanceText.innerHTML = "" + ((ones) + (2 * twos) + (3 * threes) + (4 * fours) + (5 * fives) + (6 * sixes));
         P1C = true;
         buttonsPlayer1Clicked += 1;
         bottomPointsPlayer1 += ((ones) + (2 * twos) + (3 * threes) + (4 * fours) + (5 * fives) + (6 * sixes));
         P1Bottom.innerHTML = bottomPointsPlayer1;
         totalPointsPlayer1 = (topPointsPlayer1 + bottomPointsPlayer1)
         P1Total.innerHTML = totalPointsPlayer1;
+        eventListenerRemovalForPointButtons()
     } else {
         P2C = true;
         buttonsPlayer2Clicked += 1;
@@ -961,6 +1016,7 @@ function AddChance() {
         P2Bottom.innerHTML = bottomPointsPlayer2;
         totalPointsPlayer2 = (topPointsPlayer2 + bottomPointsPlayer2)
         P2Total.innerHTML = totalPointsPlayer2;
+        eventListenerRemovalForPointButtons()
     }
 }
 
@@ -1130,6 +1186,116 @@ function resetVariables() {
 
 let currentTurn = document.getElementById('currentTurn')
 currentTurn.innerHTML = "Player 1's turn";
+
+function eventListenerRemovalForPointButtons() {
+    if (currentPlayer === 0) {
+        let Aces = document.getElementById("P1Aces");
+        Aces.style.backgroundColor = '#9d3700';
+        Aces.removeEventListener('click', AddOnes)
+
+        let Twos = document.getElementById("P1Twos");
+        Twos.style.backgroundColor = '#9d3700';
+        Twos.removeEventListener('click', AddTwos)
+
+        let Threes = document.getElementById("P1Threes");
+        Threes.style.backgroundColor = '#9d3700';
+        Threes.removeEventListener('click', AddThrees)
+
+        let Fours = document.getElementById("P1Fours");
+        Fours.style.backgroundColor = '#9d3700';
+        Fours.removeEventListener('click', AddFours)
+
+        let Fives = document.getElementById("P1Fives");
+        Fives.style.backgroundColor = '#9d3700';
+        Fives.removeEventListener('click', AddFives)
+
+        let Sixes = document.getElementById("P1Sixes");
+        Sixes.style.backgroundColor = '#9d3700';
+        Sixes.removeEventListener('click', AddSixes)
+
+        let X3 = document.getElementById("P1X3");
+        X3.style.backgroundColor = '#9d3700';
+        X3.removeEventListener('click', AddX3)
+
+        let X4 = document.getElementById("P1X4");
+        X4.style.backgroundColor = '#9d3700';
+        X4.removeEventListener('click', AddX4)
+
+        let House = document.getElementById("P1House");
+        House.style.backgroundColor = '#9d3700';
+        House.removeEventListener('click', AddFH)
+
+        let SmallS = document.getElementById("P1SmallS");
+        SmallS.style.backgroundColor = '#9d3700';
+        SmallS.removeEventListener('click', AddSS)
+
+        let LargeS = document.getElementById("P1LargeS");
+        LargeS.style.backgroundColor = '#9d3700';
+        LargeS.removeEventListener('click', AddLS)
+
+        let Yathzee = document.getElementById("P1Yathzee");
+        Yathzee.style.backgroundColor = '#9d3700';
+        Yathzee.removeEventListener('click', AddYathzee)
+
+        let Chance = document.getElementById("P1Chance");
+        Chance.style.backgroundColor = '#9d3700';
+        Chance.removeEventListener('click', AddChance)
+    }
+    else {
+        let Aces = document.getElementById("P2Aces");
+        Aces.style.backgroundColor = '#9d3700';
+        Aces.removeEventListener('click', AddOnes)
+
+        let Twos = document.getElementById("P2Twos");
+        Twos.style.backgroundColor = '#9d3700';
+        Twos.removeEventListener('click', AddTwos)
+
+        let Threes = document.getElementById("P2Threes");
+        Threes.style.backgroundColor = '#9d3700';
+        Threes.removeEventListener('click', AddThrees)
+
+        let Fours = document.getElementById("P2Fours");
+        Fours.style.backgroundColor = '#9d3700';
+        Fours.removeEventListener('click', AddFours)
+
+        let Fives = document.getElementById("P2Fives");
+        Fives.style.backgroundColor = '#9d3700';
+        Fives.removeEventListener('click', AddFives)
+
+        let Sixes = document.getElementById("P2Sixes");
+        Sixes.style.backgroundColor = '#9d3700';
+        Sixes.removeEventListener('click', AddSixes)
+
+        let X3 = document.getElementById("P2X3");
+        X3.style.backgroundColor = '#9d3700';
+        X3.removeEventListener('click', AddX3)
+
+        let X4 = document.getElementById("P2X4");
+        X4.style.backgroundColor = '#9d3700';
+        X4.removeEventListener('click', AddX4)
+
+        let House = document.getElementById("P2House");
+        House.style.backgroundColor = '#9d3700';
+        House.removeEventListener('click', AddFH)
+
+        let SmallS = document.getElementById("P2SmallS");
+        SmallS.style.backgroundColor = '#9d3700';
+        SmallS.removeEventListener('click', AddSS)
+
+        let LargeS = document.getElementById("P2LargeS");
+        LargeS.style.backgroundColor = '#9d3700';
+        LargeS.removeEventListener('click', AddLS)
+
+        let Yathzee = document.getElementById("P2Yathzee");
+        Yathzee.style.backgroundColor = '#9d3700';
+        Yathzee.removeEventListener('click', AddYathzee)
+
+        let Chance = document.getElementById("P2Chance");
+        Chance.style.backgroundColor = '#9d3700';
+        Chance.removeEventListener('click', AddChance)
+    }
+}
+
 
 function WinningPlayer() {
     if (buttonsPlayer1Clicked && buttonsPlayer2Clicked === 26) {
