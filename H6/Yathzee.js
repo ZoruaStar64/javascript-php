@@ -17,6 +17,34 @@ let doubles = false;
 let triples = false;
 let fullHouse = false;
 
+//hier komen tering feel variabelen om de checken of iets true of false is
+let P1One = false;
+let P2One = false;
+let P1Two = false;
+let P2Two = false;
+let P1Three = false;
+let P2Three = false;
+let P1Four = false;
+let P2Four = false;
+let P1Five = false;
+let P2Five = false;
+let P1Six = false;
+let P2Six = false;
+let P1ThreeX = false;
+let P2ThreeX = false
+let P1FourX = false;
+let P2FourX = false;
+let P1FH = false;
+let P2FH = false;
+let P1SS = false;
+let P2SS = false;
+let P1LS = false;
+let P2LS = false;
+let P1Y = false;
+let P2Y = false;
+let P1C = false;
+let P2C = false;
+
 
 let waitingForNextMove = true;
 
@@ -273,10 +301,10 @@ function rollDices() {
 
             let Aces = currentPlayer === 0 ? document.getElementById("P1Aces") : document.getElementById("P2Aces");
             if (ones => 1) {
-                Aces.value = '+ ' + ones + ' points';
+                Aces.value = '+ ' + ones;
                 Aces.style.backgroundColor = "#ff7423";
             } else if (ones === 0) {
-                Aces.value = '0 Points';
+                Aces.value = '+ 0';
                 Aces.style.backgroundColor = "#d04b03";
             }
 
@@ -286,10 +314,10 @@ function rollDices() {
             }
             let Twos = currentPlayer === 0 ? document.getElementById("P1Twos") : document.getElementById("P2Twos");
             if (twos => 1) {
-                Twos.value = '+ ' + (2 * twos) + ' points';
+                Twos.value = '+ ' + (2 * twos);
                 Twos.style.backgroundColor = "#ff7423";
             } else if (twos === 0) {
-                Twos.value = '0 Points';
+                Twos.value = '+ 0';
                 Twos.style.backgroundColor = "#d04b03";
             }
 
@@ -298,10 +326,10 @@ function rollDices() {
             }
             let Threes = currentPlayer === 0 ? document.getElementById("P1Threes") : document.getElementById("P2Threes");
             if (threes => 1) {
-                Threes.value = '+ ' + (3 * threes) + ' points';
+                Threes.value = '+ ' + (3 * threes);
                 Threes.style.backgroundColor = "#ff7423";
             } else if (threes === 0) {
-                Threes.value = '0 Points';
+                Threes.value = '+ 0';
                 Threes.style.backgroundColor = "#d04b03";
             }
 
@@ -310,10 +338,10 @@ function rollDices() {
             }
             let Fours = currentPlayer === 0 ? document.getElementById("P1Fours") : document.getElementById("P2Fours");
             if (fours => 1) {
-                Fours.value = '+ ' + (4 * fours) + ' points';
+                Fours.value = '+ ' + (4 * fours);
                 Fours.style.backgroundColor = "#ff7423";
             } else if (fours === 0) {
-                Fours.value = '0 Points';
+                Fours.value = '+ 0';
                 Fours.style.backgroundColor = "#d04b03";
             }
 
@@ -322,10 +350,10 @@ function rollDices() {
             }
             let Fives = currentPlayer === 0 ? document.getElementById("P1Fives") : document.getElementById("P2Fives");
             if (fives => 1) {
-                Fives.value = '+ ' + (5 * fives) + ' points';
+                Fives.value = '+ ' + (5 * fives);
                 Fives.style.backgroundColor = "#ff7423";
             } else if (fives === 0) {
-                Fives.value = '0 Points';
+                Fives.value = '+ 0';
                 Fives.style.backgroundColor = "#d04b03";
             }
 
@@ -334,10 +362,10 @@ function rollDices() {
             }
             let Sixes = currentPlayer === 0 ? document.getElementById("P1Sixes") : document.getElementById("P2Sixes");
             if (sixes => 1) {
-                Sixes.value = '+ ' + (6 * sixes) + ' points';
+                Sixes.value = '+ ' + (6 * sixes);
                 Sixes.style.backgroundColor = "#ff7423";
             } else if (sixes === 0) {
-                Sixes.value = '0 Points';
+                Sixes.value = '+ 0';
                 Sixes.style.backgroundColor = "#d04b03";
             }
 
@@ -346,10 +374,10 @@ function rollDices() {
             let X3 = currentPlayer === 0 ? document.getElementById("P1X3") : document.getElementById("P2X3");
             if (ones > 2 || twos > 2 || threes > 2 || fours > 2 || fives > 2 || sixes > 2) {
 
-                X3.value = '+ ' + ((ones) + (2 * twos) + (3 * threes) + (4 * fours) + (5 * fives) + (6 * sixes)) + ' points';
+                X3.value = '+ ' + ((ones) + (2 * twos) + (3 * threes) + (4 * fours) + (5 * fives) + (6 * sixes));
                 X3.style.backgroundColor = "#ff7423";
             } else {
-                X3.value = '+ 0 Points';
+                X3.value = '+ 0';
                 X3.style.backgroundColor = "#d04b03";
             }
 
@@ -357,10 +385,10 @@ function rollDices() {
             let X4 = currentPlayer === 0 ? document.getElementById("P1X4") : document.getElementById("P2X4");
             if (ones > 3 || twos > 3 || threes > 3 || fours > 3 || fives > 3 || sixes > 3) {
 
-                X4.value = '+ ' + ((ones) + (2 * twos) + (3 * threes) + (4 * fours) + (5 * fives) + (6 * sixes)) + ' points';
+                X4.value = '+ ' + ((ones) + (2 * twos) + (3 * threes) + (4 * fours) + (5 * fives) + (6 * sixes));
                 X4.style.backgroundColor = "#ff7423";
             } else {
-                X4.value = '+ 0 Points';
+                X4.value = '+ 0';
                 X4.style.backgroundColor = "#d04b03";
             }
 
@@ -379,10 +407,10 @@ function rollDices() {
             }
             if (fullHouse === true) {
 
-                House.value = '+ 25 Points';
+                House.value = '+ 25';
                 House.style.backgroundColor = "#ff7423";
             } else if (fullHouse === false) {
-                House.value = '+ 0 Points';
+                House.value = '+ 0';
                 House.style.backgroundColor = "#d04b03";
             }
 
@@ -394,10 +422,10 @@ function rollDices() {
                     twos > 0 && threes > 0 && fours > 0 && fives > 0 ||
                     threes > 0 && fours > 0 && fives > 0 && sixes > 0) {
 
-                    SmallS.value = '+ 30 Points';
+                    SmallS.value = '+ 30';
                     SmallS.style.backgroundColor = "#ff7423";
                 } else {
-                    SmallS.value = '+ 0 Points';
+                    SmallS.value = '+ 0';
                     SmallS.style.backgroundColor = "#d04b03";
                 }
 
@@ -406,10 +434,10 @@ function rollDices() {
                 if (ones > 0 && twos > 0 && threes > 0 && fours > 0 && fives > 0 ||
                     twos > 0 && threes > 0 && fours > 0 && fives > 0 && sixes > 0) {
 
-                    LargeS.value = '+ 40 Points';
+                    LargeS.value = '+ 40';
                     LargeS.style.backgroundColor = "#ff7423";
                 } else {
-                    LargeS.value = '+ 0 Points';
+                    LargeS.value = '+ 0';
                     LargeS.style.backgroundColor = "#d04b03";
                 }
 
@@ -417,10 +445,10 @@ function rollDices() {
             let Yathzee = currentPlayer === 0 ? document.getElementById("P1Yathzee") : document.getElementById("P2Yathzee");
                 if (ones === 5 || twos === 5 || threes === 5 || fours === 5 || fives === 5 || sixes === 5) {
 
-                    Yathzee.value = '+ 50 Points';
+                    Yathzee.value = '+ 50';
                     Yathzee.style.backgroundColor = "#ff7423";
                 } else {
-                    Yathzee.value = '+ 0 Points';
+                    Yathzee.value = '+ 0';
                     Yathzee.style.backgroundColor = "#d04b03";
                 }
 
@@ -428,7 +456,7 @@ function rollDices() {
             let Chance = currentPlayer === 0 ? document.getElementById("P1Chance") : document.getElementById("P2Chance");
                 if (ones > 0 || twos > 0 || threes > 0 || fours > 0 || fives > 0 || sixes > 0) {
 
-                    Chance.value = '+ ' + ((ones) + (2 * twos) + (3 * threes) + (4 * fours) + (5 * fives) + (6 * sixes)) + ' points';
+                    Chance.value = '+ ' + ((ones) + (2 * twos) + (3 * threes) + (4 * fours) + (5 * fives) + (6 * sixes));
                     Chance.style.backgroundColor = "#ff7423";
                 }
             }
@@ -448,6 +476,7 @@ function rollDices() {
 
         rollButton.innerHTML = "Rolls left = 2"
         rollButton.style.color = "yellow"
+
         dice1Image.addEventListener('click', keepDice1);
         dice2Image.addEventListener('click', keepDice2);
         dice3Image.addEventListener('click', keepDice3);
@@ -468,9 +497,58 @@ function rollDices() {
     }
 }
 
+//eventlistener giver
+let Aces = document.getElementById("P1Aces");
+Aces.addEventListener('click', AddOnes);
+
+let Twos = document.getElementById("P1Twos");
+Twos.addEventListener('click', AddTwos);
+
+let Threes = document.getElementById("P1Threes");
+Threes.addEventListener('click', AddThrees);
+
+let Fours = document.getElementById("P1Fours");
+Fours.addEventListener('click', AddFours);
+
+let Fives = document.getElementById("P1Fives");
+Fives.addEventListener('click', AddFives);
+
+let Sixes = document.getElementById("P1Sixes");
+Sixes.addEventListener('click', AddSixes);
+
+let X3 = document.getElementById("P1X3");
+X3.addEventListener('click', AddX3);
+
+let X4 = document.getElementById("P1X4");
+X4.addEventListener('click', AddX4);
+
+let House = document.getElementById("P1House");
+House.addEventListener('click', AddFH);
+
+let SmallS = document.getElementById("P1SmallS");
+SmallS.addEventListener('click', AddSS);
+
+let LargeS = document.getElementById("P1LargeS");
+LargeS.addEventListener('click', AddLS);
+
+let Yathzee = document.getElementById("P1Yathzee");
+Yathzee.addEventListener('click', AddYathzee);
+
+let Chance = document.getElementById("P1Chance");
+Chance.addEventListener('click', AddChance);
+
+
+
+let rollButton = document.querySelector(".rollButton");
+console.log(rollButton);
+rollButton.addEventListener("click", rollDices);
+
 //Player add functions
 function AddOnes() {
     if (currentPlayer === 0) {
+        P1One = true;
+        buttonsPlayer1Clicked += 1;
+        Aces.style.backgroundColor = '#9d3700'
         topPointsPlayer1 += ones;
         P1Top.innerHTML = topPointsPlayer1;
         totalPointsPlayer1 = (topPointsPlayer1 + bottomPointsPlayer1)
@@ -486,6 +564,8 @@ function AddOnes() {
         }
     }
     else {
+        P2One = true;
+        buttonsPlayer2Clicked += 1;
         topPointsPlayer2 += ones;
         P2Top.innerHTML = topPointsPlayer2;
         totalPointsPlayer2 = (topPointsPlayer2 + bottomPointsPlayer2)
@@ -504,6 +584,8 @@ function AddOnes() {
 
 function AddTwos() {
     if (currentPlayer === 0) {
+        P1Two = true;
+        buttonsPlayer1Clicked += 1;
         topPointsPlayer1 += (2 * twos);
         P1Top.innerHTML = topPointsPlayer1;
         totalPointsPlayer1 = (topPointsPlayer1 + bottomPointsPlayer1)
@@ -518,6 +600,8 @@ function AddTwos() {
             }
         }
     } else {
+        P2Two = true;
+        buttonsPlayer2Clicked += 1;
         topPointsPlayer2 += (2 * twos);
         P2Top.innerHTML = topPointsPlayer2;
         totalPointsPlayer2 = (topPointsPlayer2 + bottomPointsPlayer2)
@@ -536,6 +620,8 @@ function AddTwos() {
 
 function AddThrees() {
     if (currentPlayer === 0) {
+        P1Three = true;
+        buttonsPlayer1Clicked += 1;
         topPointsPlayer1 += (3 * threes);
         P1Top.innerHTML = topPointsPlayer1;
         totalPointsPlayer1 = (topPointsPlayer1 + bottomPointsPlayer1)
@@ -551,6 +637,8 @@ function AddThrees() {
         }
     }
     else {
+        P2Three = true;
+        buttonsPlayer2Clicked += 1;
         topPointsPlayer2 += (3 * threes);
         P2Top.innerHTML = topPointsPlayer2;
         totalPointsPlayer2 = (topPointsPlayer2 + bottomPointsPlayer2)
@@ -569,6 +657,8 @@ function AddThrees() {
 
 function AddFours() {
     if (currentPlayer === 0) {
+        P1Four = true;
+        buttonsPlayer1Clicked += 1;
     topPointsPlayer1 += (4 * fours);
     P1Top.innerHTML = topPointsPlayer1;
     totalPointsPlayer1 = (topPointsPlayer1 + bottomPointsPlayer1)
@@ -584,6 +674,8 @@ function AddFours() {
     }
 }
     else {
+        P2Four = true;
+        buttonsPlayer2Clicked += 1;
         topPointsPlayer2 += (4 * fours);
         P2Top.innerHTML = topPointsPlayer2;
         totalPointsPlayer2 = (topPointsPlayer2 + bottomPointsPlayer2)
@@ -602,6 +694,8 @@ function AddFours() {
 
 function AddFives() {
     if (currentPlayer === 0) {
+        P1Five = true;
+        buttonsPlayer1Clicked += 1;
     topPointsPlayer1 += (5 * fives);
     P1Top.innerHTML = topPointsPlayer1;
     totalPointsPlayer1 = (topPointsPlayer1 + bottomPointsPlayer1)
@@ -617,6 +711,8 @@ function AddFives() {
     }
 }
     else {
+        P2Five = true;
+        buttonsPlayer2Clicked += 1;
         topPointsPlayer2 += (5 * fives);
         P2Top.innerHTML = topPointsPlayer2;
         totalPointsPlayer2 = (topPointsPlayer2 + bottomPointsPlayer2)
@@ -635,6 +731,8 @@ function AddFives() {
 
 function AddSixes() {
     if (currentPlayer === 0) {
+        P1Six = true;
+        buttonsPlayer1Clicked += 1;
     topPointsPlayer1 += (6 * sixes);
     P1Top.innerHTML = topPointsPlayer1;
     totalPointsPlayer1 = (topPointsPlayer1 + bottomPointsPlayer1)
@@ -650,6 +748,8 @@ function AddSixes() {
     }
 }
     else {
+        P2Six = true;
+        buttonsPlayer2Clicked += 1;
         topPointsPlayer2 += (6 * sixes);
         P2Top.innerHTML = topPointsPlayer2;
         totalPointsPlayer2 = (topPointsPlayer2 + bottomPointsPlayer2)
@@ -668,6 +768,8 @@ function AddSixes() {
 
 function AddX3() {
     if (currentPlayer === 0) {
+        P1ThreeX = true;
+        buttonsPlayer1Clicked += 1;
         if (ones > 2 || twos > 2 || threes > 2 || fours > 2 || fives > 2 || sixes > 2) {
             bottomPointsPlayer1 += ((ones) + (2 * twos) + (3 * threes) + (4 * fours) + (5 * fives) + (6 * sixes));
             P1Bottom.innerHTML = bottomPointsPlayer1;
@@ -678,6 +780,8 @@ function AddX3() {
         totalPointsPlayer1 = (topPointsPlayer1 + bottomPointsPlayer1)
         P1Total.innerHTML = totalPointsPlayer1;
     } else {
+        P2ThreeX = true;
+        buttonsPlayer2Clicked += 1;
         if (ones > 2 || twos > 2 || threes > 2 || fours > 2 || fives > 2 || sixes > 2) {
             bottomPointsPlayer2 += ((ones) + (2 * twos) + (3 * threes) + (4 * fours) + (5 * fives) + (6 * sixes));
             P2Bottom.innerHTML = bottomPointsPlayer2;
@@ -693,6 +797,8 @@ function AddX3() {
 
 function AddX4() {
     if (currentPlayer === 0) {
+        P1FourX = true;
+        buttonsPlayer1Clicked += 1;
         if (ones > 3 || twos > 3 || threes > 3 || fours > 3 || fives > 3 || sixes > 3) {
             bottomPointsPlayer1 += ((ones) + (2 * twos) + (3 * threes) + (4 * fours) + (5 * fives) + (6 * sixes));
             P1Bottom.innerHTML = bottomPointsPlayer1;
@@ -703,6 +809,8 @@ function AddX4() {
         totalPointsPlayer1 = (topPointsPlayer1 + bottomPointsPlayer1)
         P1Total.innerHTML = totalPointsPlayer1;
     } else {
+        P2FourX = true;
+        buttonsPlayer2Clicked += 1;
         if (ones > 3 || twos > 3 || threes > 3 || fours > 3 || fives > 3 || sixes > 3) {
             bottomPointsPlayer2 += ((ones) + (2 * twos) + (3 * threes) + (4 * fours) + (5 * fives) + (6 * sixes));
             P2Bottom.innerHTML = bottomPointsPlayer2;
@@ -718,6 +826,8 @@ function AddX4() {
 
 function AddFH() {
     if (currentPlayer === 0) {
+        P1FH = true;
+        buttonsPlayer1Clicked += 1;
         if (fullHouse === true) {
             bottomPointsPlayer1 += 25;
             P1Bottom.innerHTML = bottomPointsPlayer1;
@@ -728,6 +838,8 @@ function AddFH() {
         totalPointsPlayer1 = (topPointsPlayer1 + bottomPointsPlayer1)
         P1Total.innerHTML = totalPointsPlayer1;
     } else {
+        P2FH = true;
+        buttonsPlayer2Clicked += 1;
         if (fullHouse === true) {
             bottomPointsPlayer2 += 25;
             P2Bottom.innerHTML = bottomPointsPlayer2;
@@ -743,6 +855,8 @@ function AddFH() {
 
 function AddSS() {
     if (currentPlayer === 0) {
+        P1SS = true;
+        buttonsPlayer1Clicked += 1;
         if (ones > 0 && twos > 0 && threes > 0 && fours > 0 ||
             twos > 0 && threes > 0 && fours > 0 && fives > 0 ||
             threes > 0 && fours > 0 && fives > 0 && sixes > 0) {
@@ -755,6 +869,8 @@ function AddSS() {
         totalPointsPlayer1 = (topPointsPlayer1 + bottomPointsPlayer1)
         P1Total.innerHTML = totalPointsPlayer1;
     } else {
+        P2SS = true;
+        buttonsPlayer2Clicked += 1;
         if (ones > 0 && twos > 0 && threes > 0 && fours > 0 ||
             twos > 0 && threes > 0 && fours > 0 && fives > 0 ||
             threes > 0 && fours > 0 && fives > 0 && sixes > 0) {
@@ -772,6 +888,8 @@ function AddSS() {
 
 function AddLS() {
     if (currentPlayer === 0) {
+        P1LS = true;
+        buttonsPlayer1Clicked += 1;
         if (ones > 0 && twos > 0 && threes > 0 && fours > 0 && fives > 0 ||
             twos > 0 && threes > 0 && fours > 0 && fives > 0 && sixes > 0) {
             bottomPointsPlayer1 += 40;
@@ -783,6 +901,8 @@ function AddLS() {
         totalPointsPlayer1 = (topPointsPlayer1 + bottomPointsPlayer1)
         P1Total.innerHTML = totalPointsPlayer1;
     } else {
+        P2LS = true;
+        buttonsPlayer2Clicked += 1;
         if (ones > 0 && twos > 0 && threes > 0 && fours > 0 && fives > 0 ||
             twos > 0 && threes > 0 && fours > 0 && fives > 0 && sixes > 0) {
             bottomPointsPlayer2 += 40;
@@ -799,6 +919,8 @@ function AddLS() {
 
 function AddYathzee() {
     if (currentPlayer === 0) {
+        P1Y = true;
+        buttonsPlayer1Clicked += 1;
         if (ones === 5 || twos === 5 || threes === 5 || fours === 5 || fives === 5 || sixes === 5) {
             bottomPointsPlayer1 += 50;
             P1Bottom.innerHTML = bottomPointsPlayer1;
@@ -809,6 +931,8 @@ function AddYathzee() {
         totalPointsPlayer1 = (topPointsPlayer1 + bottomPointsPlayer1)
         P1Total.innerHTML = totalPointsPlayer1;
     } else {
+        P2Y = true;
+        buttonsPlayer2Clicked += 1;
         if (ones === 5 || twos === 5 || threes === 5 || fours === 5 || fives === 5 || sixes === 5) {
             bottomPointsPlayer2 += 50;
             P2Bottom.innerHTML = bottomPointsPlayer2;
@@ -824,11 +948,15 @@ function AddYathzee() {
 
 function AddChance() {
     if (currentPlayer === 0) {
+        P1C = true;
+        buttonsPlayer1Clicked += 1;
         bottomPointsPlayer1 += ((ones) + (2 * twos) + (3 * threes) + (4 * fours) + (5 * fives) + (6 * sixes));
         P1Bottom.innerHTML = bottomPointsPlayer1;
         totalPointsPlayer1 = (topPointsPlayer1 + bottomPointsPlayer1)
         P1Total.innerHTML = totalPointsPlayer1;
     } else {
+        P2C = true;
+        buttonsPlayer2Clicked += 1;
         bottomPointsPlayer2 += ((ones) + (2 * twos) + (3 * threes) + (4 * fours) + (5 * fives) + (6 * sixes));
         P2Bottom.innerHTML = bottomPointsPlayer2;
         totalPointsPlayer2 = (topPointsPlayer2 + bottomPointsPlayer2)
@@ -838,52 +966,7 @@ function AddChance() {
 
 
 
-//eventlistener giver
 
-    let Aces = document.getElementById("P1Aces");
-    Aces.addEventListener('click', AddOnes);
-
-    let Twos = document.getElementById("P1Twos");
-    Twos.addEventListener('click', AddTwos);
-
-    let Threes = document.getElementById("P1Threes");
-    Threes.addEventListener('click', AddThrees);
-
-    let Fours = document.getElementById("P1Fours");
-    Fours.addEventListener('click', AddFours);
-
-    let Fives = document.getElementById("P1Fives");
-    Fives.addEventListener('click', AddFives);
-
-    let Sixes = document.getElementById("P1Sixes");
-    Sixes.addEventListener('click', AddSixes);
-
-    let X3 = document.getElementById("P1X3");
-    X3.addEventListener('click', AddX3);
-
-    let X4 = document.getElementById("P1X4");
-    X4.addEventListener('click', AddX4);
-
-    let House = document.getElementById("P1House");
-    House.addEventListener('click', AddFH);
-
-    let SmallS = document.getElementById("P1SmallS");
-    SmallS.addEventListener('click', AddSS);
-
-    let LargeS = document.getElementById("P1LargeS");
-    LargeS.addEventListener('click', AddLS);
-
-    let Yathzee = document.getElementById("P1Yathzee");
-    Yathzee.addEventListener('click', AddYathzee);
-
-    let Chance = document.getElementById("P1Chance");
-    Chance.addEventListener('click', AddChance);
-
-
-
-let rollButton = document.querySelector(".rollButton");
-console.log(rollButton);
-rollButton.addEventListener("click", rollDices);
 
 if (rollsLeft === 3) {
     rollButton.innerHTML = "Rolls left = 3"
@@ -903,60 +986,60 @@ function resetVariables() {
     ones = 0;
     let Aces = currentPlayer === 0 ? document.getElementById("P1Aces") : document.getElementById("P2Aces");
     if (ones => 1) {
-        Aces.value = '+ ' + ones + ' points';
+        Aces.value = '+ ' + ones;
         Aces.style.backgroundColor = "#ff7423";
     } else if (ones === 0) {
-        Aces.value = '0 Points';
+        Aces.value = '+ 0';
         Aces.style.backgroundColor = "#d04b03";
     }
 
         twos = 0;
     let Twos = currentPlayer === 0 ? document.getElementById("P1Twos") : document.getElementById("P2Twos");
     if (twos => 1) {
-        Twos.value = '+ ' + (2 * twos) + ' points';
+        Twos.value = '+ ' + (2 * twos);
         Twos.style.backgroundColor = "#ff7423";
     } else if (twos === 0) {
-        Twos.value = '0 Points';
+        Twos.value = '+ 0';
         Twos.style.backgroundColor = "#d04b03";
     }
 
         threes = 0;
     let Threes = currentPlayer === 0 ? document.getElementById("P1Threes") : document.getElementById("P2Threes");
     if (threes => 1) {
-        Threes.value = '+ ' + (3 * threes) + ' points';
+        Threes.value = '+ ' + (3 * threes);
         Threes.style.backgroundColor = "#ff7423";
     } else if (threes === 0) {
-        Threes.value = '0 Points';
+        Threes.value = '+ 0';
         Threes.style.backgroundColor = "#d04b03";
     }
 
         fours = 0;
     let Fours = currentPlayer === 0 ? document.getElementById("P1Fours") : document.getElementById("P2Fours");
     if (fours => 1) {
-        Fours.value = '+ ' + (4 * fours) + ' points';
+        Fours.value = '+ ' + (4 * fours);
         Fours.style.backgroundColor = "#ff7423";
     } else if (fours === 0) {
-        Fours.value = '0 Points';
+        Fours.value = '+ 0';
         Fours.style.backgroundColor = "#d04b03";
     }
 
         fives = 0;
     let Fives = currentPlayer === 0 ? document.getElementById("P1Fives") : document.getElementById("P2Fives");
     if (fives => 1) {
-        Fives.value = '+ ' + (5 * fives) + ' points';
+        Fives.value = '+ ' + (5 * fives);
         Fives.style.backgroundColor = "#ff7423";
     } else if (fives === 0) {
-        Fives.value = '0 Points';
+        Fives.value = '+ 0';
         Fives.style.backgroundColor = "#d04b03";
     }
 
         sixes = 0;
     let Sixes = currentPlayer === 0 ? document.getElementById("P1Sixes") : document.getElementById("P2Sixes");
     if (sixes => 1) {
-        Sixes.value = '+ ' + (6 * sixes) + ' points';
+        Sixes.value = '+ ' + (6 * sixes);
         Sixes.style.backgroundColor = "#ff7423";
     } else if (sixes === 0) {
-        Sixes.value = '0 Points';
+        Sixes.value = '+ 0';
         Sixes.style.backgroundColor = "#d04b03";
     }
 
@@ -964,20 +1047,20 @@ function resetVariables() {
     //Three of a kind
     let X3 = currentPlayer === 0 ? document.getElementById("P1X3") : document.getElementById("P2X3");
     if (ones > 2 || twos > 2 || threes > 2 || fours > 2 || fives > 2 || sixes > 2) {
-        X3.value = '+ ' + ((ones) + (2 * twos) + (3 * threes) + (4 * fours) + (5 * fives) + (6 * sixes)) + ' points';
+        X3.value = '+ ' + ((ones) + (2 * twos) + (3 * threes) + (4 * fours) + (5 * fives) + (6 * sixes));
         X3.style.backgroundColor = "#ff7423";
     } else {
-        X3.value = '+ 0 Points';
+        X3.value = '+ 0';
         X3.style.backgroundColor = "#d04b03";
     }
 
     //Four of a kind
     let X4 = currentPlayer === 0 ? document.getElementById("P1X4") : document.getElementById("P2X4");
     if (ones > 3 || twos > 3 || threes > 3 || fours > 3 || fives > 3 || sixes > 3) {
-        X4.value = '+ ' + ((ones) + (2 * twos) + (3 * threes) + (4 * fours) + (5 * fives) + (6 * sixes)) + ' points';
+        X4.value = '+ ' + ((ones) + (2 * twos) + (3 * threes) + (4 * fours) + (5 * fives) + (6 * sixes));
         X4.style.backgroundColor = "#ff7423";
     } else {
-        X4.value = '+ 0 Points';
+        X4.value = '+ 0';
         X4.style.backgroundColor = "#d04b03";
     }
 
@@ -998,10 +1081,10 @@ function resetVariables() {
     }
     if (fullHouse === true) {
 
-        House.value = '+ 25 Points';
+        House.value = '+ 25';
         House.style.backgroundColor = "#ff7423";
     } else if (fullHouse === false) {
-        House.value = '+ 0 Points';
+        House.value = '+ 0';
         House.style.backgroundColor = "#d04b03";
     }
 
@@ -1010,10 +1093,10 @@ function resetVariables() {
     if (ones > 0 && twos > 0 && threes > 0 && fours > 0 ||
         twos > 0 && threes > 0 && fours > 0 && fives > 0 ||
         threes > 0 && fours > 0 && fives > 0 && sixes > 0) {
-        SmallS.value = '+ 30 Points';
+        SmallS.value = '+ 30';
         SmallS.style.backgroundColor = "#ff7423";
     } else {
-        SmallS.value = '+ 0 Points';
+        SmallS.value = '+ 0';
         SmallS.style.backgroundColor = "#d04b03";
     }
 
@@ -1021,26 +1104,26 @@ function resetVariables() {
     let LargeS = currentPlayer === 0 ? document.getElementById("P1LargeS") : document.getElementById("P2LargeS");
     if (ones > 0 && twos > 0 && threes > 0 && fours > 0 && fives > 0 ||
         twos > 0 && threes > 0 && fours > 0 && fives > 0 && sixes > 0) {
-        LargeS.value = '+ 40 Points';
+        LargeS.value = '+ 40';
         LargeS.style.backgroundColor = "#ff7423";
     } else {
-        LargeS.value = '+ 0 Points';
+        LargeS.value = '+ 0';
         LargeS.style.backgroundColor = "#d04b03";
     }
 
     //Yathzee
     let Yathzee = currentPlayer === 0 ? document.getElementById("P1Yathzee") : document.getElementById("P2Yathzee");
     if (ones === 5 || twos === 5 || threes === 5 || fours === 5 || fives === 5 || sixes === 5) {
-        Yathzee.value = '+ 50 Points';
+        Yathzee.value = '+ 50';
         Yathzee.style.backgroundColor = "#ff7423";
     } else {
-        Yathzee.value = '+ 0 Points';
+        Yathzee.value = '+ 0';
         Yathzee.style.backgroundColor = "#d04b03";
     }
 
     //Chance
     let Chance = currentPlayer === 0 ? document.getElementById("P1Chance") : document.getElementById("P2Chance");
-        Chance.value = '+ 0 points';
+        Chance.value = '+ 0';
         Chance.style.backgroundColor = "#ff7423";
 
 }
@@ -1048,7 +1131,17 @@ function resetVariables() {
 let currentTurn = document.getElementById('currentTurn')
 currentTurn.innerHTML = "Player 1's turn";
 
+function WinningPlayer() {
+    if (buttonsPlayer1Clicked && buttonsPlayer2Clicked === 26) {
+        let winBox = document.getElementById("winBox");
+        winBox.style.display = 'Block';
+        rollButton.removeEventListener('click', rollDices);
+        nextButton.removeEventListener('click', switchPlayer);
+    }
+}
+
 function switchPlayer() {
+
     throwDice1();
     throwDice2();
     throwDice3();
@@ -1068,69 +1161,94 @@ function switchPlayer() {
         //Player 2's functions
         let Aces = document.getElementById("P1Aces");
         Aces.removeEventListener('click', AddOnes)
-        Aces = document.getElementById("P2Aces");
-        Aces.addEventListener('click', AddOnes);
+        if (P2One !== true) {
+            Aces = document.getElementById("P2Aces");
+            Aces.addEventListener('click', AddOnes);
+        }
 
         let Twos = document.getElementById("P1Twos");
         Twos.removeEventListener('click', AddTwos)
-        Twos = document.getElementById("P2Twos");
-        Twos.addEventListener('click', AddTwos);
+        if (P2Two !== true) {
+            Twos = document.getElementById("P2Twos");
+            Twos.addEventListener('click', AddTwos);
+        }
 
         let Threes = document.getElementById("P1Threes");
         Threes.removeEventListener('click', AddThrees)
-        Threes = document.getElementById("P2Threes");
-        Threes.addEventListener('click', AddThrees);
+        if (P2Three !== true) {
+            Threes = document.getElementById("P2Threes");
+            Threes.addEventListener('click', AddThrees);
+        }
 
         let Fours = document.getElementById("P1Fours");
         Fours.removeEventListener('click', AddFours)
-        Fours = document.getElementById("P2Fours");
-        Fours.addEventListener('click', AddFours);
+        if (P2Four !== true) {
+            Fours = document.getElementById("P2Fours");
+            Fours.addEventListener('click', AddFours);
+        }
 
         let Fives = document.getElementById("P1Fives");
         Fives.removeEventListener('click', AddFives)
-        Fives = document.getElementById("P2Fives");
-        Fives.addEventListener('click', AddFives);
+        if (P2Five !== true) {
+            Fives = document.getElementById("P2Fives");
+            Fives.addEventListener('click', AddFives);
+        }
 
         let Sixes = document.getElementById("P1Sixes");
         Sixes.removeEventListener('click', AddSixes)
-        Sixes = document.getElementById("P2Sixes");
-        Sixes.addEventListener('click', AddSixes);
+        if (P2Six !== true) {
+            Sixes = document.getElementById("P2Sixes");
+            Sixes.addEventListener('click', AddSixes);
+        }
 
         let X3 = document.getElementById("P1X3");
         X3.removeEventListener('click', AddX3)
-        X3 = document.getElementById("P2X3");
-        X3.addEventListener('click', AddX3);
+        if (P2ThreeX !== true) {
+            X3 = document.getElementById("P2X3");
+            X3.addEventListener('click', AddX3);
+        }
 
         let X4 = document.getElementById("P1X4");
         X4.removeEventListener('click', AddX4)
-        X4 = document.getElementById("P2X4");
-        X4.addEventListener('click', AddX4);
+        if (P2FourX !== true) {
+            X4 = document.getElementById("P2X4");
+            X4.addEventListener('click', AddX4);
+        }
 
         let House = document.getElementById("P1House");
         House.removeEventListener('click', AddFH)
-        House = document.getElementById("P2House");
-        House.addEventListener('click', AddFH);
+        if (P2FH !== true) {
+            House = document.getElementById("P2House");
+            House.addEventListener('click', AddFH);
+        }
 
         let SmallS = document.getElementById("P1SmallS");
         SmallS.removeEventListener('click', AddSS)
-        SmallS = document.getElementById("P2SmallS");
-        SmallS.addEventListener('click', AddSS);
+        if (P2SS !== true) {
+            SmallS = document.getElementById("P2SmallS");
+            SmallS.addEventListener('click', AddSS);
+        }
 
         let LargeS = document.getElementById("P1LargeS");
         LargeS.removeEventListener('click', AddLS)
-        LargeS = document.getElementById("P2LargeS");
-        LargeS.addEventListener('click', AddLS);
+        if (P2LS !== true) {
+            LargeS = document.getElementById("P2LargeS");
+            LargeS.addEventListener('click', AddLS);
+        }
 
         let Yathzee = document.getElementById("P1Yathzee");
         Yathzee.removeEventListener('click', AddYathzee)
-        Yathzee = document.getElementById("P2Yathzee");
-        Yathzee.addEventListener('click', AddYathzee);
+        if (P2Y !== true) {
+            Yathzee = document.getElementById("P2Yathzee");
+            Yathzee.addEventListener('click', AddYathzee);
+        }
 
         let Chance = document.getElementById("P1Chance");
         Chance.removeEventListener('click', AddChance)
-        Chance = document.getElementById("P2Chance");
-        Chance.addEventListener('click', AddChance);
-
+        if (P2C !== true) {
+            Chance = document.getElementById("P2Chance");
+            Chance.addEventListener('click', AddChance);
+        }
     }
     //Player 1's functions
     else {
@@ -1138,70 +1256,100 @@ function switchPlayer() {
         currentTurn.innerHTML = "Player 1's turn";
         currentPlayer = 0;
 
-        let Aces = document.getElementById("P1Aces");
-        Aces.addEventListener('click', AddOnes);
-        Aces = document.getElementById("P2Aces");
+
+        let Aces = document.getElementById("P2Aces");
         Aces.removeEventListener('click', AddOnes)
+        if (P1One !== true) {
+            let Aces = document.getElementById("P1Aces");
+            Aces.addEventListener('click', AddOnes);
+        }
 
         let Twos = document.getElementById("P2Twos");
         Twos.removeEventListener('click', AddTwos)
-        Twos = document.getElementById("P1Twos");
-        Twos.addEventListener('click', AddTwos);
+        if (P1Two !== true) {
+            Twos = document.getElementById("P1Twos");
+            Twos.addEventListener('click', AddTwos);
+        }
 
         let Threes = document.getElementById("P2Threes");
         Threes.removeEventListener('click', AddThrees)
-        Threes = document.getElementById("P1Threes");
-        Threes.addEventListener('click', AddThrees);
+        if (P1Three !== true) {
+            Threes = document.getElementById("P1Threes");
+            Threes.addEventListener('click', AddThrees);
+        }
 
         let Fours = document.getElementById("P2Fours");
         Fours.removeEventListener('click', AddFours)
-        Fours = document.getElementById("P1Fours");
-        Fours.addEventListener('click', AddFours);
+        if (P1Four !== true) {
+            Fours = document.getElementById("P1Fours");
+            Fours.addEventListener('click', AddFours);
+        }
 
         let Fives = document.getElementById("P2Fives");
         Fives.removeEventListener('click', AddFives)
-        Fives = document.getElementById("P1Fives");
-        Fives.addEventListener('click', AddFives);
+        if (P1Five !== true) {
+            Fives = document.getElementById("P1Fives");
+            Fives.addEventListener('click', AddFives);
+        }
 
         let Sixes = document.getElementById("P2Sixes");
         Sixes.removeEventListener('click', AddSixes)
-        Sixes = document.getElementById("P1Sixes");
-        Sixes.addEventListener('click', AddSixes);
+        if (P1Six !== true) {
+            Sixes = document.getElementById("P1Sixes");
+            Sixes.addEventListener('click', AddSixes);
+        }
 
         let X3 = document.getElementById("P2X3");
         X3.removeEventListener('click', AddX3)
-        X3 = document.getElementById("P1X3");
-        X3.addEventListener('click', AddX3);
+        if (P1ThreeX !== true) {
+            X3 = document.getElementById("P1X3");
+            X3.addEventListener('click', AddX3);
+        }
 
         let X4 = document.getElementById("P2X4");
         X4.removeEventListener('click', AddX4)
-        X4 = document.getElementById("P1X4");
-        X4.addEventListener('click', AddX4);
+        if (P1FourX !== true) {
+            X4 = document.getElementById("P1X4");
+            X4.addEventListener('click', AddX4);
+        }
 
         let House = document.getElementById("P2House");
         House.removeEventListener('click', AddFH)
-        House = document.getElementById("P1House");
-        House.addEventListener('click', AddFH);
+        if (P1FH !== true) {
+            House = document.getElementById("P1House");
+            House.addEventListener('click', AddFH);
+        }
 
         let SmallS = document.getElementById("P2SmallS");
         SmallS.removeEventListener('click', AddSS)
-        SmallS = document.getElementById("P1SmallS");
-        SmallS.addEventListener('click', AddSS);
+        if (P1SS !== true) {
+            SmallS = document.getElementById("P1SmallS");
+            SmallS.addEventListener('click', AddSS);
+        }
 
         let LargeS = document.getElementById("P2LargeS");
         LargeS.removeEventListener('click', AddLS)
-        LargeS = document.getElementById("P1LargeS");
-        LargeS.addEventListener('click', AddLS);
+        if (P1LS !== true) {
+            LargeS = document.getElementById("P1LargeS");
+            LargeS.addEventListener('click', AddLS);
+        }
 
         let Yathzee = document.getElementById("P2Yathzee");
         Yathzee.removeEventListener('click', AddYathzee)
-        Yathzee = document.getElementById("P1Yathzee");
-        Yathzee.addEventListener('click', AddYathzee);
+        if (P1Y !== true) {
+            Yathzee = document.getElementById("P1Yathzee");
+            Yathzee.addEventListener('click', AddYathzee);
+        }
 
         let Chance = document.getElementById("P2Chance");
         Chance.removeEventListener('click', AddChance)
-        Chance = document.getElementById("P1Chance");
-        Chance.addEventListener('click', AddChance);
+        if (P1C !== true) {
+            Chance = document.getElementById("P1Chance");
+            Chance.addEventListener('click', AddChance);
+        }
+    }
+    if (buttonsPlayer1Clicked && buttonsPlayer2Clicked === 25) {
+        nextButton.addEventListener('click', WinningPlayer);
     }
 }
 
@@ -1221,6 +1369,24 @@ function exitRules() {
 }
 exitRulesButton.addEventListener('click', exitRules);
 rulesButton.addEventListener('click', showRules);
+
+let infoButton = document.querySelector(".infoButton");
+let infoTextBox = document.getElementById("infoTextBox");
+function showInfo() {
+    if (infoTextBox.style.display === 'none') {
+        infoTextBox.style.display = 'block';
+    }
+    console.log("function active")
+}
+
+let exitInfoButton = document.getElementById("infoExitBox")
+function exitInfo() {
+    if (infoTextBox.style.display === 'block') {
+        infoTextBox.style.display = 'none';
+    }
+}
+exitInfoButton.addEventListener('click', exitInfo);
+infoButton.addEventListener('click', showInfo);
 
 
 let nextButton = document.querySelector(".nextButton");

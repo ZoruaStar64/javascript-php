@@ -5,6 +5,10 @@
     /*font-size: 16px;*/
 }
 
+html {
+    background-color: rgb(231, 95, 5);
+}
+
 .flexcontainer {
     background-color: rgb(231, 95, 5);
     height: 100vh;
@@ -55,6 +59,15 @@
 
 }
 
+div.rollButton:hover {
+    background-color: #d0b010;
+}
+
+div.rollButton:active {
+    background-color: #a08301;
+    color: #cd6100;
+}
+
 .nextButton {
     display: flex;
     background-color: #9d1919;
@@ -65,6 +78,14 @@
     text-align: center;
     padding: 1em;
     cursor: pointer;
+}
+
+div.nextButton:hover {
+    background-color: #9d0c0c;
+}
+
+div.nextButton:active {
+    background-color: #960000;
 }
 
 div.playerTurnBox {
@@ -89,6 +110,48 @@ div.rulesButton {
     cursor: pointer;
 }
 
+div.rulesButton:hover {
+    background-color: #12c412;
+}
+
+div.rulesButton:active {
+    background-color: #009b00;
+}
+
+div#rulesTextBox {
+    border: 3px solid black;
+    background-color: #009b00;
+    width: 500px;
+    margin-top: 50px;
+    float: left;
+}
+
+div#rulesTextBox p {
+    font-size: 25px;
+    color: black;
+}
+
+div#rulesExitBox {
+    border: 1px solid black;
+    background-color: darkred;
+    width: 50px;
+    height: 20px;
+    float: right;
+}
+
+div#rulesExitBox:hover {
+    background-color: #be0101;
+}
+
+div#rulesExitBox:active {
+    background-color: #ee0202;
+}
+
+div#rulesExitBox p {
+    font-size: 20px;
+    margin: 0 0 0 1px;
+}
+
 div.infoButton {
     display: flex;
     background-color: dodgerblue;
@@ -99,6 +162,48 @@ div.infoButton {
     align-items: center;
     padding: 1em;
     cursor: pointer;
+}
+
+div.infoButton:hover {
+    background-color: #056ddb;
+}
+
+div.infoButton:active {
+    background-color: #00519d;
+}
+
+div#infoTextBox {
+    border: 3px solid black;
+    background-color: #056ddb;
+    width: 500px;
+    margin-top: 50px;
+    float: right;
+}
+
+div#infoTextBox p {
+    font-size: 25px;
+    color: black;
+}
+
+div#infoExitBox {
+    border: 1px solid black;
+    background-color: darkred;
+    width: 50px;
+    height: 20px;
+    float: right;
+}
+
+div#infoExitBox:hover {
+    background-color: #be0101;
+}
+
+div#infoExitBox:active {
+    background-color: #ee0202;
+}
+
+div#infoExitBox p {
+    font-size: 20px;
+    margin: 0 0 0 1px;
 }
 
 .dices {
@@ -116,14 +221,14 @@ div.infoButton {
 }
 
 .playerOne {
-    background-color: sandybrown;
     padding-right: 0.5em;
-    background: linear-gradient(to right, sandybrown, #cd5418);
+    background: linear-gradient(to right, sandybrown, #ef631d);
 }
 
 .playerTwo {
-    background-color: sandybrown;
     padding-left: 0.5em;
+    background: linear-gradient(to right, sandybrown, #ef631d);
+
 }
 
 .one {
@@ -152,6 +257,17 @@ div.infoButton {
 }
 
 .playerOne input {
+    float: right;
+    height: 16px;
+    margin-right: 2em;
+    border: none;
+    background-color: #d04b03;
+    padding: 0.5em;
+    font-size: 12px;
+    line-height: 2px;
+}
+
+.playerTwo input {
     float: right;
     height: 16px;
     margin-right: 2em;
@@ -203,6 +319,91 @@ div.infoButton {
 
 /* Laptop / PC */
 @media only screen and (min-width: 1200px) {
+    .rollButton {
+        display: flex;
+        background-color: #d9bb34;
+        border: 2px black solid;
+        /*border-radius: 0% 20% 0% 20%;*/
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 1em;
+        cursor: pointer;
+        border-radius: 50%;
+    }
+
+    .nextButton {
+        display: flex;
+        background-color: #9d1919;
+        border: 2px black solid;
+        /*border-radius: 50%;*/
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 1em;
+        cursor: pointer;
+        border-radius: 50%;
+    }
+
+    div.playerTurnBox {
+        display: flex;
+        background-color: #9d0c0c;
+        border: 3px solid #6d2803;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 1em;
+    }
+
+    #currentTurn {
+        font-size: 20px;
+        color: black;
+    }
+
+    div.rulesButton {
+        display: flex;
+        background-color: limegreen;
+        border: 2px black solid;
+        /*border-radius: 50%;*/
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        padding: 1em;
+        cursor: pointer;
+        border-radius: 50%;
+    }
+
+    div.infoButton {
+        display: flex;
+        background-color: dodgerblue;
+        border: 2px black solid;
+        /*border-radius: 50%;*/
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        padding: 1em;
+        cursor: pointer;
+        border-radius: 50%;
+    }
+
+
+    .playerOne {
+        font-size: 20px;
+        margin-top: 100px;
+    }
+
+    .playerTwo {
+        font-size: 20px;
+        margin-top: 100px;
+    }
+
+    .playerOne input, .playerTwo input {
+        font-size: 20px;
+        cursor: copy;
+        border: 1px solid #6d2803;
+        background-color: #d04b03;
+    }
+
     div.dices {
         /*position: absolute;*/
         display: grid;
@@ -270,7 +471,7 @@ div.infoButton {
         margin: auto;
         /*float: left;*/
         /*margin-left: 225px;*/
-        /*margin-top: 30px;*/
+        margin-top: 100px;
 
     }
 }
