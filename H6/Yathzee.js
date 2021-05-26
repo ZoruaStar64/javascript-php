@@ -264,7 +264,7 @@ function rollDices() {
     if (rollsLeft > 0) {
         //array vullen
         diceNumbers = [];
-
+        let randomDiceRoll = 0;
         for (teller; teller < 5; teller++) {
             if (diceImages[0] === null && teller === 0) {
                 teller += 1;
@@ -286,18 +286,18 @@ function rollDices() {
                 /*teller += 1;*/
                 /*teller = 5*/
                 console.log("dice 5 skipt!")
-                break;
 
+            } else {
+                randomDiceRoll = Math.floor(Math.random() * 6 + 1);
+                diceNumbers.push(randomDiceRoll);
+                console.log(randomDiceRoll);
+                console.log(diceNumbers);
 
+                diceImages[teller].src = "../img/dice" + randomDiceRoll + ".jpg"; //template literal
+                //om de beurt vullen
             }
 
-            let randomDiceRoll = Math.floor(Math.random() * 6 + 1);
-            diceNumbers.push(randomDiceRoll);
-            console.log(randomDiceRoll);
-            console.log(diceNumbers);
 
-            diceImages[teller].src = "../img/dice" + randomDiceRoll + ".jpg"; //template literal
-            //om de beurt vullen
             if (randomDiceRoll === 1) {
                 ones += 1;
             }
