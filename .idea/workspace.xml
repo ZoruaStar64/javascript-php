@@ -23,6 +23,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/H6/Yathzee.html" beforeDir="false" afterPath="$PROJECT_DIR$/H6/Yathzee.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/H6/Yathzee.js" beforeDir="false" afterPath="$PROJECT_DIR$/H6/Yathzee.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/H6/yathzee2.css" beforeDir="false" afterPath="$PROJECT_DIR$/H6/yathzee2.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -162,7 +163,10 @@
       <workItem from="1621345709658" duration="195000" />
       <workItem from="1621345982294" duration="4452000" />
       <workItem from="1621350802908" duration="235000" />
-      <workItem from="1621404973942" duration="13863000" />
+      <workItem from="1621404973942" duration="14362000" />
+      <workItem from="1621580147341" duration="1302000" />
+      <workItem from="1621944105153" duration="290000" />
+      <workItem from="1622010840936" duration="4298000" />
     </task>
     <servers />
   </component>

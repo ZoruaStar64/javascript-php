@@ -1,6 +1,5 @@
 "use strict";
 
-let winner = null;
 let buttonsPlayer1Clicked = 0; //if this is 13 and buttonsplayer2 is also 13 then the game ends
 let buttonsPlayer2Clicked = 0; //and picks the winner with the higher Final Score
 let rollsLeft = 3;
@@ -237,6 +236,9 @@ function rollDices() {
     fours = 0;
     fives = 0;
     sixes = 0;
+    doubles = false;
+    triples = false;
+    fullHouse = false;
     for(let counter = 0; counter < 5; counter++){
         if(trueDiceNumbers[counter] === 1){
             ones++;
@@ -257,9 +259,7 @@ function rollDices() {
         }
     }
 
-    doubles = false;
-    triples = false;
-    fullHouse = false;
+
     let teller = 0;
     if (rollsLeft > 0) {
         //array vullen
@@ -569,6 +569,8 @@ function AddOnes() {
         eventListenerRemovalForPointButtons()
     }
     else {
+        let P2AcesText = document.getElementById("P2AcesText");
+        P2AcesText.innerHTML = "" + ones;
         P2One = true;
         buttonsPlayer2Clicked += 1;
         topPointsPlayer2 += ones;
@@ -609,6 +611,8 @@ function AddTwos() {
         }
         eventListenerRemovalForPointButtons()
     } else {
+        let P2TwosText = document.getElementById("P2TwosText");
+        P2TwosText.innerHTML = "" + (2 * twos);
         P2Two = true;
         buttonsPlayer2Clicked += 1;
         topPointsPlayer2 += (2 * twos);
@@ -650,6 +654,8 @@ function AddThrees() {
         eventListenerRemovalForPointButtons()
     }
     else {
+        let P2ThreesText = document.getElementById("P2ThreesText");
+        P2ThreesText.innerHTML = "" + (3 * threes);
         P2Three = true;
         buttonsPlayer2Clicked += 1;
         topPointsPlayer2 += (3 * threes);
@@ -691,6 +697,8 @@ function AddFours() {
         eventListenerRemovalForPointButtons()
 }
     else {
+        let P2FoursText = document.getElementById("P2FoursText");
+        P2FoursText.innerHTML = "" + (4 * fours);
         P2Four = true;
         buttonsPlayer2Clicked += 1;
         topPointsPlayer2 += (4 * fours);
@@ -732,6 +740,8 @@ function AddFives() {
         eventListenerRemovalForPointButtons()
 }
     else {
+        let P2FivesText = document.getElementById("P2FivesText");
+        P2FivesText.innerHTML = "" + (5 * fives);
         P2Five = true;
         buttonsPlayer2Clicked += 1;
         topPointsPlayer2 += (5 * fives);
@@ -773,6 +783,8 @@ function AddSixes() {
         eventListenerRemovalForPointButtons()
 }
     else {
+        let P2SixesText = document.getElementById("P2SixesText");
+        P2SixesText.innerHTML = "" + (6 * sixes);
         P2Six = true;
         buttonsPlayer2Clicked += 1;
         topPointsPlayer2 += (6 * sixes);
@@ -795,29 +807,36 @@ function AddSixes() {
 function AddX3() {
     if (currentPlayer === 0) {
         let P1X3Text = document.getElementById("P1X3Text");
-        P1X3Text.innerHTML = "" + ((ones) + (2 * twos) + (3 * threes) + (4 * fours) + (5 * fives) + (6 * sixes));
         P1ThreeX = true;
         buttonsPlayer1Clicked += 1;
         if (ones > 2 || twos > 2 || threes > 2 || fours > 2 || fives > 2 || sixes > 2) {
             bottomPointsPlayer1 += ((ones) + (2 * twos) + (3 * threes) + (4 * fours) + (5 * fives) + (6 * sixes));
             P1Bottom.innerHTML = bottomPointsPlayer1;
+            P1X3Text.innerHTML = "" + ((ones) + (2 * twos) + (3 * threes) + (4 * fours) + (5 * fives) + (6 * sixes));
         } else {
             bottomPointsPlayer1 += 0;
             P1Bottom.innerHTML = bottomPointsPlayer1;
+            P1X3Text.innerHTML = "0";
+
         }
         totalPointsPlayer1 = (topPointsPlayer1 + bottomPointsPlayer1)
         P1Total.innerHTML = totalPointsPlayer1;
         eventListenerRemovalForPointButtons()
     } else {
+        let P2X3Text = document.getElementById("P2X3Text");
         P2ThreeX = true;
         buttonsPlayer2Clicked += 1;
         if (ones > 2 || twos > 2 || threes > 2 || fours > 2 || fives > 2 || sixes > 2) {
             bottomPointsPlayer2 += ((ones) + (2 * twos) + (3 * threes) + (4 * fours) + (5 * fives) + (6 * sixes));
             P2Bottom.innerHTML = bottomPointsPlayer2;
+            P2X3Text.innerHTML = "" + ((ones) + (2 * twos) + (3 * threes) + (4 * fours) + (5 * fives) + (6 * sixes));
+
         }
         else {
             bottomPointsPlayer2 += 0;
             P2Bottom.innerHTML = bottomPointsPlayer2;
+            P2X3Text.innerHTML = "0";
+
         }
         totalPointsPlayer2 = (topPointsPlayer2 + bottomPointsPlayer2)
         P2Total.innerHTML = totalPointsPlayer2;
@@ -828,29 +847,38 @@ function AddX3() {
 function AddX4() {
     if (currentPlayer === 0) {
         let P1X4Text = document.getElementById("P1X4Text");
-        P1X4Text.innerHTML = "" + ((ones) + (2 * twos) + (3 * threes) + (4 * fours) + (5 * fives) + (6 * sixes));
         P1FourX = true;
         buttonsPlayer1Clicked += 1;
         if (ones > 3 || twos > 3 || threes > 3 || fours > 3 || fives > 3 || sixes > 3) {
             bottomPointsPlayer1 += ((ones) + (2 * twos) + (3 * threes) + (4 * fours) + (5 * fives) + (6 * sixes));
             P1Bottom.innerHTML = bottomPointsPlayer1;
+            P1X4Text.innerHTML = "" + ((ones) + (2 * twos) + (3 * threes) + (4 * fours) + (5 * fives) + (6 * sixes));
+
         } else {
             bottomPointsPlayer1 += 0;
             P1Bottom.innerHTML = bottomPointsPlayer1;
+            P1X4Text.innerHTML = "0";
+
         }
         totalPointsPlayer1 = (topPointsPlayer1 + bottomPointsPlayer1)
         P1Total.innerHTML = totalPointsPlayer1;
         eventListenerRemovalForPointButtons()
     } else {
+        let P2X4Text = document.getElementById("P2X4Text");
+
         P2FourX = true;
         buttonsPlayer2Clicked += 1;
         if (ones > 3 || twos > 3 || threes > 3 || fours > 3 || fives > 3 || sixes > 3) {
             bottomPointsPlayer2 += ((ones) + (2 * twos) + (3 * threes) + (4 * fours) + (5 * fives) + (6 * sixes));
             P2Bottom.innerHTML = bottomPointsPlayer2;
+            P2X4Text.innerHTML = "" + ((ones) + (2 * twos) + (3 * threes) + (4 * fours) + (5 * fives) + (6 * sixes));
+
         }
         else {
             bottomPointsPlayer2 += 0;
             P2Bottom.innerHTML = bottomPointsPlayer2;
+            P2X4Text.innerHTML = "0";
+
         }
         totalPointsPlayer2 = (topPointsPlayer2 + bottomPointsPlayer2)
         P2Total.innerHTML = totalPointsPlayer2;
@@ -861,29 +889,35 @@ function AddX4() {
 function AddFH() {
     if (currentPlayer === 0) {
         let P1HouseText = document.getElementById("P1HouseText");
-        P1HouseText.innerHTML = "25";
+
         P1FH = true;
         buttonsPlayer1Clicked += 1;
         if (fullHouse === true) {
             bottomPointsPlayer1 += 25;
             P1Bottom.innerHTML = bottomPointsPlayer1;
+            P1HouseText.innerHTML = "25";
         } else {
             bottomPointsPlayer1 += 0;
             P1Bottom.innerHTML = bottomPointsPlayer1;
+            P1HouseText.innerHTML = "0";
         }
         totalPointsPlayer1 = (topPointsPlayer1 + bottomPointsPlayer1)
         P1Total.innerHTML = totalPointsPlayer1;
         eventListenerRemovalForPointButtons()
     } else {
+        let P2HouseText = document.getElementById("P2HouseText");
+
         P2FH = true;
         buttonsPlayer2Clicked += 1;
         if (fullHouse === true) {
             bottomPointsPlayer2 += 25;
             P2Bottom.innerHTML = bottomPointsPlayer2;
+            P2HouseText.innerHTML = "25";
         }
         else {
             bottomPointsPlayer2 += 0;
             P2Bottom.innerHTML = bottomPointsPlayer2;
+            P1HouseText.innerHTML = "0";
         }
         totalPointsPlayer2 = (topPointsPlayer2 + bottomPointsPlayer2)
         P2Total.innerHTML = totalPointsPlayer2;
@@ -894,7 +928,7 @@ function AddFH() {
 function AddSS() {
     if (currentPlayer === 0) {
         let P1SSText = document.getElementById("P1SSText");
-        P1SSText.innerHTML = "30";
+
         P1SS = true;
         buttonsPlayer1Clicked += 1;
         SmallS.style.backgroundColor = '#9d3700';
@@ -903,14 +937,18 @@ function AddSS() {
             threes > 0 && fours > 0 && fives > 0 && sixes > 0) {
             bottomPointsPlayer1 += 30;
             P1Bottom.innerHTML = bottomPointsPlayer1;
+            P1SSText.innerHTML = "30";
         } else {
             bottomPointsPlayer1 += 0;
             P1Bottom.innerHTML = bottomPointsPlayer1;
+            P1SSText.innerHTML = "0";
         }
         totalPointsPlayer1 = (topPointsPlayer1 + bottomPointsPlayer1)
         P1Total.innerHTML = totalPointsPlayer1;
         eventListenerRemovalForPointButtons()
     } else {
+        let P2SSText = document.getElementById("P2SSText");
+
         P2SS = true;
         buttonsPlayer2Clicked += 1;
         SmallS.style.backgroundColor = '#9d3700';
@@ -919,10 +957,12 @@ function AddSS() {
             threes > 0 && fours > 0 && fives > 0 && sixes > 0) {
             bottomPointsPlayer2 += 30;
             P2Bottom.innerHTML = bottomPointsPlayer2;
+            P2SSText.innerHTML = "30";
         }
         else {
             bottomPointsPlayer2 += 0;
             P2Bottom.innerHTML = bottomPointsPlayer2;
+            P2SSText.innerHTML = "0";
         }
         totalPointsPlayer2 = (topPointsPlayer2 + bottomPointsPlayer2)
         P2Total.innerHTML = totalPointsPlayer2;
@@ -933,31 +973,36 @@ function AddSS() {
 function AddLS() {
     if (currentPlayer === 0) {
         let P1LSText = document.getElementById("P1LSText");
-        P1LSText.innerHTML = "40";
+
         P1LS = true;
         buttonsPlayer1Clicked += 1;
         if (ones > 0 && twos > 0 && threes > 0 && fours > 0 && fives > 0 ||
             twos > 0 && threes > 0 && fours > 0 && fives > 0 && sixes > 0) {
             bottomPointsPlayer1 += 40;
             P1Bottom.innerHTML = bottomPointsPlayer1;
+            P1LSText.innerHTML = "40";
         } else {
             bottomPointsPlayer1 += 0;
             P1Bottom.innerHTML = bottomPointsPlayer1;
+            P1LSText.innerHTML = "0";
         }
         totalPointsPlayer1 = (topPointsPlayer1 + bottomPointsPlayer1)
         P1Total.innerHTML = totalPointsPlayer1;
         eventListenerRemovalForPointButtons()
     } else {
+        let P2LSText = document.getElementById("P2LSText");
         P2LS = true;
         buttonsPlayer2Clicked += 1;
         if (ones > 0 && twos > 0 && threes > 0 && fours > 0 && fives > 0 ||
             twos > 0 && threes > 0 && fours > 0 && fives > 0 && sixes > 0) {
             bottomPointsPlayer2 += 40;
             P2Bottom.innerHTML = bottomPointsPlayer2;
+            P2LSText.innerHTML = "40";
         }
         else {
             bottomPointsPlayer2 += 0;
             P2Bottom.innerHTML = bottomPointsPlayer2;
+            P2LSText.innerHTML = "0";
         }
         totalPointsPlayer2 = (topPointsPlayer2 + bottomPointsPlayer2)
         P2Total.innerHTML = totalPointsPlayer2;
@@ -968,29 +1013,33 @@ function AddLS() {
 function AddYathzee() {
     if (currentPlayer === 0) {
         let P1YathzeeText = document.getElementById("P1YathzeeText");
-        P1YathzeeText.innerHTML = "50";
         P1Y = true;
         buttonsPlayer1Clicked += 1;
         if (ones === 5 || twos === 5 || threes === 5 || fours === 5 || fives === 5 || sixes === 5) {
             bottomPointsPlayer1 += 50;
             P1Bottom.innerHTML = bottomPointsPlayer1;
+            P1YathzeeText.innerHTML = "50";
         } else {
             bottomPointsPlayer1 += 0;
             P1Bottom.innerHTML = bottomPointsPlayer1;
+            P1YathzeeText.innerHTML = "0";
         }
         totalPointsPlayer1 = (topPointsPlayer1 + bottomPointsPlayer1)
         P1Total.innerHTML = totalPointsPlayer1;
         eventListenerRemovalForPointButtons()
     } else {
+        let P2YathzeeText = document.getElementById("P2YathzeeText");
         P2Y = true;
         buttonsPlayer2Clicked += 1;
         if (ones === 5 || twos === 5 || threes === 5 || fours === 5 || fives === 5 || sixes === 5) {
             bottomPointsPlayer2 += 50;
             P2Bottom.innerHTML = bottomPointsPlayer2;
+            P2YathzeeText.innerHTML = "50";
         }
         else {
             bottomPointsPlayer2 += 0;
             P2Bottom.innerHTML = bottomPointsPlayer2;
+            P2YathzeeText.innerHTML = "0";
         }
         totalPointsPlayer2 = (topPointsPlayer2 + bottomPointsPlayer2)
         P2Total.innerHTML = totalPointsPlayer2;
@@ -1010,6 +1059,8 @@ function AddChance() {
         P1Total.innerHTML = totalPointsPlayer1;
         eventListenerRemovalForPointButtons()
     } else {
+        let P2ChanceText = document.getElementById("P2ChanceText");
+        P2ChanceText.innerHTML = "" + ((ones) + (2 * twos) + (3 * threes) + (4 * fours) + (5 * fives) + (6 * sixes));
         P2C = true;
         buttonsPlayer2Clicked += 1;
         bottomPointsPlayer2 += ((ones) + (2 * twos) + (3 * threes) + (4 * fours) + (5 * fives) + (6 * sixes));
@@ -1188,6 +1239,7 @@ let currentTurn = document.getElementById('currentTurn')
 currentTurn.innerHTML = "Player 1's turn";
 
 function eventListenerRemovalForPointButtons() {
+    WinningPlayer();
     if (currentPlayer === 0) {
         let Aces = document.getElementById("P1Aces");
         Aces.style.backgroundColor = '#9d3700';
@@ -1298,13 +1350,29 @@ function eventListenerRemovalForPointButtons() {
 
 
 function WinningPlayer() {
-    if (buttonsPlayer1Clicked && buttonsPlayer2Clicked === 26) {
+
+    if (buttonsPlayer1Clicked + buttonsPlayer2Clicked === 26) {
         let winBox = document.getElementById("winBox");
+        let winner = document.getElementById("Winner")
         winBox.style.display = 'Block';
         rollButton.removeEventListener('click', rollDices);
         nextButton.removeEventListener('click', switchPlayer);
+        if (totalPointsPlayer1 > totalPointsPlayer2) {
+            winner.innerHTML = "Congrats Player 1! <br> You won!";
+        } else if (totalPointsPlayer2 > totalPointsPlayer1) {
+            winner.innerHTML = "Congrats Player 2! <br> You won!";
+        } else {
+            winner.innerHTML = "Huh didn't expect this <br> " +
+                "You two got the exact same score <br>" +
+                "or maybe something went wrong <br>" +
+                "either way congrats on seeing this message";
+
+        }
     }
 }
+
+let winner = document.getElementById("Winner");
+winner.innerHTML = "Dunno how you're seeing this but you shouldn't";
 
 function switchPlayer() {
 
