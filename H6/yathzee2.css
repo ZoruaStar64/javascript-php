@@ -64,12 +64,14 @@ html {
 }
 
 div.rollButton:hover {
-    background-color: #d0b010;
+   /* background-color: #d0b010;*/
+    background: linear-gradient(to right, #ac920d, #d0b010);
 }
 
 div.rollButton:active {
-    background-color: #a08301;
-    color: #cd6100;
+/*    background-color: #a08301;
+    color: #cd6100;*/
+    background: linear-gradient(to right, #776100, #a08301);
 }
 
 .nextButton {
@@ -86,11 +88,13 @@ div.rollButton:active {
 }
 
 div.nextButton:hover {
-    background-color: #9d0c0c;
+    /*background-color: #9d0c0c;*/
+    background: linear-gradient(to right, #860b0b, #b10e0e);
 }
 
 div.nextButton:active {
-    background-color: #960000;
+   /* background-color: #960000;*/
+    background: linear-gradient(to right, #620202, #960000);
 }
 
 div.playerTurnBox {
@@ -118,11 +122,15 @@ div.rulesButton {
 }
 
 div.rulesButton:hover {
-    background-color: #12c412;
+    /*background-color: #12c412;*/
+    background: linear-gradient(to right, #11a511, #11bf11);
+
 }
 
 div.rulesButton:active {
-    background-color: #009b00;
+   /* background-color: #009b00;*/
+    background: linear-gradient(to right, #027002, #009b00);
+
 }
 
 div#rulesTextBox {
@@ -173,11 +181,13 @@ div.infoButton {
 }
 
 div.infoButton:hover {
-    background-color: #056ddb;
+    /*background-color: #056ddb;*/
+    background: linear-gradient(to right, #065ebc, #056ddb);
 }
 
 div.infoButton:active {
-    background-color: #00519d;
+  /*  background-color: #00519d;*/
+    background: linear-gradient(to right, #02427e, #00519d);
 }
 
 div#infoTextBox {
