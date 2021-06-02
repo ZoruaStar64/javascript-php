@@ -311,7 +311,7 @@ function rollDices() {
             }
 
             let Aces = currentPlayer === 0 ? document.getElementById("P1Aces") : document.getElementById("P2Aces");
-            if (ones => 1) {
+            if (ones >= 1) {
                 Aces.value = '+ ' + ones;
                 Aces.style.backgroundColor = "#ff7423";
             } else if (ones === 0) {
@@ -324,19 +324,22 @@ function rollDices() {
                 twos += 1;
             }
             let Twos = currentPlayer === 0 ? document.getElementById("P1Twos") : document.getElementById("P2Twos");
-            if (twos => 1) {
+            if (twos >= 1) {
                 Twos.value = '+ ' + (2 * twos);
                 Twos.style.backgroundColor = "#ff7423";
-            } else if (twos === 0) {
+            }
+
+            else if (twos === 0) {
                 Twos.value = '+ 0';
                 Twos.style.backgroundColor = "#d04b03";
             }
+
 
             if (randomDiceRoll === 3) {
                 threes += 1;
             }
             let Threes = currentPlayer === 0 ? document.getElementById("P1Threes") : document.getElementById("P2Threes");
-            if (threes => 1) {
+            if (threes >= 1) {
                 Threes.value = '+ ' + (3 * threes);
                 Threes.style.backgroundColor = "#ff7423";
             } else if (threes === 0) {
@@ -348,7 +351,7 @@ function rollDices() {
                 fours += 1;
             }
             let Fours = currentPlayer === 0 ? document.getElementById("P1Fours") : document.getElementById("P2Fours");
-            if (fours => 1) {
+            if (fours >= 1) {
                 Fours.value = '+ ' + (4 * fours);
                 Fours.style.backgroundColor = "#ff7423";
             } else if (fours === 0) {
@@ -360,7 +363,7 @@ function rollDices() {
                 fives += 1;
             }
             let Fives = currentPlayer === 0 ? document.getElementById("P1Fives") : document.getElementById("P2Fives");
-            if (fives => 1) {
+            if (fives >= 1) {
                 Fives.value = '+ ' + (5 * fives);
                 Fives.style.backgroundColor = "#ff7423";
             } else if (fives === 0) {
@@ -372,7 +375,7 @@ function rollDices() {
                 sixes += 1;
             }
             let Sixes = currentPlayer === 0 ? document.getElementById("P1Sixes") : document.getElementById("P2Sixes");
-            if (sixes => 1) {
+            if (sixes >= 1) {
                 Sixes.value = '+ ' + (6 * sixes);
                 Sixes.style.backgroundColor = "#ff7423";
             } else if (sixes === 0) {
@@ -1403,6 +1406,10 @@ function WinningPlayer() {
 //Nextbutton's function
 function switchPlayer() {
     antiRollWaste = false;
+    const allInputElements = document.getElementsByTagName("input");
+    for (let e = 0; e < allInputElements.length; e++) {
+        allInputElements[e].style.backgroundColor = "#d04b03";
+    }
     throwDice1();
     throwDice2();
     throwDice3();
@@ -1516,7 +1523,6 @@ function switchPlayer() {
         nextButton.innerHTML = "Switch the turn to Player 2!";
         currentTurn.innerHTML = "Player 1's turn";
         currentPlayer = 0;
-
 
         let Aces = document.getElementById("P2Aces");
         Aces.removeEventListener('click', AddOnes)

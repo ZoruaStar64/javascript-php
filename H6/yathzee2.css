@@ -45,6 +45,9 @@ html {
     margin: auto;
     padding: 1em;
 }
+.buttonContainer > * {
+    flex-basis: 150px;
+}
 
 .rollButton {
     display: flex;
@@ -176,7 +179,7 @@ div#infoTextBox {
     border: 3px solid black;
     background-color: #056ddb;
     width: 500px;
-    margin-top: 50px;
+    margin: 50px 0 0 0;
     float: right;
 }
 
@@ -305,9 +308,8 @@ div#infoExitBox p {
     color: black;
     border: 3px solid black;
     width: 300px;
-    margin-top: 50px;
     text-align: center;
-    float: right;
+    margin: 50px auto 0 auto;
 }
 
 .refresh {
@@ -497,6 +499,13 @@ div#infoExitBox p {
         /*margin-top: 50px;*/
 
     }
+}
+.game-rules {
+    display: flex;
+    align-items: start;
+}
+.game-rules > * {
+    flex-basis: min-content;
 }
 
 

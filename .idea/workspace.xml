@@ -21,8 +21,9 @@
   <component name="ChangeListManager">
     <list default="true" id="c5475574-7e0c-4a54-bb73-5d31cdf8e08b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/H6/Yathzee.html" beforeDir="false" afterPath="$PROJECT_DIR$/H6/Yathzee.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/H6/Yathzee.js" beforeDir="false" afterPath="$PROJECT_DIR$/H6/Yathzee.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/H6/YathzeeButtonFunctions.js" beforeDir="false" afterPath="$PROJECT_DIR$/H6/YathzeeButtonFunctions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/H6/yathzee2.css" beforeDir="false" afterPath="$PROJECT_DIR$/H6/yathzee2.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,7 +167,7 @@
       <workItem from="1621580147341" duration="1302000" />
       <workItem from="1621944105153" duration="290000" />
       <workItem from="1622010840936" duration="9579000" />
-      <workItem from="1622616327635" duration="8374000" />
+      <workItem from="1622616327635" duration="12266000" />
     </task>
     <servers />
   </component>
