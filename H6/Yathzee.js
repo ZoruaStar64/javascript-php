@@ -169,9 +169,7 @@ function throwDice5() {
 function keepDice5() {
     dice5Image.style.border = "blue 3px solid";
     dicesClickedNumber += 1;
-console.log(diceNumbers, 'de dice numbers roll');
     trueDiceNumbers[4] = diceNumbers[4];
-console.log(diceNumbers[4]);
     diceImages[4] = null;
     dice5Image.addEventListener('click', throwDice5)
     dice5Image.removeEventListener('click', keepDice5)
@@ -215,49 +213,34 @@ function rollDices() {
     if (rollsLeft > 0) {
         //array vullen
         diceNumbers = [];
-console.log(diceImages);
         let randomDiceRoll = 0;
         for (teller; teller < 5; teller++) {
             if (diceImages[0] === null && teller === 0) {
-diceNumbers.push(null);
+                diceNumbers.push(null);
                 continue;
-               // console.log("dice 1 skipt!")
             }
             if (diceImages[1] === null && teller === 1) {
-diceNumbers.push(null);
+                diceNumbers.push(null);
                 continue;
-              //  console.log("dice 2 skipt!")
             }
             if (diceImages[2] === null && teller === 2) {
- diceNumbers.push(null);
-               // teller += 1;
+                diceNumbers.push(null);
                 continue;
-               // console.log("dice 3 skipt!")
             }
             if (diceImages[3] === null && teller === 3) {
- diceNumbers.push(null);
-            //    teller += 1;
+                diceNumbers.push(null);
                 continue;
-              //  console.log("dice 4 skipt!")
             }
             if (diceImages[4] === null && teller === 4) {
-diceNumbers.push(null);
-                /*teller += 1;*/
+                diceNumbers.push(null);
                 continue;
-                /*teller = 5*/
-              //  console.log("dice 5 skipt!")
-
-            } else {
+            }
+            else {
                 randomDiceRoll = Math.floor(Math.random() * 6 + 1);
-console.log(randomDiceRoll, 'randomDiceroll');
                 diceNumbers.push(randomDiceRoll);
-               // console.log(randomDiceRoll);
-               // console.log(diceNumbers);
-
                 diceImages[teller].src = "../img/dice" + randomDiceRoll + ".jpg"; //template literal
                 //om de beurt vullen
             }
-console.log(diceNumbers, 'dice');
 
             if (randomDiceRoll === 1) {
                 ones += 1;
@@ -332,7 +315,7 @@ console.log(diceNumbers, 'dice');
                 Sixes.value = '+ 0';
                 Sixes.style.backgroundColor = "#d04b03";
             }
- console.log(ones, twos, threes, fours, fives, sixes);
+
             //Part 2
             //Three of a kind
             let X3 = currentPlayer === 0 ? document.getElementById("P1X3") : document.getElementById("P2X3");
@@ -423,7 +406,6 @@ console.log(diceNumbers, 'dice');
                     Chance.value = '+ ' + ((ones) + (2 * twos) + (3 * threes) + (4 * fours) + (5 * fives) + (6 * sixes));
                     Chance.style.backgroundColor = "#ff7423";
                 }
- console.log(trueDiceNumbers, "true dicenumbers");
             }
 
 
@@ -462,7 +444,7 @@ console.log(diceNumbers, 'dice');
     }
 }
 
-//eventlistener giver
+//eventlistener givers
 let Aces = document.getElementById("P1Aces");
 Aces.addEventListener('click', AddOnes);
 
@@ -503,9 +485,8 @@ let Chance = document.getElementById("P1Chance");
 Chance.addEventListener('click', AddChance);
 
 
-
+//This gives the rollbutton it's function at the start of the game
 let rollButton = document.querySelector(".rollButton");
-//console.log(rollButton);
 rollButton.addEventListener("click", rollDices);
 
 //Player add functions
@@ -1033,17 +1014,16 @@ function AddChance() {
     }
 }
 
-
-
-
-
+//This makes it display the rolls at the start of the game
 if (rollsLeft === 3) {
     rollButton.innerHTML = "Rolls left = 3"
     rollButton.style.color = "green"
 }
 
 
-
+//This is suposed to just reset everything
+//But i think the button with this function just simply refreshes the page
+//so i think this is useless?..
 function resetVariables() {
     rollsLeft = 3;
     rollButton.addEventListener("click", rollDices);
@@ -1197,9 +1177,11 @@ function resetVariables() {
 
 }
 
+//This makes the currentturn box display that it's player 1's turn
 let currentTurn = document.getElementById('currentTurn')
 currentTurn.innerHTML = "Player 1's turn";
 
+//This removes eventlisteners on all addbuttons so you cant constantly up your score by repeat clicking
 function eventListenerRemovalForPointButtons() {
     WinningPlayer();
     if (currentPlayer === 0) {
@@ -1310,9 +1292,10 @@ function eventListenerRemovalForPointButtons() {
     }
 }
 
-
+//The function that decides who wins
+let winner = document.getElementById("Winner");
+winner.innerHTML = "Dunno how you're seeing this but you shouldn't";
 function WinningPlayer() {
-
     if (buttonsPlayer1Clicked + buttonsPlayer2Clicked === 26) {
         let winBox = document.getElementById("winBox");
         let winner = document.getElementById("Winner")
@@ -1328,16 +1311,13 @@ function WinningPlayer() {
                 "You two got the exact same score <br>" +
                 "or maybe something went wrong <br>" +
                 "either way congrats on seeing this message";
-
         }
     }
 }
 
-let winner = document.getElementById("Winner");
-winner.innerHTML = "Dunno how you're seeing this but you shouldn't";
 
+//Nextbutton's function
 function switchPlayer() {
-
     throwDice1();
     throwDice2();
     throwDice3();
@@ -1548,14 +1528,18 @@ function switchPlayer() {
         nextButton.addEventListener('click', WinningPlayer);
     }
 }
+let nextButton = document.querySelector(".nextButton");
+nextButton.addEventListener('click', resetVariables);
+nextButton.addEventListener('click', switchPlayer);
 
+
+//Rulesbutton functions
 let rulesButton = document.querySelector(".rulesButton");
 let rulesTextBox = document.getElementById("rulesTextBox")
 function showRules() {
     if (rulesTextBox.style.display === 'none') {
         rulesTextBox.style.display = 'block';
     }
-   // console.log("function active")
 }
 let exitRulesButton = document.getElementById("rulesExitBox")
 function exitRules() {
@@ -1566,13 +1550,14 @@ function exitRules() {
 exitRulesButton.addEventListener('click', exitRules);
 rulesButton.addEventListener('click', showRules);
 
+
+//Infobutton functions
 let infoButton = document.querySelector(".infoButton");
 let infoTextBox = document.getElementById("infoTextBox");
 function showInfo() {
     if (infoTextBox.style.display === 'none') {
         infoTextBox.style.display = 'block';
     }
- //   console.log("function active")
 }
 
 let exitInfoButton = document.getElementById("infoExitBox")
@@ -1585,6 +1570,4 @@ exitInfoButton.addEventListener('click', exitInfo);
 infoButton.addEventListener('click', showInfo);
 
 
-let nextButton = document.querySelector(".nextButton");
-nextButton.addEventListener('click', resetVariables);
-nextButton.addEventListener('click', switchPlayer);
+
