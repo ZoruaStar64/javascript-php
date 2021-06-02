@@ -90,11 +90,16 @@ P2Bottom.innerHTML = bottomPointsPlayer2;
 let P2Total = document.getElementById("P2Total")
 P2Total.innerHTML = totalPointsPlayer2;
 
+
+let antiRollWaste = false;
 function throwDice1() {
     dice1Image.style.border = "none";
     dicesClickedNumber -= 1;
     trueDiceNumbers[0] = null;
     diceImages[0] = dice1Image;
+    if (antiRollWaste === true) {
+        rollButton.addEventListener('click', rollDices)
+    }
     dice1Image.addEventListener('click', keepDice1)
     dice1Image.removeEventListener('click', throwDice1)
 }
@@ -103,6 +108,10 @@ function keepDice1() {
     dicesClickedNumber += 1;
     trueDiceNumbers[0] = diceNumbers[0];
     diceImages[0] = null;
+    if (dicesClickedNumber === 5) {
+        rollButton.removeEventListener('click', rollDices)
+        antiRollWaste = true;
+    }
     dice1Image.addEventListener('click', throwDice1)
     dice1Image.removeEventListener('click', keepDice1)
 }
@@ -112,6 +121,9 @@ function throwDice2() {
     dicesClickedNumber -= 1;
     trueDiceNumbers[1] = null;
     diceImages[1] = dice2Image;
+    if (antiRollWaste === true) {
+        rollButton.addEventListener('click', rollDices)
+    }
     dice2Image.addEventListener('click', keepDice2)
     dice2Image.removeEventListener('click', throwDice2)
 }
@@ -120,6 +132,10 @@ function keepDice2() {
     dicesClickedNumber += 1;
     trueDiceNumbers[1] = diceNumbers[1];
     diceImages[1] = null;
+    if (dicesClickedNumber === 5) {
+        rollButton.removeEventListener('click', rollDices)
+        antiRollWaste = true;
+    }
     dice2Image.addEventListener('click', throwDice2)
     dice2Image.removeEventListener('click', keepDice2)
 }
@@ -129,6 +145,9 @@ function throwDice3() {
     dicesClickedNumber -= 1;
     trueDiceNumbers[2] = null;
     diceImages[2] = dice3Image;
+    if (antiRollWaste === true) {
+        rollButton.addEventListener('click', rollDices)
+    }
     dice3Image.addEventListener('click', keepDice3)
     dice3Image.removeEventListener('click', throwDice3)
 }
@@ -137,6 +156,10 @@ function keepDice3() {
     dicesClickedNumber += 1;
     trueDiceNumbers[2] = diceNumbers[2];
     diceImages[2] = null;
+    if (dicesClickedNumber === 5) {
+        rollButton.removeEventListener('click', rollDices)
+        antiRollWaste = true;
+    }
     dice3Image.addEventListener('click', throwDice3)
     dice3Image.removeEventListener('click', keepDice3)
 }
@@ -146,6 +169,9 @@ function throwDice4() {
     dicesClickedNumber -= 1;
     trueDiceNumbers[3] = null;
     diceImages[3] = dice4Image;
+    if (antiRollWaste === true) {
+        rollButton.addEventListener('click', rollDices)
+    }
     dice4Image.addEventListener('click', keepDice4)
     dice4Image.removeEventListener('click', throwDice4)
 }
@@ -154,6 +180,10 @@ function keepDice4() {
     dicesClickedNumber += 1;
     trueDiceNumbers[3] = diceNumbers[3];
     diceImages[3] = null;
+    if (dicesClickedNumber === 5) {
+        rollButton.removeEventListener('click', rollDices)
+        antiRollWaste = true;
+    }
     dice4Image.addEventListener('click', throwDice4)
     dice4Image.removeEventListener('click', keepDice4)
 }
@@ -163,6 +193,9 @@ function throwDice5() {
     dicesClickedNumber -= 1;
     trueDiceNumbers[4] = null;
     diceImages[4] = dice5Image;
+    if (antiRollWaste === true) {
+        rollButton.addEventListener('click', rollDices)
+    }
     dice5Image.addEventListener('click', keepDice5)
     dice5Image.removeEventListener('click', throwDice5)
 }
@@ -171,9 +204,14 @@ function keepDice5() {
     dicesClickedNumber += 1;
     trueDiceNumbers[4] = diceNumbers[4];
     diceImages[4] = null;
+    if (dicesClickedNumber === 5) {
+        rollButton.removeEventListener('click', rollDices)
+        antiRollWaste = true;
+    }
     dice5Image.addEventListener('click', throwDice5)
     dice5Image.removeEventListener('click', keepDice5)
 }
+
 
 
 function rollDices() {
@@ -1318,6 +1356,7 @@ function WinningPlayer() {
 
 //Nextbutton's function
 function switchPlayer() {
+    antiRollWaste = false;
     throwDice1();
     throwDice2();
     throwDice3();
