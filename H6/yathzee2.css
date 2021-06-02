@@ -51,7 +51,8 @@ html {
 
 .rollButton {
     display: flex;
-    background-color: #d9bb34;
+    /*background-color: #d9bb34;*/
+    background: linear-gradient(to right, #b39e2c, #d9bb34);
     border: 2px black solid;
     /*border-radius: 0% 20% 0% 20%;*/
     justify-content: center;
@@ -73,7 +74,8 @@ div.rollButton:active {
 
 .nextButton {
     display: flex;
-    background-color: #9d1919;
+    /*background-color: #9d1919;*/
+    background: linear-gradient(to right, #9d1919, #e00b0b);
     border: 2px black solid;
     /*border-radius: 50%;*/
     justify-content: center;
@@ -93,7 +95,8 @@ div.nextButton:active {
 
 div.playerTurnBox {
     display: flex;
-    background-color: #9d0c0c;
+    /*background-color: #9d0c0c;*/
+    background: linear-gradient(to top, #9d0c0c, #ea1515);
     border: 3px solid #6d2803;
     justify-content: center;
     align-items: center;
@@ -103,7 +106,8 @@ div.playerTurnBox {
 
 div.rulesButton {
     display: flex;
-    background-color: limegreen;
+   /* background-color: limegreen;*/
+    background: linear-gradient(to right, #259225, limegreen);
     border: 2px black solid;
     /*border-radius: 50%;*/
     text-align: center;
@@ -157,7 +161,8 @@ div#rulesExitBox p {
 
 div.infoButton {
     display: flex;
-    background-color: dodgerblue;
+    /*background-color: dodgerblue;*/
+    background: linear-gradient(to right, #145ea5, dodgerblue);
     border: 2px black solid;
     /*border-radius: 50%;*/
     text-align: center;
