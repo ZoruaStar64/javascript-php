@@ -3,8 +3,8 @@
 let buttonsPlayer1Clicked = 0; //if this is 13 and buttonsplayer2 is also 13 then the game ends
 let buttonsPlayer2Clicked = 0; //and picks the winner with the higher Final Score
 let rollsLeft = 3;
-let diceNumbers = [];
-let trueDiceNumbers = [null, null, null, null, null];
+let diceNumbers = []; //vasthouden
+let trueDiceNumbers = [null, null, null, null, null]; //vasthouden
 
 let ones = 0;
 let twos = 0;
@@ -95,11 +95,6 @@ function throwDice1() {
     dicesClickedNumber -= 1;
     trueDiceNumbers[0] = null;
     diceImages[0] = dice1Image;
-    console.log(trueDiceNumbers);
-    console.log(diceImages)
-    if (trueDiceNumbers !== [4]) {
-        rollButton.addEventListener('click', rollDices)
-    }
     dice1Image.addEventListener('click', keepDice1)
     dice1Image.removeEventListener('click', throwDice1)
 }
@@ -108,11 +103,6 @@ function keepDice1() {
     dicesClickedNumber += 1;
     trueDiceNumbers[0] = diceNumbers[0];
     diceImages[0] = null;
-    console.log(trueDiceNumbers);
-    console.log(diceImages)
-    if (trueDiceNumbers === [4]) {
-        rollButton.removeEventListener('click', rollDices)
-    }
     dice1Image.addEventListener('click', throwDice1)
     dice1Image.removeEventListener('click', keepDice1)
 }
@@ -122,11 +112,6 @@ function throwDice2() {
     dicesClickedNumber -= 1;
     trueDiceNumbers[1] = null;
     diceImages[1] = dice2Image;
-    console.log(trueDiceNumbers);
-    console.log(diceImages)
-    if (trueDiceNumbers !== [4]) {
-        rollButton.addEventListener('click', rollDices)
-    }
     dice2Image.addEventListener('click', keepDice2)
     dice2Image.removeEventListener('click', throwDice2)
 }
@@ -135,11 +120,6 @@ function keepDice2() {
     dicesClickedNumber += 1;
     trueDiceNumbers[1] = diceNumbers[1];
     diceImages[1] = null;
-    console.log(trueDiceNumbers);
-    console.log(diceImages)
-    if (trueDiceNumbers === [4]) {
-        rollButton.removeEventListener('click', rollDices)
-    }
     dice2Image.addEventListener('click', throwDice2)
     dice2Image.removeEventListener('click', keepDice2)
 }
@@ -149,11 +129,6 @@ function throwDice3() {
     dicesClickedNumber -= 1;
     trueDiceNumbers[2] = null;
     diceImages[2] = dice3Image;
-    console.log(trueDiceNumbers);
-    console.log(diceImages)
-    if (trueDiceNumbers !== [4]) {
-        rollButton.addEventListener('click', rollDices)
-    }
     dice3Image.addEventListener('click', keepDice3)
     dice3Image.removeEventListener('click', throwDice3)
 }
@@ -162,11 +137,6 @@ function keepDice3() {
     dicesClickedNumber += 1;
     trueDiceNumbers[2] = diceNumbers[2];
     diceImages[2] = null;
-    console.log(trueDiceNumbers);
-    console.log(diceImages)
-    if (trueDiceNumbers === [4]) {
-        rollButton.removeEventListener('click', rollDices)
-    }
     dice3Image.addEventListener('click', throwDice3)
     dice3Image.removeEventListener('click', keepDice3)
 }
@@ -176,11 +146,6 @@ function throwDice4() {
     dicesClickedNumber -= 1;
     trueDiceNumbers[3] = null;
     diceImages[3] = dice4Image;
-    console.log(trueDiceNumbers);
-    console.log(diceImages)
-    if (trueDiceNumbers !== [4]) {
-        rollButton.addEventListener('click', rollDices)
-    }
     dice4Image.addEventListener('click', keepDice4)
     dice4Image.removeEventListener('click', throwDice4)
 }
@@ -189,12 +154,6 @@ function keepDice4() {
     dicesClickedNumber += 1;
     trueDiceNumbers[3] = diceNumbers[3];
     diceImages[3] = null;
-    console.log(trueDiceNumbers);
-    console.log(diceImages)
-    if (trueDiceNumbers === [4]) {
-        rollButton.removeEventListener('click', rollDices)
-        console.log("eventlistener removed!");
-    }
     dice4Image.addEventListener('click', throwDice4)
     dice4Image.removeEventListener('click', keepDice4)
 }
@@ -204,32 +163,23 @@ function throwDice5() {
     dicesClickedNumber -= 1;
     trueDiceNumbers[4] = null;
     diceImages[4] = dice5Image;
-    console.log(trueDiceNumbers);
-    console.log(diceImages)
-    if (trueDiceNumbers !== [4]) {
-        rollButton.addEventListener('click', rollDices)
-
-    }
     dice5Image.addEventListener('click', keepDice5)
     dice5Image.removeEventListener('click', throwDice5)
 }
 function keepDice5() {
     dice5Image.style.border = "blue 3px solid";
     dicesClickedNumber += 1;
+console.log(diceNumbers, 'de dice numbers roll');
     trueDiceNumbers[4] = diceNumbers[4];
+console.log(diceNumbers[4]);
     diceImages[4] = null;
-    console.log(trueDiceNumbers);
-    console.log(diceImages)
-    if (trueDiceNumbers === [4]) {
-        rollButton.removeEventListener('click', rollDices)
-        console.log("eventlistener removed!");
-    }
     dice5Image.addEventListener('click', throwDice5)
     dice5Image.removeEventListener('click', keepDice5)
 }
 
 
 function rollDices() {
+
     ones = 0;
     twos = 0;
     threes = 0;
@@ -239,6 +189,7 @@ function rollDices() {
     doubles = false;
     triples = false;
     fullHouse = false;
+
     for(let counter = 0; counter < 5; counter++){
         if(trueDiceNumbers[counter] === 1){
             ones++;
@@ -264,39 +215,49 @@ function rollDices() {
     if (rollsLeft > 0) {
         //array vullen
         diceNumbers = [];
+console.log(diceImages);
         let randomDiceRoll = 0;
         for (teller; teller < 5; teller++) {
             if (diceImages[0] === null && teller === 0) {
-                teller += 1;
-                console.log("dice 1 skipt!")
+diceNumbers.push(null);
+                continue;
+               // console.log("dice 1 skipt!")
             }
             if (diceImages[1] === null && teller === 1) {
-                teller += 1;
-                console.log("dice 2 skipt!")
+diceNumbers.push(null);
+                continue;
+              //  console.log("dice 2 skipt!")
             }
             if (diceImages[2] === null && teller === 2) {
-                teller += 1;
-                console.log("dice 3 skipt!")
+ diceNumbers.push(null);
+               // teller += 1;
+                continue;
+               // console.log("dice 3 skipt!")
             }
             if (diceImages[3] === null && teller === 3) {
-                teller += 1;
-                console.log("dice 4 skipt!")
+ diceNumbers.push(null);
+            //    teller += 1;
+                continue;
+              //  console.log("dice 4 skipt!")
             }
             if (diceImages[4] === null && teller === 4) {
+diceNumbers.push(null);
                 /*teller += 1;*/
+                continue;
                 /*teller = 5*/
-                console.log("dice 5 skipt!")
+              //  console.log("dice 5 skipt!")
 
             } else {
                 randomDiceRoll = Math.floor(Math.random() * 6 + 1);
+console.log(randomDiceRoll, 'randomDiceroll');
                 diceNumbers.push(randomDiceRoll);
-                console.log(randomDiceRoll);
-                console.log(diceNumbers);
+               // console.log(randomDiceRoll);
+               // console.log(diceNumbers);
 
                 diceImages[teller].src = "../img/dice" + randomDiceRoll + ".jpg"; //template literal
                 //om de beurt vullen
             }
-
+console.log(diceNumbers, 'dice');
 
             if (randomDiceRoll === 1) {
                 ones += 1;
@@ -371,7 +332,7 @@ function rollDices() {
                 Sixes.value = '+ 0';
                 Sixes.style.backgroundColor = "#d04b03";
             }
-
+ console.log(ones, twos, threes, fours, fives, sixes);
             //Part 2
             //Three of a kind
             let X3 = currentPlayer === 0 ? document.getElementById("P1X3") : document.getElementById("P2X3");
@@ -462,6 +423,7 @@ function rollDices() {
                     Chance.value = '+ ' + ((ones) + (2 * twos) + (3 * threes) + (4 * fours) + (5 * fives) + (6 * sixes));
                     Chance.style.backgroundColor = "#ff7423";
                 }
+ console.log(trueDiceNumbers, "true dicenumbers");
             }
 
 
@@ -543,7 +505,7 @@ Chance.addEventListener('click', AddChance);
 
 
 let rollButton = document.querySelector(".rollButton");
-console.log(rollButton);
+//console.log(rollButton);
 rollButton.addEventListener("click", rollDices);
 
 //Player add functions
@@ -1089,7 +1051,7 @@ function resetVariables() {
     rollButton.style.color = "green"
     //diceImages.src = "../img/dice0.jpg"
     diceNumbers = []
-    console.log(diceNumbers);
+   // console.log(diceNumbers);
     ones = 0;
     let Aces = currentPlayer === 0 ? document.getElementById("P1Aces") : document.getElementById("P2Aces");
     if (ones => 1) {
@@ -1593,7 +1555,7 @@ function showRules() {
     if (rulesTextBox.style.display === 'none') {
         rulesTextBox.style.display = 'block';
     }
-    console.log("function active")
+   // console.log("function active")
 }
 let exitRulesButton = document.getElementById("rulesExitBox")
 function exitRules() {
@@ -1610,7 +1572,7 @@ function showInfo() {
     if (infoTextBox.style.display === 'none') {
         infoTextBox.style.display = 'block';
     }
-    console.log("function active")
+ //   console.log("function active")
 }
 
 let exitInfoButton = document.getElementById("infoExitBox")
