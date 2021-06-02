@@ -1,5 +1,5 @@
 "use strict";
-
+let nextButton = document.querySelector(".nextButton");
 let buttonsPlayer1Clicked = 0; //if this is 13 and buttonsplayer2 is also 13 then the game ends
 let buttonsPlayer2Clicked = 0; //and picks the winner with the higher Final Score
 let rollsLeft = 3;
@@ -1270,6 +1270,8 @@ currentTurn.innerHTML = "Player 1's turn";
 
 //This removes eventlisteners on all addbuttons so you cant constantly up your score by repeat clicking
 function eventListenerRemovalForPointButtons() {
+    nextButton.addEventListener('click', resetVariables);
+    nextButton.addEventListener('click', switchPlayer);
     WinningPlayer();
     if (currentPlayer === 0) {
         let Aces = document.getElementById("P1Aces");
@@ -1420,7 +1422,8 @@ function switchPlayer() {
     dice3Image.removeEventListener('click', keepDice3)
     dice4Image.removeEventListener('click', keepDice4)
     dice5Image.removeEventListener('click', keepDice5)
-    let nextButton = document.querySelector(".nextButton");
+    nextButton.removeEventListener('click', resetVariables);
+    nextButton.removeEventListener('click', switchPlayer);
     if (currentPlayer === 0) {
         nextButton.innerHTML = "Switch the turn to Player 1!";
         currentTurn.innerHTML = "Player 2's turn";
@@ -1619,9 +1622,7 @@ function switchPlayer() {
         nextButton.addEventListener('click', WinningPlayer);
     }
 }
-let nextButton = document.querySelector(".nextButton");
-nextButton.addEventListener('click', resetVariables);
-nextButton.addEventListener('click', switchPlayer);
+
 
 
 //Rulesbutton functions
