@@ -6,6 +6,13 @@ let rollsLeft = 3;
 let diceNumbers = []; //vasthouden
 let trueDiceNumbers = [null, null, null, null, null]; //vasthouden
 
+//this is used for a rotating animation
+let current_rotation = 0;
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+
 let ones = 0;
 let twos = 0;
 let threes = 0;
@@ -240,7 +247,7 @@ function keepDice5() {
 
 
 
-function rollDices() {
+async function rollDices() {
 
     ones = 0;
     twos = 0;
@@ -304,6 +311,15 @@ function rollDices() {
                 diceNumbers.push(randomDiceRoll);
                 diceImages[teller].src = "../img/dice" + randomDiceRoll + ".jpg"; //template literal
                 //om de beurt vullen
+
+                for (let rotateTeller = 0; rotateTeller < 12; rotateTeller++) {
+                    if (current_rotation > 359) {
+                        current_rotation = 0;
+                    }
+                    current_rotation += 30;
+                    diceImages[teller].style.transform = 'rotate(' + current_rotation + 'deg)';
+                    await sleep(25)
+                }
             }
 
             if (randomDiceRoll === 1) {
