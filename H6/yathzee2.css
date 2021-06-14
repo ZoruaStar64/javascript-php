@@ -1,11 +1,14 @@
-* {
+*, *:after, *:before {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: inherit;
     /*font-size: 16px;*/
+    /* SASS en BEM */
 }
 
 html {
+    box-sizing: border-box;
+    /*font-size: 62.5%; //10px*/
     background-color: rgb(231, 95, 5);
 }
 
@@ -46,7 +49,7 @@ html {
     padding: 1em;
 }
 .buttonContainer > * {
-    flex-basis: 150px;
+    flex-basis: 150px; /*15rem*/
 }
 
 .rollButton {

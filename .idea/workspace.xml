@@ -20,9 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c5475574-7e0c-4a54-bb73-5d31cdf8e08b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Extra's/yathzeenewstorage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/H6/Yathzee.html" beforeDir="false" afterPath="$PROJECT_DIR$/H6/Yathzee.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/H6/Yathzee.js" beforeDir="false" afterPath="$PROJECT_DIR$/H6/Yathzee.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/H6/YathzeeButtonFunctions.js" beforeDir="false" afterPath="$PROJECT_DIR$/Extra's/YathzeeButtonFunctions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/H6/yathzee2.css" beforeDir="false" afterPath="$PROJECT_DIR$/H6/yathzee2.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,8 +41,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -73,6 +76,7 @@
       <recent name="C:\Users\sande\javascript\H2" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\sande\javascript\Extra's" />
       <recent name="C:\Users\sande\javascript\img" />
     </key>
   </component>
@@ -167,7 +171,10 @@
       <workItem from="1621944105153" duration="290000" />
       <workItem from="1622010840936" duration="9579000" />
       <workItem from="1622616327635" duration="15415000" />
-      <workItem from="1622708059406" duration="4292000" />
+      <workItem from="1622708059406" duration="4918000" />
+      <workItem from="1622718047438" duration="828000" />
+      <workItem from="1623095200807" duration="46000" />
+      <workItem from="1623653631895" duration="4863000" />
     </task>
     <servers />
   </component>
