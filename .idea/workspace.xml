@@ -19,8 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c5475574-7e0c-4a54-bb73-5d31cdf8e08b" name="Default Changelist" comment="schooltimeline done">
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+    <list default="true" id="c5475574-7e0c-4a54-bb73-5d31cdf8e08b" name="Default Changelist" comment="added link">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/schoolTimeline/schoolTimeline.css" beforeDir="false" afterPath="$PROJECT_DIR$/schoolTimeline/schoolTimeline.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -167,7 +168,7 @@
       <workItem from="1625740031051" duration="610000" />
       <workItem from="1630408675099" duration="525000" />
       <workItem from="1630410400373" duration="17000" />
-      <workItem from="1630581125948" duration="4959000" />
+      <workItem from="1630581125948" duration="5373000" />
     </task>
     <task id="LOCAL-00001" summary="schooltimeline done">
       <created>1630585816322</created>
@@ -176,7 +177,14 @@
       <option name="project" value="LOCAL" />
       <updated>1630585816322</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="added link">
+      <created>1630586140614</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1630586140614</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -196,7 +204,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="schooltimeline done" />
-    <option name="LAST_COMMIT_MESSAGE" value="schooltimeline done" />
+    <MESSAGE value="added link" />
+    <option name="LAST_COMMIT_MESSAGE" value="added link" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
