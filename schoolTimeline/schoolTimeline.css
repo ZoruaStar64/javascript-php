@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /*font-size: 16px;*/
+}
+
+h2 {
+    text-align: center;
+}
+
+#reflectieVerslag {
+    margin: 2% 0 0 20%;
+    text-align: center;
+    width: 60%;
+    height: 30%;
+    background-color: #00e6ff;
+    border: solid 5px #0074ff;
+}
+
+#schoolTijdlijn1, #schoolTijdlijn2 {
+    text-align: center;
+    margin: 2% 0 0 20%;
+    width: 60%;
+    height: 50%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "P1 P2 P3 P4";
+}
+#schoolTijdlijnP1 {
+    float: left;
+    grid-area: P1;
+    width: 100%;
+    height: 100%;
+    background-color: #ff3c3c;
+    border-left: #c73232 2px solid;
+    border-bottom: #c73232 2px solid;
+    border-top: #c73232 2px solid;
+}
+#schoolTijdlijnP2 {
+    float: left;
+    grid-area: P2;
+    width: 100%;
+    height: 100%;
+    background-color: #3cc1ff;
+    border-bottom: #2883ac 2px solid;
+    border-top: #2883ac 2px solid;
+}
+#schoolTijdlijnP3 {
+    float: left;
+    grid-area: P3;
+    width: 100%;
+    height: 100%;
+    background-color: #70ff3c;
+    border-bottom: #419522 2px solid;
+    border-top: #419522 2px solid;
+}
+#schoolTijdlijnP4 {
+    float: left;
+    grid-area: P4;
+    width: 100%;
+    height: 100%;
+    background-color: #fff53c;
+    border-right: #a59e27 2px solid;
+    border-bottom: #a59e27 2px solid;
+    border-top: #a59e27 2px solid;
+}
+
+#schoolTijdlijnP5 {
+    float: left;
+    grid-area: P1;
+    width: 100%;
+    height: 100%;
+    background-color: #cb3cff;
+    border-left: #732490 2px solid;
+    border-bottom: #732490 2px solid;
+    border-top: #732490 2px solid;
+}
+#schoolTijdlijnP6 {
+    float: left;
+    grid-area: P2;
+    width: 100%;
+    height: 100%;
+    background-color: #ff973c;
+    border-bottom: #9c5d25 2px solid;
+    border-top: #9c5d25 2px solid;
+}
+#schoolTijdlijnP7 {
+    float: left;
+    grid-area: P3;
+    width: 100%;
+    height: 100%;
+    background-color: #ff3ce5;
+    border-bottom: #992589 2px solid;
+    border-top: #992589 2px solid;
+}
+#schoolTijdlijnP8 {
+    float: left;
+    grid-area: P4;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    border-right: #767676 2px solid;
+    border-bottom: #767676 2px solid;
+    border-top: #767676 2px solid;
+}
