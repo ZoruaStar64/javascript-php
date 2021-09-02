@@ -1,8 +1,15 @@
-* {
+*, *:after, *:before {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: inherit;
     /*font-size: 16px;*/
+    /* SASS en BEM */
+}
+
+html {
+    box-sizing: border-box;
+    /*font-size: 62.5%; //10px*/
+    background-color: rgb(231, 95, 5);
 }
 
 .flexcontainer {
@@ -41,10 +48,14 @@
     margin: auto;
     padding: 1em;
 }
+.buttonContainer > * {
+    flex-basis: 150px; /*15rem*/
+}
 
 .rollButton {
     display: flex;
-    background-color: #d9bb34;
+    /*background-color: #d9bb34;*/
+    background: linear-gradient(to right, #b39e2c, #d9bb34);
     border: 2px black solid;
     /*border-radius: 0% 20% 0% 20%;*/
     justify-content: center;
@@ -55,9 +66,21 @@
 
 }
 
+div.rollButton:hover {
+   /* background-color: #d0b010;*/
+    background: linear-gradient(to right, #ac920d, #d0b010);
+}
+
+div.rollButton:active {
+/*    background-color: #a08301;
+    color: #cd6100;*/
+    background: linear-gradient(to right, #776100, #a08301);
+}
+
 .nextButton {
     display: flex;
-    background-color: #9d1919;
+    /*background-color: #9d1919;*/
+    background: linear-gradient(to right, #9d1919, #e00b0b);
     border: 2px black solid;
     /*border-radius: 50%;*/
     justify-content: center;
@@ -67,9 +90,20 @@
     cursor: pointer;
 }
 
+div.nextButton:hover {
+    /*background-color: #9d0c0c;*/
+    background: linear-gradient(to right, #860b0b, #b10e0e);
+}
+
+div.nextButton:active {
+   /* background-color: #960000;*/
+    background: linear-gradient(to right, #620202, #960000);
+}
+
 div.playerTurnBox {
     display: flex;
-    background-color: #9d0c0c;
+    /*background-color: #9d0c0c;*/
+    background: linear-gradient(to top, #9d0c0c, #ea1515);
     border: 3px solid #6d2803;
     justify-content: center;
     align-items: center;
@@ -79,7 +113,8 @@ div.playerTurnBox {
 
 div.rulesButton {
     display: flex;
-    background-color: limegreen;
+   /* background-color: limegreen;*/
+    background: linear-gradient(to right, #259225, limegreen);
     border: 2px black solid;
     /*border-radius: 50%;*/
     text-align: center;
@@ -89,9 +124,56 @@ div.rulesButton {
     cursor: pointer;
 }
 
+div.rulesButton:hover {
+    /*background-color: #12c412;*/
+    background: linear-gradient(to right, #11a511, #11bf11);
+
+}
+
+div.rulesButton:active {
+   /* background-color: #009b00;*/
+    background: linear-gradient(to right, #027002, #009b00);
+
+}
+
+div#rulesTextBox {
+    border: 3px solid black;
+    background-color: #009b00;
+    width: 500px;
+    margin-top: 50px;
+    float: left;
+}
+
+div#rulesTextBox p {
+    font-size: 25px;
+    color: black;
+}
+
+div#rulesExitBox {
+    border: 1px solid black;
+    background-color: darkred;
+    width: 50px;
+    height: 20px;
+    float: right;
+}
+
+div#rulesExitBox:hover {
+    background-color: #be0101;
+}
+
+div#rulesExitBox:active {
+    background-color: #ee0202;
+}
+
+div#rulesExitBox p {
+    font-size: 20px;
+    margin: 0 0 0 1px;
+}
+
 div.infoButton {
     display: flex;
-    background-color: dodgerblue;
+    /*background-color: dodgerblue;*/
+    background: linear-gradient(to right, #145ea5, dodgerblue);
     border: 2px black solid;
     /*border-radius: 50%;*/
     text-align: center;
@@ -99,6 +181,50 @@ div.infoButton {
     align-items: center;
     padding: 1em;
     cursor: pointer;
+}
+
+div.infoButton:hover {
+    /*background-color: #056ddb;*/
+    background: linear-gradient(to right, #065ebc, #056ddb);
+}
+
+div.infoButton:active {
+  /*  background-color: #00519d;*/
+    background: linear-gradient(to right, #02427e, #00519d);
+}
+
+div#infoTextBox {
+    border: 3px solid black;
+    background-color: #056ddb;
+    width: 500px;
+    margin: 50px 0 0 0;
+    float: right;
+}
+
+div#infoTextBox p {
+    font-size: 25px;
+    color: black;
+}
+
+div#infoExitBox {
+    border: 1px solid black;
+    background-color: darkred;
+    width: 50px;
+    height: 20px;
+    float: right;
+}
+
+div#infoExitBox:hover {
+    background-color: #be0101;
+}
+
+div#infoExitBox:active {
+    background-color: #ee0202;
+}
+
+div#infoExitBox p {
+    font-size: 20px;
+    margin: 0 0 0 1px;
 }
 
 .dices {
@@ -116,14 +242,14 @@ div.infoButton {
 }
 
 .playerOne {
-    background-color: sandybrown;
     padding-right: 0.5em;
-    background: linear-gradient(to right, sandybrown, #cd5418);
+    background: linear-gradient(to right, sandybrown, #ef631d);
 }
 
 .playerTwo {
-    background-color: sandybrown;
     padding-left: 0.5em;
+    background: linear-gradient(to right, sandybrown, #ef631d);
+
 }
 
 .one {
@@ -162,6 +288,17 @@ div.infoButton {
     line-height: 2px;
 }
 
+.playerTwo input {
+    float: right;
+    height: 16px;
+    margin-right: 2em;
+    border: none;
+    background-color: #d04b03;
+    padding: 0.5em;
+    font-size: 12px;
+    line-height: 2px;
+}
+
 .upperScorecard {
     display: flex;
     flex-direction: column;
@@ -184,6 +321,28 @@ div.infoButton {
     margin: 0.5em 0.5em 0.5em 0.5em;
 }
 
+#winBox {
+    background-color: gold;
+    color: black;
+    border: 3px solid black;
+    width: 300px;
+    text-align: center;
+    margin: 50px auto 0 auto;
+}
+
+.refresh {
+    display: block;
+    background-color: #fff188;
+    color: black;
+    border: 2px solid black;
+    border-radius: 50%;
+    text-align: center;
+    margin-left: 20px;
+    padding-top: 10px;
+    width: 250px;
+    height: 50px;
+}
+
 /* Tabllets */
 @media only screen and (min-width: 768px) {
     .gameContainer {
@@ -203,6 +362,91 @@ div.infoButton {
 
 /* Laptop / PC */
 @media only screen and (min-width: 1200px) {
+    .rollButton {
+        display: flex;
+        background-color: #d9bb34;
+        border: 2px black solid;
+        /*border-radius: 0% 20% 0% 20%;*/
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 1em;
+        cursor: pointer;
+        border-radius: 50%;
+    }
+
+    .nextButton {
+        display: flex;
+        background-color: #9d1919;
+        border: 2px black solid;
+        /*border-radius: 50%;*/
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 1em;
+        cursor: pointer;
+        border-radius: 50%;
+    }
+
+    div.playerTurnBox {
+        display: flex;
+        background-color: #9d0c0c;
+        border: 3px solid #6d2803;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 1em;
+    }
+
+    #currentTurn {
+        font-size: 20px;
+        color: black;
+    }
+
+    div.rulesButton {
+        display: flex;
+        background-color: limegreen;
+        border: 2px black solid;
+        /*border-radius: 50%;*/
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        padding: 1em;
+        cursor: pointer;
+        border-radius: 50%;
+    }
+
+    div.infoButton {
+        display: flex;
+        background-color: dodgerblue;
+        border: 2px black solid;
+        /*border-radius: 50%;*/
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        padding: 1em;
+        cursor: pointer;
+        border-radius: 50%;
+    }
+
+
+    .playerOne {
+        font-size: 20px;
+        margin-top: 50px;
+    }
+
+    .playerTwo {
+        font-size: 20px;
+        margin-top: 50px;
+    }
+
+    .playerOne input, .playerTwo input {
+        font-size: 20px;
+        cursor: copy;
+        border: 1px solid #6d2803;
+        background-color: #d04b03;
+    }
+
     div.dices {
         /*position: absolute;*/
         display: grid;
@@ -270,9 +514,16 @@ div.infoButton {
         margin: auto;
         /*float: left;*/
         /*margin-left: 225px;*/
-        /*margin-top: 30px;*/
+        /*margin-top: 50px;*/
 
     }
+}
+.game-rules {
+    display: flex;
+    align-items: start;
+}
+.game-rules > * {
+    flex-basis: min-content;
 }
 
 

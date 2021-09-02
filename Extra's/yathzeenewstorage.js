@@ -23,6 +23,14 @@ let doubles = false;
 let triples = false;
 let fullHouse = false;
 
+//let valuesThrown = [0, 0, 0, 0, 0, 0, false, false, false]; //arry geen key / value pairs
+//let valuesThrownTwo = new Map();
+//valuesThrownTwo['ones'] = 0; valuesThrownTwo['twos'] = 0;
+//console.log(valuesThrownTwo)
+//datastructuren // Heb je key values -airs nodig? Nee =? array / ja => object pof een map (geen functies nodig hebbe, dan map)
+
+
+
 //hier komen tering feel variabelen om de checken of iets true of false is
 let P1One = false;
 let P2One = false;
@@ -99,7 +107,8 @@ const dice1Image = document.getElementById("diceOne");
 const dice2Image = document.getElementById("diceTwo");
 const dice3Image = document.getElementById("diceThree");
 const dice4Image = document.getElementById("diceFour");
-const dice5Image = document.getElementById("diceFive")
+const dice5Image = document.getElementById("diceFive");
+const dieImage = [dice1Image, dice2Image, dice3Image, dice4Image, dice5Image];
 const diceImages = [dice1Image, dice2Image, dice3Image, dice4Image, dice5Image];
 
 //wanneer een dice geklikt wordt verhoog dit getal
@@ -136,7 +145,22 @@ function throwDice1() {
     dice1Image.addEventListener('click', keepDice1)
     dice1Image.removeEventListener('click', throwDice1)
 }
-function keepDice1() {
+function keepDice1 (dieNumber){
+    diceImages[dieNumber-1].style.border = "3px solid blue";
+    dicesClickedNumber += 1;
+    trueDiceNumbers[dieNumber - 1] = diceNumbers[dieNumber - 1];
+    diceImages[dieNumber - 1] = null;
+    if (dicesClickedNumber === 5) {
+        rollButton.removeEventListener('click', rollDices);
+        antiRollWaste = true;
+    }
+    //console.log(diceImages);
+    dieImage[dieNumber-1].addEventListener('click', throwDice1);
+    //let stringOne = dieNumber + "";
+    //eval("dice" + stringOne + "Image").addEventListener('click', throwDice1);
+    dice1Image.removeEventListener('click', keepDice1);
+}
+function OldkeepDice1() {
     dice1Image.style.border = "blue 3px solid";
     dicesClickedNumber += 1;
     trueDiceNumbers[0] = diceNumbers[0];
@@ -507,7 +531,11 @@ async function rollDices() {
         rollButton.innerHTML = "Rolls left = 2"
         rollButton.style.color = "yellow"
 
-        dice1Image.addEventListener('click', keepDice1);
+        dice1Image.addEventListener('click', function(){
+            console.log(123);
+            keepDice1(1);
+        });
+
         dice2Image.addEventListener('click', keepDice2);
         dice3Image.addEventListener('click', keepDice3);
         dice4Image.addEventListener('click', keepDice4);
