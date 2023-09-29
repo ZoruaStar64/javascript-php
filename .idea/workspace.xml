@@ -19,9 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c5475574-7e0c-4a54-bb73-5d31cdf8e08b" name="Default Changelist" comment="added link">
+    <list default="true" id="c5475574-7e0c-4a54-bb73-5d31cdf8e08b" name="Default Changelist" comment="Updates styles">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/schoolTimeline/schoolTimeline.css" beforeDir="false" afterPath="$PROJECT_DIR$/schoolTimeline/schoolTimeline.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/H6/Yathzee.html" beforeDir="false" afterPath="$PROJECT_DIR$/H6/Yathzee.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/H6/Yathzee.js" beforeDir="false" afterPath="$PROJECT_DIR$/H6/Yathzee.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/H6/yathzee2.css" beforeDir="false" afterPath="$PROJECT_DIR$/H6/yathzee2.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,14 +80,14 @@
       <recent name="C:\Users\sande\javascript\img" />
     </key>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.Yathzee.html">
+  <component name="RunManager" selected="JavaScript Debug.Yathzee.html (1)">
     <configuration name="Memory.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/javascript/H6/Memory.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="Yathzee.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/javascript/H6/Yathzee.html" useBuiltInWebServerPort="true">
+    <configuration name="Yathzee.html (1)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/javascript-php/H6/Yathzee.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="car.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/javascript/H4/car.html" useBuiltInWebServerPort="true">
+    <configuration name="Yathzee.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/javascript/H6/Yathzee.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="randomImageSlider.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/javascript/Extra's/randomImageSlider.html" useBuiltInWebServerPort="true">
@@ -96,11 +98,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.Yathzee.html (1)" />
         <item itemvalue="JavaScript Debug.Yathzee.html" />
         <item itemvalue="Node.js.Yathzee.js" />
         <item itemvalue="JavaScript Debug.Memory.html" />
         <item itemvalue="JavaScript Debug.randomImageSlider.html" />
-        <item itemvalue="JavaScript Debug.car.html" />
       </list>
     </recent_temporary>
   </component>
@@ -168,7 +170,16 @@
       <workItem from="1625740031051" duration="610000" />
       <workItem from="1630408675099" duration="525000" />
       <workItem from="1630410400373" duration="17000" />
-      <workItem from="1630581125948" duration="5373000" />
+      <workItem from="1630581125948" duration="5397000" />
+      <workItem from="1630909485623" duration="42000" />
+      <workItem from="1632310553782" duration="616000" />
+      <workItem from="1632379182305" duration="606000" />
+      <workItem from="1633606802759" duration="315000" />
+      <workItem from="1635408429452" duration="478000" />
+      <workItem from="1635409078825" duration="2355000" />
+      <workItem from="1635495240923" duration="13000" />
+      <workItem from="1695888786344" duration="11088000" />
+      <workItem from="1695970997920" duration="6560000" />
     </task>
     <task id="LOCAL-00001" summary="schooltimeline done">
       <created>1630585816322</created>
@@ -184,7 +195,14 @@
       <option name="project" value="LOCAL" />
       <updated>1630586140614</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Updates styles">
+      <created>1630586560141</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1630586560141</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -205,17 +223,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="schooltimeline done" />
     <MESSAGE value="added link" />
-    <option name="LAST_COMMIT_MESSAGE" value="added link" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/H6/Yathzee.js</url>
-          <line>1616</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Updates styles" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updates styles" />
   </component>
 </project>

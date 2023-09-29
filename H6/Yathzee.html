@@ -7,177 +7,163 @@
     <link rel="stylesheet" href="../H6/yathzee2.css">
 </head>
 <body>
-<div class="flexcontainer">
+    <header>
 
-    <div class="gameContainer">
+    </header>
+    <main>
+        <div class="flexcontainer">
+            <div class="gameContainer">
+                <div class="buttonContainer">
+                    <div class="rollButton">Rolls left: <span id="rollNumber"></span> </div>
+                    <div class="nextButton">Switch to Player 2</div>
+                    <div class="playerTurnBox"><span id="currentTurn"></span></div>
+                    <div class="rulesButton">View the Rules!</div>
+                    <div class="infoButton">FAQ</div>
+                </div>
+                <div class="playerOne"><p class="one">Player One</p>
+                    <p class="parts">Part 1/Basic Moves</p>
+                    <div class="upperScorecard">
+                        <p>Aces : <span id="P1AcesText"></span><input type="submit" id="P1Aces" value="+ 0"></p>
+                        <p>Twos : <span id="P1TwosText"></span><input type="submit" id="P1Twos" value="+ 0"></p>
+                        <p>Threes : <span id="P1ThreesText"></span><input type="submit" id="P1Threes" value="+ 0"></p>
+                        <p>Fours : <span id="P1FoursText"></span><input type="submit" id="P1Fours" value="+ 0"></p>
+                        <p>Fives : <span id="P1FivesText"></span><input type="submit" id="P1Fives" value="+ 0"></p>
+                        <p>Sixes : <span id="P1SixesText"></span><input type="submit" id="P1Sixes" value="+ 0"></p>
+                    </div>
+                    <div class="bonus">
+                        <label>Extra bonus points (+35)</label>
+                        <img id="bonusImageP1" src="../img/X.png">
+        <!--                <p style="color: #9d0c0c">&#x2613;</p>-->
+                    </div>
+                    <p class="parts">
+                    Part 2/Advanced Moves</p>
+                    <div class="lowerScorecard">
+                        <p>Three of a Kind : <span id="P1X3Text"></span><input type="submit" id="P1X3" value="+ 0"></p>
+                        <p>Four of a Kind : <span id="P1X4Text"></span><input type="submit" id="P1X4" value="+ 0"></p>
+                        <p>Full House : <span id="P1HouseText"></span><input type="submit" id="P1House" value="+ 0"></p>
+                        <p>Small Street : <span id="P1SSText"></span><input type="submit" id="P1SmallS" value="+ 0"></p>
+                        <p>Large Street : <span id="P1LSText"></span><input type="submit" id="P1LargeS" value="+ 0"></p>
+                        <p>Yathzee : <span id="P1YathzeeText"></span><input type="submit" id="P1Yathzee" value="+ 0"></p>
+                        <p>Chance : <span id="P1ChanceText"></span><input type="submit" id="P1Chance" value="+ 0"></p>
+                    </div>
+                    <p class="parts">Summary of total points</p>
+                    <label>Total Top half : <span id="P1Top"></span></label>
+                    <br>
+                    <label>Total Bottom half : <span id="P1Bottom"></span></label>
+                    <br>
+                    <label>Combined Total/Final Score : <span id="P1Total"></span></label>
+                </div>
 
-        <div class="playerOne"><p class="one">Player One</p>
-            <p class="parts">Part 1/Basic Moves</p>
+                <div class="outerBoardRing">
+                    <div class="innerBoardRing">
+                        <div class="dices">
+                            <img id="1" src="../img/dice1.jpg" alt="a dice with a number between 1-6" class="rotate diceOne">
+                            <img id="2" src="../img/dice2.jpg" alt="a dice with a number between 1-6" class="rotate diceTwo">
+                            <img id="3" src="../img/dice4.jpg" alt="a dice with a number between 1-6" class="rotate diceThree">
+                            <img id="4" src="../img/dice6.jpg" alt="a dice with a number between 1-6" class="rotate diceFour">
+                            <img id="5" src="../img/dice5.jpg" alt="a dice with a number between 1-6" class="rotate diceFive">
+                        </div>
+                    </div>
+                </div>
+                <div class="playerTwo"><p class="two">Player Two</p>
+                    <p class="parts">
+                        Part 1/Basic Moves</p>
+                    <div class="upperScorecard">
+                        <p>Aces : <span id="P2AcesText"></span><input type="submit" id="P2Aces" value="+ 0"></p>
+                        <p>Twos : <span id="P2TwosText"></span><input type="submit" id="P2Twos" value="+ 0"></p>
+                        <p>Threes : <span id="P2ThreesText"></span><input type="submit" id="P2Threes" value="+ 0"></p>
+                        <p>Fours : <span id="P2FoursText"></span><input type="submit" id="P2Fours" value="+ 0"></p>
+                        <p>Fives : <span id="P2FivesText"></span><input type="submit" id="P2Fives" value="+ 0"></p>
+                        <p>Sixes : <span id="P2SixesText"></span><input type="submit" id="P2Sixes" value="+ 0"></p>
+                    </div>
+                    <div class="bonus">
+                        <label>Extra bonus points (+35)</label>
+                        <img id="bonusImageP2" src="../img/X.png">
+                        <!--                <p style="color: #9d0c0c">&#x2613;</p>-->
+                    </div>
+                    <p class="parts">
+                        Part 2/Advanced Moves</p>
+                    <div class="lowerScorecard">
+                        <p>Three of a Kind :  <span id="P2X3Text"></span><input type="submit" id="P2X3" value="+ 0"></p>
+                        <p>Four of a Kind : <span id="P2X4Text"></span><input type="submit" id="P2X4" value="+ 0"></p>
+                        <p>Full House : <span id="P2HouseText"></span><input type="submit" id="P2House" value="+ 0"></p>
+                        <p>Small Street : <span id="P2SSText"></span><input type="submit" id="P2SmallS" value="+ 0"></p>
+                        <p>Large Street : <span id="P2LSText"></span><input type="submit" id="P2LargeS" value="+ 0"></p>
+                        <p>Yathzee : <span id="P2YathzeeText"></span><input type="submit" id="P2Yathzee" value="+ 0"></p>
+                        <p>Chance : <span id="P2ChanceText"></span><input type="submit" id="P2Chance" value="+ 0"></p>
+                    </div>
+                    <p class="parts">Summary of total points</p>
+                    <label>Total Top half : <span id="P2Top"></span></label>
+                    <br>
+                    <label>Total Bottom half : <span id="P2Bottom"></span></label>
+                    <br>
+                    <label>Combined Total/Final Score : <span id="P2Total"></span></label>
+                </div>
 
-            <div class="upperScorecard">
-                <p>Aces : <span id="P1AcesText"></span><input type="submit" id="P1Aces" value="+ 0"></p>
-                <p>Twos : <span id="P1TwosText"></span><input type="submit" id="P1Twos" value="+ 0"></p>
-                <p>Threes : <span id="P1ThreesText"></span><input type="submit" id="P1Threes" value="+ 0"></p>
-                <p>Fours : <span id="P1FoursText"></span><input type="submit" id="P1Fours" value="+ 0"></p>
-                <p>Fives : <span id="P1FivesText"></span><input type="submit" id="P1Fives" value="+ 0"></p>
-                <p>Sixes : <span id="P1SixesText"></span><input type="submit" id="P1Sixes" value="+ 0"></p>
             </div>
-
-            <div class="bonus">
-                <label>Extra bonus points (+35)</label>
-                <img id="bonusImageP1" src="../img/X.png">
-<!--                <p style="color: #9d0c0c">&#x2613;</p>-->
-            </div>
-
-            <p class="parts">
-            Part 2/Advanced Moves</p>
-
-            <div class="lowerScorecard">
-                <p>Three of a Kind : <span id="P1X3Text"></span><input type="submit" id="P1X3" value="+ 0"></p>
-                <p>Four of a Kind : <span id="P1X4Text"></span><input type="submit" id="P1X4" value="+ 0"></p>
-                <p>Full House : <span id="P1HouseText"></span><input type="submit" id="P1House" value="+ 0"></p>
-                <p>Small Street : <span id="P1SSText"></span><input type="submit" id="P1SmallS" value="+ 0"></p>
-                <p>Large Street : <span id="P1LSText"></span><input type="submit" id="P1LargeS" value="+ 0"></p>
-                <p>Yathzee : <span id="P1YathzeeText"></span><input type="submit" id="P1Yathzee" value="+ 0"></p>
-                <p>Chance : <span id="P1ChanceText"></span><input type="submit" id="P1Chance" value="+ 0"></p>
-            </div>
-
-            <p class="parts">Summary of total points</p>
-
-            <label>Total Top half : <span id="P1Top"></span></label>
-            <br>
-            <label>Total Bottom half : <span id="P1Bottom"></span></label>
-            <br>
-            <label>Combined Total/Final Score : <span id="P1Total"></span></label>
-        </div>
-
-        <div class="buttonContainer">
-
-            <div class="rollButton">Rolls left: <span id="rollNumber"></span> </div>
-            <div class="nextButton">Switch to Player 2</div>
-            <div class="playerTurnBox"><span id="currentTurn"></span></div>
-            <div class="rulesButton">View the Rules!</div>
-            <div class="infoButton">FAQ</div>
-
-        </div>
-
-
-        <div class="outerBoardRing">
-            <div class="innerBoardRing">
-                <div class="dices">
-                    <img id="diceOne" src="../img/dice1.jpg" alt="a dice with a number between 1-6" class="rotate">
-                    <img id="diceTwo" src="../img/dice2.jpg" alt="a dice with a number between 1-6" class="rotate">
-                    <img id="diceThree" src="../img/dice4.jpg" alt="a dice with a number between 1-6" class="rotate">
-                    <img id="diceFour" src="../img/dice6.jpg" alt="a dice with a number between 1-6" class="rotate">
-                    <img id="diceFive" src="../img/dice5.jpg" alt="a dice with a number between 1-6" class="rotate">
+            <div class="game-rules">
+                <div id="rulesTextBox" style="display: none"><div id="rulesExitBox" style="display: block"><p>Close</p></div>
+                    <p>Bij Yathzee gelden de volgende regels:</p>
+                    <p>1: je mag 3 keer rollen en na de eerste keer en
+                        <br>tweede keer mag je dobbelstenen vasthouden daarna moet je iets invullen</p>
+                    <br>
+                    <p>2: je mag na de eerste keer, tweede keer en derde keer een vakje invullen<br>
+                        het is ook toegestaan om een nul in te vullen, maar dat kan je niet meer veranderen</p>
+                    <br>
+                    <p>3: Daarnaast zijn er wat regels zoals:<br> niet jouw tegenstander's turn switchen.<br>
+                        niet jouw tegenstander's rolls doen/dobbelstenen vasthouden/dobbelstenen niet meer vasthouden<br>
+                        en als laatste niet jouw tegenstander's velden invullen</p><br>
+                </div>
+                <div id="winBox" style="display: none">
+                    <p style="font-size: 25px"><span id="Winner"></span></p>
+                    <a class="refresh"  href="Yathzee.html">Click here to play again!</a>
+                </div>
+                <div id="infoTextBox" style="display: none"><div id="infoExitBox" style="display: block"><p>Close</p></div>
+                    <p>Aces: Aces zijn de dobbelstenen met 1 oog voor elke van deze gaat Aces met 1 omhoog</p>
+                    <br>
+                    <p>Twos: Twos zijn de dobbelstenen met 2 ogen voor elke van deze gaat Twos met 2 omhoog</p>
+                    <br>
+                    <p>Threes: Threes zijn de dobbelstenen met 3 ogen voor elke van deze gaat Threes met 3 omhoog</p>
+                    <br>
+                    <p>Fours: Fours zijn de dobbelstenen met 4 ogen voor elke van deze gaat Fours met 4 omhoog</p>
+                    <br>
+                    <p>Fives: Fives zijn de dobbelstenen met 5 ogen voor elke van deze gaat Fives met 5 omhoog</p>
+                    <br>
+                    <p>Sixes: Sixes zijn de dobbelstenen met 6 ogen voor elke van deze gaat Sixes met 6 omhoog</p>
+                    <br>
+                    <p>Three of a kind: Als je van een soort dobbelsteen 3 hebt<br>
+                        dan telt dit deze dobbelstenen inclusief de resterende bij elkaar op</p>
+                    <br>
+                    <p>Four of a kind: Als je van een soort dobbelsteen 4 hebt<br>
+                        dan telt dit deze dobbelstenen inclusief de laatste bij elkaar op</p>
+                    <br>
+                    <p>Full House: Als je van een soort dobbelsteen 3 hebt<br>
+                        en van een andere soort dobbelsteen 2 hebt<br>
+                        dan kan je 25 punten hiervoor krijgen</p>
+                    <br>
+                    <p>Small Street: Als je een combinatie van 1-4, 2-5 of 3-6 hebt<br>
+                        dan krijg je hiervoor 30 punten</p>
+                    <br>
+                    <p>Large Street: Als je een combinatie van 1-5 of 2-6 hebt<br>
+                        dan krijg je hiervoor 40 punten</p>
+                    <br>
+                    <p>Yathzee: als je 5 van een soort dobbelsteen hebt<br>
+                        B.V.B: 5 dobbelstenen met 3 ogen<br>
+                        dan krijg je 50 punten erbij</p>
+                    <br>
+                    <p>Chance: Dit telt alle dobbelstenen bij elkaar op<br>
+                        B.V.B: 5+3+6+5+1 = 20 punten</p>
+                    <br>
+                    <p>Bonus: Als je 63 of meer punten hebt in Basic moves/Part 1<br>
+                        dan krijg je 35 punten extra erbij</p>
+                    <br>
                 </div>
             </div>
         </div>
-
-        <div class="playerTwo"><p class="two">Player Two</p>
-            <p class="parts">
-                Part 1/Basic Moves</p>
-
-            <div class="upperScorecard">
-                <p>Aces : <span id="P2AcesText"></span><input type="submit" id="P2Aces" value="+ 0"></p>
-                <p>Twos : <span id="P2TwosText"></span><input type="submit" id="P2Twos" value="+ 0"></p>
-                <p>Threes : <span id="P2ThreesText"></span><input type="submit" id="P2Threes" value="+ 0"></p>
-                <p>Fours : <span id="P2FoursText"></span><input type="submit" id="P2Fours" value="+ 0"></p>
-                <p>Fives : <span id="P2FivesText"></span><input type="submit" id="P2Fives" value="+ 0"></p>
-                <p>Sixes : <span id="P2SixesText"></span><input type="submit" id="P2Sixes" value="+ 0"></p>
-            </div>
-
-            <div class="bonus">
-                <label>Extra bonus points (+35)</label>
-                <img id="bonusImageP2" src="../img/X.png">
-                <!--                <p style="color: #9d0c0c">&#x2613;</p>-->
-            </div>
-
-            <p class="parts">
-                Part 2/Advanced Moves</p>
-
-            <div class="lowerScorecard">
-                <p>Three of a Kind :  <span id="P2X3Text"></span><input type="submit" id="P2X3" value="+ 0"></p>
-                <p>Four of a Kind : <span id="P2X4Text"></span><input type="submit" id="P2X4" value="+ 0"></p>
-                <p>Full House : <span id="P2HouseText"></span><input type="submit" id="P2House" value="+ 0"></p>
-                <p>Small Street : <span id="P2SSText"></span><input type="submit" id="P2SmallS" value="+ 0"></p>
-                <p>Large Street : <span id="P2LSText"></span><input type="submit" id="P2LargeS" value="+ 0"></p>
-                <p>Yathzee : <span id="P2YathzeeText"></span><input type="submit" id="P2Yathzee" value="+ 0"></p>
-                <p>Chance : <span id="P2ChanceText"></span><input type="submit" id="P2Chance" value="+ 0"></p>
-            </div>
-
-
-            <p class="parts">Summary of total points</p>
-
-            <label>Total Top half : <span id="P2Top"></span></label>
-            <br>
-            <label>Total Bottom half : <span id="P2Bottom"></span></label>
-            <br>
-            <label>Combined Total/Final Score : <span id="P2Total"></span></label>
-        </div>
-    </div>
-<div class="game-rules">
-<div id="rulesTextBox" style="display: none"><div id="rulesExitBox" style="display: block"><p>Close</p></div>
-    <p>Bij Yathzee gelden de volgende regels:</p>
-    <p>1: je mag 3 keer rollen en na de eerste keer en
-        <br>tweede keer mag je dobbelstenen vasthouden daarna moet je iets invullen</p>
-    <br>
-    <p>2: je mag na de eerste keer, tweede keer en derde keer een vakje invullen<br>
-    het is ook toegestaan om een nul in te vullen, maar dat kan je niet meer veranderen</p>
-    <br>
-    <p>3: Daarnaast zijn er wat regels zoals:<br> niet jouw tegenstander's turn switchen.<br>
-    niet jouw tegenstander's rolls doen/dobbelstenen vasthouden/dobbelstenen niet meer vasthouden<br>
-    en als laatste niet jouw tegenstander's velden invullen</p><br></div>
-
-<div id="winBox" style="display: none">
-    <p style="font-size: 25px"><span id="Winner"></span></p>
-    <a class="refresh"  href="Yathzee.html">Click here to play again!</a>
-</div>
-
-
-<div id="infoTextBox" style="display: none"><div id="infoExitBox" style="display: block"><p>Close</p></div>
-    <p>Aces: Aces zijn de dobbelstenen met 1 oog voor elke van deze gaat Aces met 1 omhoog</p>
-    <br>
-    <p>Twos: Twos zijn de dobbelstenen met 2 ogen voor elke van deze gaat Twos met 2 omhoog</p>
-    <br>
-    <p>Threes: Threes zijn de dobbelstenen met 3 ogen voor elke van deze gaat Threes met 3 omhoog</p>
-    <br>
-    <p>Fours: Fours zijn de dobbelstenen met 4 ogen voor elke van deze gaat Fours met 4 omhoog</p>
-    <br>
-    <p>Fives: Fives zijn de dobbelstenen met 5 ogen voor elke van deze gaat Fives met 5 omhoog</p>
-    <br>
-    <p>Sixes: Sixes zijn de dobbelstenen met 6 ogen voor elke van deze gaat Sixes met 6 omhoog</p>
-    <br>
-    <p>Three of a kind: Als je van een soort dobbelsteen 3 hebt<br>
-        dan telt dit deze dobbelstenen inclusief de resterende bij elkaar op</p>
-    <br>
-    <p>Four of a kind: Als je van een soort dobbelsteen 4 hebt<br>
-    dan telt dit deze dobbelstenen inclusief de laatste bij elkaar op</p>
-    <br>
-    <p>Full House: Als je van een soort dobbelsteen 3 hebt<br>
-    en van een andere soort dobbelsteen 2 hebt<br>
-        dan kan je 25 punten hiervoor krijgen</p>
-    <br>
-    <p>Small Street: Als je een combinatie van 1-4, 2-5 of 3-6 hebt<br>
-        dan krijg je hiervoor 30 punten</p>
-    <br>
-    <p>Large Street: Als je een combinatie van 1-5 of 2-6 hebt<br>
-    dan krijg je hiervoor 40 punten</p>
-    <br>
-    <p>Yathzee: als je 5 van een soort dobbelsteen hebt<br>
-    B.V.B: 5 dobbelstenen met 3 ogen<br>
-    dan krijg je 50 punten erbij</p>
-    <br>
-    <p>Chance: Dit telt alle dobbelstenen bij elkaar op<br>
-    B.V.B: 5+3+6+5+1 = 20 punten</p>
-    <br>
-    <p>Bonus: Als je 63 of meer punten hebt in Basic moves/Part 1<br>
-    dan krijg je 35 punten extra erbij</p>
-    <br>
-</div>
-</div>
-</div>
-
+    </main>
+    <footer>
+        <p>Made by sb-dev</p>
+    </footer>
 <script src="../H6/Yathzee.js"></script>
 
 </body>
